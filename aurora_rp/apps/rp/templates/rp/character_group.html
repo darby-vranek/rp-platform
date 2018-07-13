@@ -1,0 +1,13 @@
+<div class="card-group">
+	{% for char in character_list %}
+	<div class="card m-2" style="max-width: 20rem; min-width: 20rem; border: none;">
+		<div class="media">
+			<img src="{{ char.sm_icon }}" class="mr-3" style="width: 100px; height: 100px; background-color: lightgray;" alt=""/>
+			<div class="media-body">
+				<h5 class="mt-0 card-title"><a href="/characters/{{ char.pk }}">{{ char.page_name }}</a></h5>
+				<h6 class="mb-0 card-subtitle text-muted">{{ char.display_name }}</h6>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+</div>

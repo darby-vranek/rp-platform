@@ -78,8 +78,8 @@ DATABASES = {
     'default': {
         'NAME': 'rp',
         'ENGINE': 'django.db.backends.postgresql',
-        'USER': 'admin',
-        'PASSWORD': 'admin'
+        'USER': 'lyra',
+        'PASSWORD': ''
     }
 }
 

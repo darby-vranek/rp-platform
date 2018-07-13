@@ -1,0 +1,15 @@
+{% extends "rp/base.html" %}
+{% block title %}{{ character.display_name }}{% endblock %}
+{% block jumbotron %}
+<div class="card-body jumbotron">
+	<div class="media">
+		<img id="lg-icon" class="mr-3" src="{{ character.lg_icon }}" alt="" style="min-width: 100px; width:200px; border-radius: 100px; background-color: lightgray;"/>
+		<div class="media-body">
+			<h1 id="char-name" class='display-4'>{{ character.display_name }}</h1>
+			<p id="char-caption" class="lead">{{ character.caption }}</p>
+			<p id="char-desc">{{ character.desc }}</p>
+            <a class="btn btn-primary" href="/characters/{{ character.pk }}/edit/" role="button">Edit</a>
+		</div>
+	</div>
+</div>
+{% endblock %}
