@@ -36,3 +36,12 @@ class CharacterForm(ModelForm):
     class Meta:
         model = Character
         fields = ['page_name', 'display_name', 'caption', 'desc', 'sm_icon', 'lg_icon']
+
+class Bio(Entity):
+    char = models.ForeignKey(Character, related_name='bios', on_delete=models.DO_NOTHING, null=True)
+    ver = models.ForeignKey(Verse, related_name='bios', on_delete=models.DO_NOTHING, null=True)
+    sm_icon = models.URLField(default='', blank=True)
+    lg_icon = models.URLField(default='', blank=True)
+
+    def get_absolute_url(self):
+        return reverse('bio-detail', kwargs={'pk': self.pk})
