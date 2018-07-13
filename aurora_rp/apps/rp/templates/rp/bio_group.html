@@ -8,7 +8,7 @@
                 <img src="{{ bio.char.sm_icon }}" class="mr-3" style="width: 100px; height: 100px; background-color: lightgray;" alt=""/>
             {% endif %}
 			<div class="media-body">
-				<h5 class="mt-0 card-title"><a href="{% url 'bio-detail' pk=bio.pk %}">{{ bio.display_name }}</a></h5>
+				<h5 class="mt-0 card-title"><a href="{% url 'bio-detail' pk=bio.id %}">{{ bio.display_name }}</a></h5>
 				<h6 class="mb-0 card-subtitle text-muted">{{ bio.caption }}</h6>
 			</div>
 		</div>

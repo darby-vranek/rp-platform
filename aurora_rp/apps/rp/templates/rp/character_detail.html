@@ -8,7 +8,20 @@
 			<h1 id="char-name" class='display-4'>{{ character.display_name }}</h1>
 			<p id="char-caption" class="lead">{{ character.caption }}</p>
 			<p id="char-desc">{{ character.desc }}</p>
-            <a class="btn btn-primary" href="/characters/{{ character.pk }}/edit/" role="button">Edit</a>
+            <a class="btn btn-primary" href="{% url 'edit-character' pk=character.pk %}" role="button">Edit</a>
+			<div class="btn-group">
+				<button type="button" class="btn btn-secondary">All Verses</button>
+			  	<button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Toggle Dropdown</span></button>
+			 	<div class="dropdown-menu">
+					<a class="dropdown-item" href="{% url 'character-detail' pk=character.pk %}">All Verses</a>
+					{% if character.bios.count > 0 %}
+					<div class="dropdown-divider"></div>
+					{% for bio in character.bios.all %}
+					<a class="dropdown-item" href="{% url 'bio-detail' pk=bio.pk %}">{{ bio.verse.display_name }}</a>
+					{% endfor %}
+					{% endif %}
+			  </div>
+			</div>
 		</div>
 	</div>
 </div>

@@ -7,7 +7,7 @@
 	<h1 class="display-4"> {{ verse.display_name }}</h1>
 	<p class="lead">{{ verse.caption }}</p>
 	<p>{{ verse.desc }}</p>
-	<a class="btn btn-outline-primary" href="/verses/{{ verse.pk }}/edit/">Edit</a>
+	<a class="btn btn-outline-primary" href="{% url 'edit-verse' pk=verse.pk %}">Edit</a>
 </div>
 {% endblock %}
 {% block content %}

@@ -10,13 +10,13 @@
 			<p id="char-desc">{{ bio.desc }}</p>
             <a class="btn btn-primary" href="{% url 'edit-bio' pk=bio.pk %}" role="button">Edit</a>
 			<div class="btn-group">
-				<button type="button" class="btn btn-secondary">{{ bio.ver.display_name }}</button>
+				<button type="button" class="btn btn-secondary">{{ bio.verse.display_name }}</button>
 			  	<button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Toggle Dropdown</span></button>
 			 	<div class="dropdown-menu">
-					<a class="dropdown-item" href="{% url 'character-detail' pk=bio.char.pk %}">All Verses</a>
-					{% if bio.char.bios %}
+					<a class="dropdown-item" href="{% url 'character-detail' pk=bio.character.pk %}">All Verses</a>
+					{% if bio.character.bios %}
 					<div class="dropdown-divider"></div>
-					{% for b in bio.char.bios.all %}
+					{% for b in bio.character.bios.all %}
 					<a class="dropdown-item" href="{% url 'bio-detail' pk=b.pk %}">{{ b.verse.display_name }}</a>
 					{% endfor %}
 					{% endif %}
