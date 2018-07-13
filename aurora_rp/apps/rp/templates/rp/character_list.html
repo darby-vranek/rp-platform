@@ -3,6 +3,7 @@
 {% block jumbotron %}
 <div class="jumbotron">
     <h1 class="display-4">Characters</h1>
+    <a class="btn btn-primary" href="{% url 'new-character' %}" role="button">New</a>
 </div>
 {% endblock %}
 {% block content %}{% include "rp/character_group.html" %}{% endblock %}

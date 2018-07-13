@@ -1,0 +1,9 @@
+{% extends "rp/base.html" %}
+{% block title %}Verses{% endblock %}
+{% block jumbotron %}
+<div class="jumbotron">
+    <h1 class="display-4">Verses</h1>
+    <a class="btn btn-primary" href="{% url 'new-verse' %}" role="button">New</a>
+</div>
+{% endblock %}
+{% block content %}{% include "rp/verse_group.html" %}{% endblock %}
