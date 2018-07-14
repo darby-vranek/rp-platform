@@ -81,8 +81,8 @@ DATABASES = {
         'NAME': 'rp',
         'ENGINE': 'django.db.backends.postgresql',
         'PORT': 5432,
-        'USER': 'ocufplvjjtxjck',
-        'PASSWORD': 'b1ff95cec344215bb0715a8b7310256de879361f62d5ee95aa821ff1a7ceb891'
+        'USER': 'lyra',
+        'PASSWORD': ''
     }
 }
 
