@@ -113,3 +113,30 @@ class BioUpdateView(UpdateView):
         context['title'] = 'Edit Bio'
         return context
 
+
+class CharacterTraitCreateView(CreateView):
+    model = CharacterTrait
+    fields = ['char', 'title', 'content']
+    template_name='rp/form.html'
+    success_url = '/characters/'
+
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super().get_context_data(**kwargs)
+        # Add in a QuerySet of all the books
+        context['title'] = 'New Character Trait'
+        return context
+
+
+class CharacterTraitUpdateView(UpdateView):
+    model = CharacterTrait
+    fields = ['title', 'content']
+    template_name = 'rp/form.html'
+    success_url = '/characters/'
+
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super().get_context_data(**kwargs)
+        # Add in a QuerySet of all the books
+        context['title'] = 'Edit Trait'
+        return context
