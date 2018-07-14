@@ -9,8 +9,9 @@ https://docs.djangoproject.com/en/2.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
-
+import django_heroku
 import os
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -76,8 +77,9 @@ WSGI_APPLICATION = 'aurora_rp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'NAME': 'd9laumej64r63g',
+        'NAME': 'rp',
         'ENGINE': 'django.db.backends.postgresql',
+        'PORT': 5432,
         'USER': 'ocufplvjjtxjck',
         'PASSWORD': 'b1ff95cec344215bb0715a8b7310256de879361f62d5ee95aa821ff1a7ceb891'
     }
@@ -121,3 +123,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+django_heroku.settings(locals())
