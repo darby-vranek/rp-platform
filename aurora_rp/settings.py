@@ -76,10 +76,10 @@ WSGI_APPLICATION = 'aurora_rp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'NAME': 'rp',
+        'NAME': 'd9laumej64r63g',
         'ENGINE': 'django.db.backends.postgresql',
-        'USER': 'lyra',
-        'PASSWORD': ''
+        'USER': 'ocufplvjjtxjck',
+        'PASSWORD': 'b1ff95cec344215bb0715a8b7310256de879361f62d5ee95aa821ff1a7ceb891'
     }
 }
 
