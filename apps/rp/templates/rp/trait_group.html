@@ -1,6 +1,12 @@
 {% for trait in traits %}
-<div class="card-body">
-    <h5 class="card-title">{{ trait.title }}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">{{ trait.content }}</h6>
-</div>
+<div class="card-body m-1">
+	<div class="media">
+		<div class="m-2"><a class="btn btn-outline-primary m-2 btn-sm" href="{% url 'edit-character-trait' pk=trait.pk %}">Edit</a><form action="{% url 'delete-character-trait' pk=trait.pk %}" method="post">{% csrf_token %}<input class="btn btn-sm btn-outline-danger" type="submit" value="Delete" /></form>
+		</div>
+		<div class="media-body m-3">
+				<h5 class="mt-0 card-title">{{ trait.title }}</h5>
+				<h6 class="mb-0 card-subtitle text-muted">{{ trait.content }}</h6>
+			</div>
+		</div>
+	</div>
 {% endfor %}

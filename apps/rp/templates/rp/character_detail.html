@@ -8,12 +8,8 @@
 			<h1 id="char-name" class='display-4'>{{ character.display_name }}</h1>
 			<p id="char-caption" class="lead">{{ character.caption }}</p>
 			<p class="small">{{ character.desc }}</p>
-			{% if character.character %}
-			<a class="btn btn-primary" href="{% url 'edit-bio' pk=character.pk %}" role="button">Edit</a>
-			{% else %}
-            <a class="btn btn-primary" href="{% url 'edit-character' pk=character.pk %}" role="button">Edit</a>
-			{% endif %}
-			<div class="btn-group">
+            <a class="btn btn-primary btn-sm" href="{% url 'edit-character' pk=character.pk %}" role="button">Edit Character</a>
+			<div class="btn-group btn-group-sm">
 				{% if character.bios %}
 				<button type="button" class="btn btn-secondary">All Verses</button>
 				{% elif character.character %}
@@ -67,6 +63,13 @@
   <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">tba</div>
   <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">tba</div>
   <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">tba</div>
-	<div class="tab-pane fade" id="pills-trait" role="tabpanel" aria-labelledby="pills-trait-tab">{% include "rp/trait_group.html" with traits=character.traits.all %}</div>
+	<div class="tab-pane fade" id="pills-trait" role="tabpanel" aria-labelledby="pills-trait-tab">
+		{% block traits %}
+			<div class="card-body m-1">
+				<form action="{% url 'new-character-trait' pk=character.pk %}"><input type="submit" class="btn btn-outline-primary btn-sm" value="New Trait" /></form>
+			</div>
+			{% include "rp/trait_group.html" with traits=character.traits.all %}
+		{% endblock %}
+	</div>
 </div>
 {% endblock %}

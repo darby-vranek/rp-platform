@@ -17,6 +17,7 @@ urlpatterns = [
     path('bios/new/', BioCreateView.as_view(), name='new-bio'),
     path('bios/<int:pk>/', BioDetailView.as_view(), name='bio-detail'),
     path('bios/<int:pk>/edit/', BioUpdateView.as_view(), name='edit-bio'),
-    path('character-traits/new/', CharacterTraitCreateView.as_view(), name='new-character-trait'),
-    path('character-traits/<int:pk>/edit', CharacterTraitUpdateView.as_view(), name='edit-character-trait')
+    path('characters/<int:pk>/traits/new/', CharacterTraitCreateView.as_view(), name='new-character-trait'),
+    path('character-traits/<int:pk>/edit', CharacterTraitUpdateView.as_view(), name='edit-character-trait'),
+path('character-traits/<int:pk>/delete', CharacterTraitDeleteView.as_view(), name='delete-character-trait')
 ]

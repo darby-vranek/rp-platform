@@ -154,15 +154,18 @@ class BioUpdateView(UpdateView):
 class CharacterTraitCreateView(CreateView):
     model = CharacterTrait
     fields = ['char', 'title', 'content']
-    template_name='rp/form.html'
-    success_url = '/characters/'
+    template_name = 'rp/form.html'
 
     def get_context_data(self, **kwargs):
-        # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
-        # Add in a QuerySet of all the books
         context['title'] = 'New Character Trait'
         return context
+
+    def get(self, *args, **kwargs):
+        pk = kwargs['pk']
+        self.success_url = '/characters/%s/' % pk
+        self.initial = {'char': Character.objects.get(pk=pk)}
+        return super().get(self)
 
 
 class CharacterTraitUpdateView(UpdateView):
@@ -172,8 +175,11 @@ class CharacterTraitUpdateView(UpdateView):
     success_url = '/characters/'
 
     def get_context_data(self, **kwargs):
-        # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
-        # Add in a QuerySet of all the books
         context['title'] = 'Edit Trait'
         return context
+
+
+class CharacterTraitDeleteView(DeleteView):
+    model = CharacterTrait
+    success_url = '/characters/'

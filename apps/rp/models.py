@@ -110,6 +110,9 @@ class Trait(Model):
 class CharacterTrait(Trait):
     char = models.ForeignKey(Character, related_name='traits', on_delete=models.DO_NOTHING, null=True)
 
+    def get_absolute_url(self):
+        return reverse('character-detail', kwargs={'pk': self.char.pk})
+
 
 class VerseTrait(Trait):
     ver = models.ForeignKey(Verse, related_name='traits', on_delete=models.DO_NOTHING, null=True)
