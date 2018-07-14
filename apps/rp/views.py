@@ -6,7 +6,7 @@ from .models import *
 
 
 def index(request):
-    return render('rp/base.html')
+    return render(request, 'rp/base.html')
 
 
 class CharacterDetailView(DetailView):
