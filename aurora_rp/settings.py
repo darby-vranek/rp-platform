@@ -25,7 +25,7 @@ SECRET_KEY = 'vjz2qel%w8ob-@kd^)fp#f_c5=0oa5m&whtx!^ksxu!hxto8_q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['aurora-rp.herokuapp.com']
 
 
 # Application definition

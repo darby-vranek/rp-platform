@@ -1,8 +1,12 @@
+from django.shortcuts import render
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 from django.views.generic.edit import FormView, CreateView, UpdateView, DeleteView
 from .models import *
-from django.forms import Select
+
+
+def index(request):
+    return render('rp/base.html')
 
 
 class CharacterDetailView(DetailView):
