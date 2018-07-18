@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>{% block title %}{{character.display_name}}{% endblock %}</title>
+        {% block favicon %}{% endblock %}
+    </head>
+    <body>
+        <div class="card" id="page">
+            <div class="card-header">
+                <ul class="nav nav-pills card-header-pills">
+					<li class="nav-item">
+						<div class="btn-group">
+							<button style="border: none;" type="button" class="nav-link active dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+							<div class="dropdown-menu">
+								<h6 class="dropdown-header">Create new</h6>
+								<a class="dropdown-item" href="{% url 'new-character' %}">Character</a>
+								<a class="dropdown-item" href="{% url 'new-verse' %}">Verse</a>
+								<a class="dropdown-item" href="{% url 'new-bio' %}">Bio</a>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/" style="margin-left: 10px;">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'characters' %}">Characters</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'verses' %}">Verses</a>
+					</li>
+				</ul>
+            </div>
+            <div class="card-body jumbotron">
+                <div class="media">
+                    <img id="lg-icon" class="mr-3" src="{{ character.lg_icon }}" alt="" style="min-width: 100px; width:200px; border-radius: 100px; background-color: lightgray;"/>
+                    <div class="media-body">
+                        <h1 id="char-name" class='display-4'>{{ character.display_name }}</h1>
+                        <p id="char-caption" class="lead">{{ character.caption }}</p>
+                        <p class="small">{{ character.desc }}</p>
+                        {% block editchar %}<a class="btn btn-primary btn-sm" href="{% url 'edit-character' pk=character.pk %}" role="button">Edit Character</a>{% endblock %}
+                        {% block verses_btn %}
+                        <div class="btn-group btn-group-sm">
+                            <button type="button" class="btn btn-secondary">All Verses</button>
+                            <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Toggle Dropdown</span></button>
+                            <div class="dropdown-menu">
+                                {% if character.bios and character.bios.count > 0 %}
+                                <a class="dropdown-item" href="{% url 'character-detail' pk=character.pk %}">All Verses</a>
+                                <div class="dropdown-divider"></div>
+                                    {% for b in character.bios.all %}
+                                    <a class="dropdown-item" href="{% url 'bio-detail' pk=b.pk %}">{{ b.bio_verse.display_name }}</a>
+                                    {% endfor %}
+                                <div class="dropdown-divider"></div>
+                                {% endif %}
+                                <a class="dropdown-item" href="{% url 'new-character-bio' pk=character.pk %}">New Verse</a>
+                            </div>
+                        </div>
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+            {% block navbar %}
+            <div class="card-header" style="margin-top: -32px;">
+            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">All</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Posts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Threads</a>
+              </li>
+                <li class="nav-item">
+                <a class="nav-link" id="pills-trait-tab" data-toggle="pill" href="#pills-trait" role="tab" aria-controls="pills-contact" aria-selected="false">Traits</a>
+              </li>
+            </ul>
+            </div>
+			{% endblock %}
+			<div class="card-body">
+				{% block content %}
+				{% endblock %}
+			</div>
+        </div>
+    </body>
+</html>

@@ -87,11 +87,11 @@ class VerseUpdateView(UpdateView):
 
 class BioDetailView(DetailView):
     model = Bio
-
+    context_object_name = 'character'
 
 class BioCreateView(CreateView):
     model = Bio
-    fields = ['character', 'verse', '_display_name', '_caption', '_desc', '_sm_icon', '_lg_icon']
+    fields = ['bio_char', 'bio_verse', '_display_name', '_caption', '_desc', '_sm_icon', '_lg_icon']
     template_name = 'rp/form.html'
     success_url = '/characters/'
 
@@ -105,7 +105,7 @@ class BioCreateView(CreateView):
 
 class CharacterBioCreateView(CreateView):
     model = Bio
-    fields = ['character', 'verse', '_display_name', '_caption', '_desc', '_sm_icon', '_lg_icon']
+    fields = ['bio_char', 'bio_verse', '_display_name', '_caption', '_desc', '_sm_icon', '_lg_icon']
     template_name = 'rp/form.html'
     success_url = '/characters/'
 
@@ -115,13 +115,13 @@ class CharacterBioCreateView(CreateView):
         return context
 
     def get(self, *args, **kwargs):
-        self.initial = {'character': Character.objects.get(pk=kwargs['pk'])}
+        self.initial = {'bio_char': Character.objects.get(pk=kwargs['pk'])}
         return super().get(self)
 
 
 class VerseBioCreateView(CreateView):
     model = Bio
-    fields = ['character', 'verse', '_display_name', '_caption', '_desc', '_sm_icon', '_lg_icon']
+    fields = ['bio_char', 'bio_Verse', '_display_name', '_caption', '_desc', '_sm_icon', '_lg_icon']
     template_name = 'rp/form.html'
     success_url = '/verses/'
 
@@ -147,13 +147,13 @@ class BioUpdateView(UpdateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = '%s: <em>%s</em>' % (self.bio.character.display_name, self.bio.verse.display_name)
+        context['title'] = '%s: <em>%s</em>' % (self.bio.bio_char.display_name, self.bio.bio_verse.display_name)
         return context
 
 
 class CharacterTraitCreateView(CreateView):
     model = CharacterTrait
-    fields = ['char', 'title', 'content']
+    fields = ['character', 'title', 'content']
     template_name = 'rp/form.html'
 
     def get_context_data(self, **kwargs):
@@ -183,3 +183,71 @@ class CharacterTraitUpdateView(UpdateView):
 class CharacterTraitDeleteView(DeleteView):
     model = CharacterTrait
     success_url = '/characters/'
+
+
+class BioTraitCreateView(CreateView):
+    model = BioTrait
+    fields = ['bio', 'title', 'content']
+    template_name = 'rp/form.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'New Bio Trait'
+        return context
+
+    def get(self, *args, **kwargs):
+        pk = kwargs['pk']
+        self.success_url = '/bios/%s/' % pk
+        self.initial = {'bio': Bio.objects.get(pk=pk)}
+        return super().get(self)
+
+
+class BioTraitUpdateView(UpdateView):
+    model = BioTrait
+    fields = ['title', 'content']
+    template_name = 'rp/form.html'
+    success_url = '/characters/'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Edit Trait'
+        return context
+
+
+class BioTraitDeleteView(DeleteView):
+    model = BioTrait
+    success_url = '/characters/'
+
+
+class VerseTraitCreateView(CreateView):
+    model = VerseTrait
+    fields = ['verse', 'title', 'content']
+    template_name = 'rp/form.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'New Verse Trait'
+        return context
+
+    def get(self, *args, **kwargs):
+        pk = kwargs['pk']
+        self.success_url = '/verses/%s/' % pk
+        self.initial = {'verse': Verse.objects.get(pk=pk)}
+        return super().get(self)
+
+
+class VerseTraitUpdateView(UpdateView):
+    model = VerseTrait
+    fields = ['title', 'content']
+    template_name = 'rp/form.html'
+    success_url = '/verses/'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Edit Trait'
+        return context
+
+
+class VerseTraitDeleteView(DeleteView):
+    model = VerseTrait
+    success_url = '/verses/'
