@@ -3,6 +3,7 @@
 	<div class="card-body">
 		<h5 class="card-title"><a href="{% url 'thread-detail' pk=thread.pk %}">{{ thread.title }}</a> <span class="badge badge-pill badge-primary" style="font-size: .4em; vertical-align: 50%;">{{ thread.verse }}</span></h5>
 		<h6 class="card-subtitle text-muted">{{ thread.caption }}</h6>
+		<p class="lead">Replies: <span class="badge">{{ thread.replies.count }}</span></p>
 	</div>
 </div>
 {% endfor %}
