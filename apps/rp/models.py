@@ -4,7 +4,6 @@ from django.urls import reverse
 from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 
 
-
 class Model(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -30,6 +29,15 @@ class Character(Profile):
 
     def get_absolute_url(self):
         return reverse('character-detail', kwargs={'pk': self.pk})
+
+    def get_threads(self):
+        reps = Reply.objects.filter(character=self)
+        threads = list()
+        for rep in reps.all():
+            if not rep.parent in threads:
+                threads.append(rep.parent)
+        return threads
+
 
 
 class CharacterForm(ModelForm):
@@ -122,6 +130,9 @@ class CharacterTraitForm(ModelForm):
 class VerseTrait(Trait):
     verse = models.ForeignKey(Verse, related_name='traits', on_delete=models.DO_NOTHING, null=True)
 
+    def get_absolute_url(self):
+        return reverse('verse-detail', kwargs={'pk': self.verse.pk})
+
 
 class VerseTraitForm(ModelForm):
     class Meta:
@@ -131,6 +142,9 @@ class VerseTraitForm(ModelForm):
 
 class BioTrait(Trait):
     bio = models.ForeignKey(Bio, related_name='traits', on_delete=models.DO_NOTHING, null=True)
+
+    def get_absolute_url(self):
+        return reverse('bio-detail', kwargs={'pk': self.bio.pk})
 
 
 class BioTraitForm(ModelForm):
@@ -148,6 +162,9 @@ class Thread(Model):
     def __str__(self):
         return self.title
 
+    def get_absolute_url(self):
+        return reverse('thread-detail', kwargs={'pk': self.pk})
+
 
 class ThreadForm(ModelForm):
     model = Thread
@@ -161,6 +178,9 @@ class Reply(Model):
 
     def __str__(self):
         return 'Reply to %s (%s)' % (self.parent.title, self.created)
+
+    def get_absolute_url(self):
+        return reverse('thread-detail', kwargs={'pk': self.parent.pk})
 
 
 class ReplyForm(ModelForm):

@@ -180,7 +180,6 @@ class CharacterTraitUpdateView(UpdateView):
     model = CharacterTrait
     fields = ['title', 'content']
     template_name = 'rp/form.html'
-    success_url = '/characters/'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -231,7 +230,6 @@ class VerseTraitCreateView(CreateView):
     model = VerseTrait
     fields = ['verse', 'title', 'content']
     template_name = 'rp/form.html'
-    success_url = '/verses/'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -240,7 +238,6 @@ class VerseTraitCreateView(CreateView):
 
     def get(self, *args, **kwargs):
         pk = kwargs['pk']
-        self.success_url = '/verses/%s/' % pk
         self.initial = {'verse': Verse.objects.get(pk=pk)}
         return super().get(self)
 
@@ -342,12 +339,15 @@ class ReplyUpdateView(UpdateView):
     model = Reply
     fields = ['character', 'content']
     template_name = 'rp/reply_form.html'
-    success_url = "/threads/"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Edit Thread'
         return context
+
+    def get(self, request, *args, **kwargs):
+        self.success_url = '/threads/%s/' % kwargs['thread_pk']
+        return super().get(self)
 
 
 class ReplyDeleteView(DeleteView):
