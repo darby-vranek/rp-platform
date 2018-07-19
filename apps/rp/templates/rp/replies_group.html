@@ -8,6 +8,6 @@
     <div class="post-body" style="width: 500px; margin: auto;">
         {{ reply.content | safe }}
     </div>
-    <div class="card-footer">{{ reply.created }}</div>
+    <div class="card-footer text-center"><small><em>{{ reply.created }}</em></small></div>
 </div>
 {% endfor %}
