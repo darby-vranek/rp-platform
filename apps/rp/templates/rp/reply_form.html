@@ -1,0 +1,23 @@
+{% extends "rp/base.html" %}
+{% block jumbotron %}
+<div class="jumbotron">
+    <h1 class="display-4">Edit reply</h1>
+</div>
+{% endblock %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <div>Character: {{ form.character }}</div>
+        {{ form.content }}
+        <div><input type="submit" value="Submit" /></div>
+    </form>
+<script>
+    $(document).ready(function() {
+        $('textarea').summernote({
+            'width': '600px',
+           'height': '400px'
+        });
+    });
+</script>
+{% endblock %}

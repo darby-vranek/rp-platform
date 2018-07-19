@@ -1,11 +1,15 @@
 {% for reply in thread.replies.all %}
-<div class="card mb-4" style="width: 540px;">
+<div class="card mb-4" style="width: 700px; margin: auto;">
     {% if reply.character %}
-    <div class="card-header">{{ reply.character.page_name }}</div>
+    <div class="card-header">
+        <a class="card-link" href="{% url 'character-detail' pk=reply.character.pk %}">{{ reply.character.page_name }}</a>
+        <a href="{% url 'edit-reply' thread.pk reply.pk %}" class="card-link">Edit</a>
+        <a href="{% url 'delete-reply' thread_pk=thread.pk reply_pk=reply.pk %}" class="card-link">Delete</a>
+    </div>
     {% else %}
     <div class="card-header">character</div>
     {% endif %}
-    <div class="post-body" style="width: 500px; margin: auto;">
+    <div class="post-body" style="width: 600px; margin: 15px auto;">
         {{ reply.content | safe }}
     </div>
     <div class="card-footer text-center"><small><em>{{ reply.created }}</em></small></div>

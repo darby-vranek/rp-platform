@@ -3,32 +3,19 @@
 
 {% block jumbotron %}
     <div class="card-body jumbotron">
-        <h1 class="display-4">{{ thread.title }}</h1>
+        <h1 class="display-4">{{ thread.title }} <span class="badge badge-primary" style="font-size: .3em; vertical-align: 80%;">{{ thread.verse }}</span></h1>
         <p class="lead">{{ thread.caption }}</p>
     </div>
 {% endblock %}
 {% block content %}
     {% include "rp/replies_group.html" %}
-    <div class="card" style="width: 540px;">
-        <div class="card-body">
+        <div class="card-body text-center">
             <form method="post" action="{% url 'new-reply' pk=thread.pk %}">
                 {% csrf_token %}
-                <select></select>
                 <input type="hidden" name="parent" value="{{ thread.pk }}" />
-                <textarea id="summernote" name="content"></textarea>
-                <input type="submit" value="Submit" />
+                <div>Character: {{ form.character }}</div>
+                {{ form.content }}
+                <div><input type="submit" value="Submit" /></div>
             </form>
         </div>
-    </div>
-    <script>
-        $(document).ready(function() {
-            $('#summernote').summernote({
-                width: '500px',
-                height: '300px',
-                popover: {
-                    air: [] }
-            });
-
-        });
-    </script>
 {% endblock %}

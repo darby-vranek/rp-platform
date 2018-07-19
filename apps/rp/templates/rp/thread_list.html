@@ -1,11 +1,12 @@
 {% extends "rp/base.html" %}
-{% block content %}
-{% for thread in thread_list %}
-<div class="card" style="border: none;">
-	<div class="card-body">
-		<h5 class="card-title"><a href="{% url 'thread-detail' pk=thread.pk %}">{{ thread.title }}</a></h5>
-		<h6 class="card-subtitle text-muted">{{ thread.caption }}</h6>
-	</div>
+
+{% block jumbotron %}
+<div class="card-body jumbotron">
+	<h1 class="display-4">Threads</h1>
+	<a class="btn btn-primary" href="{% url 'new-thread' %}" role="button">New</a>
 </div>
-{% endfor %}
+{% endblock %}
+
+{% block content %}
+	{% include "rp/thread_group.html" %}
 {% endblock %}

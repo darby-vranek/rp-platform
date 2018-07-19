@@ -142,7 +142,7 @@ class BioTraitForm(ModelForm):
 # threads & replies
 class Thread(Model):
     title = models.CharField(max_length=255, default="Untitled")
-    caption = models.CharField(max_length=255, default='')
+    caption = models.CharField(max_length=255, default='', blank=True)
     verse = models.ForeignKey(Verse, related_name='threads', null=True, on_delete=models.DO_NOTHING)
 
     def __str__(self):
@@ -157,7 +157,7 @@ class ThreadForm(ModelForm):
 class Reply(Model):
     parent = models.ForeignKey(Thread, related_name='replies', on_delete=models.CASCADE)
     content = models.TextField()
-    character = models.ForeignKey(Character, related_name='replies', on_delete=models.DO_NOTHING, null=True, blank=True)
+    character = models.ForeignKey(Character, related_name='replies', on_delete=models.DO_NOTHING)
 
     def __str__(self):
         return 'Reply to %s (%s)' % (self.parent.title, self.created)
@@ -166,7 +166,7 @@ class Reply(Model):
 class ReplyForm(ModelForm):
     class Meta:
         model = Reply
-        fields = ['parent', 'content', 'character']
+        fields = ['parent', 'character', 'content']
         widgets = {
             'content': SummernoteWidget()
         }

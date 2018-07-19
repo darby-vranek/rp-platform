@@ -43,6 +43,10 @@ class CharacterUpdateView(UpdateView):
         context['title'] = 'Edit Character'
         return context
 
+    def get(self, *args, **kwargs):
+        self.success_url = '/characters/%s/' % kwargs['pk']
+        return super().get(self)
+
 
 class CharacterDeleteView(DeleteView):
     pass
@@ -78,16 +82,19 @@ class VerseUpdateView(UpdateView):
     template_name = 'rp/form.html'
 
     def get_context_data(self, **kwargs):
-        # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
-        # Add in a QuerySet of all the books
         context['title'] = 'Edit Verse'
         return context
+
+    def get(self, *args, **kwargs):
+        self.success_url = '/verses/%s/' % kwargs['pk']
+        return super().get(self)
 
 
 class BioDetailView(DetailView):
     model = Bio
     context_object_name = 'character'
+
 
 class BioCreateView(CreateView):
     model = Bio
@@ -107,7 +114,6 @@ class CharacterBioCreateView(CreateView):
     model = Bio
     fields = ['bio_char', 'bio_verse', '_display_name', '_caption', '_desc', '_sm_icon', '_lg_icon']
     template_name = 'rp/form.html'
-    success_url = '/characters/'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -116,6 +122,7 @@ class CharacterBioCreateView(CreateView):
 
     def get(self, *args, **kwargs):
         self.initial = {'bio_char': Character.objects.get(pk=kwargs['pk'])}
+        self.success_url = kwargs['pk']
         return super().get(self)
 
 
@@ -123,7 +130,6 @@ class VerseBioCreateView(CreateView):
     model = Bio
     fields = ['bio_char', 'bio_verse', '_display_name', '_caption', '_desc', '_sm_icon', '_lg_icon']
     template_name = 'rp/form.html'
-    success_url = '/verses/'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -132,6 +138,7 @@ class VerseBioCreateView(CreateView):
 
     def get(self, *args, **kwargs):
         self.initial = {'bio_verse': Verse.objects.get(pk=kwargs['pk'])}
+        self.success_url = '/verses/%s/' % kwargs['pk']
         return super().get(self)
 
 
@@ -143,6 +150,7 @@ class BioUpdateView(UpdateView):
 
     def get(self, *args, **kwargs):
         self.bio = Bio.objects.get(pk=kwargs['pk'])
+        self.success_url = '/bios/%s/' % kwargs['pk']
         return super().get(self)
 
     def get_context_data(self, **kwargs):
@@ -155,7 +163,6 @@ class CharacterTraitCreateView(CreateView):
     model = CharacterTrait
     fields = ['char', 'title', 'content']
     template_name = 'rp/form.html'
-    success_url = '/characters/'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -190,7 +197,6 @@ class BioTraitCreateView(CreateView):
     model = BioTrait
     fields = ['bio', 'title', 'content']
     template_name = 'rp/form.html'
-    success_url = '/characters/'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -282,7 +288,9 @@ class ThreadDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context['form'] = ReplyForm()
         return context
+
 
 
 class ThreadCreateView(CreateView):
@@ -315,7 +323,7 @@ class ThreadDeleteView(DeleteView):
 
 class ReplyCreateView(CreateView):
     model = Reply
-    fields = ['character', 'parent', 'content']
+    fields = ['parent', 'character', 'content']
     template_name = 'rp/form.html'
     success_url = "/threads/"
 
@@ -324,17 +332,16 @@ class ReplyCreateView(CreateView):
         context['title'] = 'Reply to Thread'
         return context
 
-    def get(self, *args, **kwargs):
+    def post(self, request, *args, **kwargs):
         pk = kwargs['pk']
         self.success_url = '/threads/%s/' % pk
-        self.initial = {'parent': Thread.objects.get(pk=pk)}
-        return super().get(self)
+        return super().post(self)
 
 
 class ReplyUpdateView(UpdateView):
-    model = Thread
+    model = Reply
     fields = ['character', 'content']
-    template_name = 'rp/form.html'
+    template_name = 'rp/reply_form.html'
     success_url = "/threads/"
 
     def get_context_data(self, **kwargs):

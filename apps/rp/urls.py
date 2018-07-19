@@ -40,6 +40,6 @@ urlpatterns = [
     path('threads/<int:pk>/delete/', ThreadDetailView.as_view(), name='delete-thread'),
     # replies
     path('threads/<int:pk>/replies/new/', ReplyCreateView.as_view(), name='new-reply'),
-    path('threads/<int:thread_pk>/replies/<int:reply_pk>/edit/', ReplyUpdateView.as_view(), name='edit-reply'),
+    path('threads/<int:thread_pk>/replies/<int:pk>/edit/', ReplyUpdateView.as_view(), name='edit-reply'),
     path('threads/<int:thread_pk>/replies/<int:reply_pk>/delete/', ReplyDeleteView.as_view(), name='delete-reply'),
 ]
