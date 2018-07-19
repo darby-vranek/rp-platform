@@ -1,0 +1,13 @@
+{% for reply in thread.replies.all %}
+<div class="card mb-4" style="width: 540px;">
+    {% if reply.character %}
+    <div class="card-header">{{ reply.character.page_name }}</div>
+    {% else %}
+    <div class="card-header">character</div>
+    {% endif %}
+    <div class="post-body" style="width: 500px; margin: auto;">
+        {{ reply.content | safe }}
+    </div>
+    <div class="card-footer">{{ reply.created }}</div>
+</div>
+{% endfor %}

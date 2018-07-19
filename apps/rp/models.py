@@ -1,6 +1,8 @@
 from django.db import models
 from django.forms import ModelForm
 from django.urls import reverse
+from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
+
 
 
 class Model(models.Model):
@@ -86,6 +88,9 @@ class Bio(Model):
     def get_absolute_url(self):
         return reverse('bio-detail', kwargs={'pk': self.pk})
 
+    def __str__(self):
+        return '%s (%s)' % (self.bio_char.display_name, self.bio_verse.display_name)
+
 
 class BioForm(ModelForm):
     class Meta:
@@ -132,3 +137,36 @@ class BioTraitForm(ModelForm):
     class Meta:
         model = BioTrait
         fields = ['bio', 'title', 'content']
+
+
+# threads & replies
+class Thread(Model):
+    title = models.CharField(max_length=255, default="Untitled")
+    caption = models.CharField(max_length=255, default='')
+    verse = models.ForeignKey(Verse, related_name='threads', null=True, on_delete=models.DO_NOTHING)
+
+    def __str__(self):
+        return self.title
+
+
+class ThreadForm(ModelForm):
+    model = Thread
+    fields = ['title', 'caption', 'verse']
+
+
+class Reply(Model):
+    parent = models.ForeignKey(Thread, related_name='replies', on_delete=models.CASCADE)
+    content = models.TextField()
+    character = models.ForeignKey(Character, related_name='replies', on_delete=models.DO_NOTHING, null=True, blank=True)
+
+    def __str__(self):
+        return 'Reply to %s (%s)' % (self.parent.title, self.created)
+
+
+class ReplyForm(ModelForm):
+    class Meta:
+        model = Reply
+        fields = ['parent', 'content', 'character']
+        widgets = {
+            'content': SummernoteWidget()
+        }

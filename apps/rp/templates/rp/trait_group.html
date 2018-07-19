@@ -1,7 +1,8 @@
+{% block content %}
 {% for trait in traits %}
 <div class="card-body m-1">
 	<div class="media">
-		<div class="m-2"><a class="btn btn-outline-primary m-2 btn-sm" href="{% url 'edit-character-trait' pk=trait.pk %}">Edit</a><form action="{% url 'delete-character-trait' pk=trait.pk %}" method="post">{% csrf_token %}<input class="btn btn-sm btn-outline-danger" type="submit" value="Delete" /></form>
+		<div class="m-2"><a class="btn btn-outline-primary m-2 btn-sm" href="{% url 'edit-trait' pk=trait.pk %}">Edit</a><form action="{% url 'delete-trait' pk=trait.pk %}" method="post">{% csrf_token %}<input class="btn btn-sm btn-outline-danger" type="submit" value="Delete" /></form>
 		</div>
 		<div class="media-body m-3">
 				<h5 class="mt-0 card-title">{{ trait.title }}</h5>
@@ -10,3 +11,4 @@
 		</div>
 	</div>
 {% endfor %}
+{% endblock %}

@@ -121,7 +121,7 @@ class CharacterBioCreateView(CreateView):
 
 class VerseBioCreateView(CreateView):
     model = Bio
-    fields = ['bio_char', 'bio_Verse', '_display_name', '_caption', '_desc', '_sm_icon', '_lg_icon']
+    fields = ['bio_char', 'bio_verse', '_display_name', '_caption', '_desc', '_sm_icon', '_lg_icon']
     template_name = 'rp/form.html'
     success_url = '/verses/'
 
@@ -131,7 +131,7 @@ class VerseBioCreateView(CreateView):
         return context
 
     def get(self, *args, **kwargs):
-        self.initial = {'verse': Verse.objects.get(pk=kwargs['pk'])}
+        self.initial = {'bio_verse': Verse.objects.get(pk=kwargs['pk'])}
         return super().get(self)
 
 
@@ -153,8 +153,9 @@ class BioUpdateView(UpdateView):
 
 class CharacterTraitCreateView(CreateView):
     model = CharacterTrait
-    fields = ['character', 'title', 'content']
+    fields = ['char', 'title', 'content']
     template_name = 'rp/form.html'
+    success_url = '/characters/'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -189,6 +190,7 @@ class BioTraitCreateView(CreateView):
     model = BioTrait
     fields = ['bio', 'title', 'content']
     template_name = 'rp/form.html'
+    success_url = '/characters/'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -223,6 +225,7 @@ class VerseTraitCreateView(CreateView):
     model = VerseTrait
     fields = ['verse', 'title', 'content']
     template_name = 'rp/form.html'
+    success_url = '/verses/'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -251,3 +254,94 @@ class VerseTraitUpdateView(UpdateView):
 class VerseTraitDeleteView(DeleteView):
     model = VerseTrait
     success_url = '/verses/'
+
+
+class TraitUpdateView(UpdateView):
+    model = Trait
+    fields = ['title', 'content']
+    template_name = 'rp/form.html'
+    success_url = '/verses/'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Edit Trait'
+        return context
+
+
+class TraitDeleteView(DeleteView):
+    model = Trait
+    success_url = '/verses/'
+
+
+class ThreadListView(ListView):
+    model = Thread
+
+
+class ThreadDetailView(DetailView):
+    model = Thread
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
+
+
+class ThreadCreateView(CreateView):
+    model = Thread
+    fields = ['title', 'caption', 'verse']
+    template_name = 'rp/form.html'
+    success_url = "/threads/"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'New Thread'
+        return context
+
+
+class ThreadUpdateView(UpdateView):
+    model = Thread
+    fields = ['title', 'caption', 'verse']
+    template_name = 'rp/form.html'
+    success_url = "/threads/"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Edit Thread'
+        return context
+
+
+class ThreadDeleteView(DeleteView):
+    pass
+
+
+class ReplyCreateView(CreateView):
+    model = Reply
+    fields = ['character', 'parent', 'content']
+    template_name = 'rp/form.html'
+    success_url = "/threads/"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Reply to Thread'
+        return context
+
+    def get(self, *args, **kwargs):
+        pk = kwargs['pk']
+        self.success_url = '/threads/%s/' % pk
+        self.initial = {'parent': Thread.objects.get(pk=pk)}
+        return super().get(self)
+
+
+class ReplyUpdateView(UpdateView):
+    model = Thread
+    fields = ['character', 'content']
+    template_name = 'rp/form.html'
+    success_url = "/threads/"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Edit Thread'
+        return context
+
+
+class ReplyDeleteView(DeleteView):
+    pass

@@ -23,3 +23,12 @@
 	</div>
 </div>
 {% endblock %}
+
+{% block content %}
+                <div class="card-body m-1">
+				    <form action="{% url 'new-bio-trait' pk=character.pk %}">
+                        <input type="submit" class="btn btn-outline-primary btn-sm" value="New Trait" />
+                    </form>
+			    </div>
+{% include "rp/trait_group.html" with traits=character.traits.all %}
+{% endblock %}
