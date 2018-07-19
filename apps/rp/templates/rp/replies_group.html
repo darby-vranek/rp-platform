@@ -1,4 +1,4 @@
-{% for reply in thread.replies.all %}
+{% for reply in thread.replies.all|dictsort:"reply.created" %}
 <div class="card mb-4" style="width: 700px; margin: auto;">
     {% if reply.character %}
     <div class="card-header">
