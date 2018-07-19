@@ -1,17 +1,15 @@
 {% for reply in thread.replies.all|dictsort:"created" %}
-<div class="card mb-4" style="width: 700px; margin: auto;">
-    {% if reply.character %}
-    <div class="card-header">
-        <a class="card-link" href="{% url 'character-detail' pk=reply.character.pk %}"><strong>{{ reply.character.page_name }}</strong></a>
-        <a href="{% url 'edit-reply' thread.pk reply.pk %}" class="card-link">Edit</a>
-        <a href="{% url 'delete-reply' thread_pk=thread.pk reply_pk=reply.pk %}" class="card-link">Delete</a>
+<div class="row" style="width: 775px;">
+    <div class="col- mr-3 mt-1" style="width: 100px;">
+        <img src="{{reply.character.sm_icon}}" alt="" class="text-right" style="height:100px; width:100px; min-width:100px; min-height:100px; background-color: gray" />
+        <p class="text-right"><a href="{% url 'character-detail' pk=reply.character.pk %}">{{ reply.character.page_name }}</a></p>
     </div>
-    {% else %}
-    <div class="card-header">character</div>
-    {% endif %}
-    <div class="post-body" style="width: 600px; margin: 20px auto 5px;">
-        {{ reply.content | safe }}
+    <div class="card col-m" style="width: 600px; border: none;">
+        <div class="card-header text-right" style="padding: 0px; border: none; margin-bottom: -15px;">
+            <small><strong class="card-link">{{ reply.character.display_name }}</strong><em class="card-link">{{ reply.created }}</em> <a href="{% url 'edit-reply' thread.pk reply.pk %}" class="card-link">Edit</a>
+            <a href="{% url 'delete-reply' thread_pk=thread.pk reply_pk=reply.pk %}" class="card-link">Delete</a></small>
+        </div>
+        <div class="card-body" style="width: 576px; margin: auto; vertical-align: top;">{{ reply.content | safe }}</div>
     </div>
-    <div class="card-footer text-center"><small><em>{{ reply.created }}</em></small></div>
 </div>
 {% endfor %}

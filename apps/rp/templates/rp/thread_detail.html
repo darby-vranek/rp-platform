@@ -9,7 +9,6 @@
 {% endblock %}
 {% block content %}
 {% include "rp/replies_group.html" %}
-<div class="card-body text-center">
     <form method="post" action="{% url 'new-reply' pk=thread.pk %}">
         {% csrf_token %}
         <input type="hidden" name="parent" value="{{ thread.pk }}" />
@@ -17,5 +16,4 @@
         {{ form.content }}
         <div><input type="submit" value="Submit" /></div>
     </form>
-</div>
 {% endblock %}
