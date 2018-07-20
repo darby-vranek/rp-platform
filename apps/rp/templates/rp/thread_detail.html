@@ -9,11 +9,13 @@
 {% endblock %}
 {% block content %}
 {% include "rp/replies_group.html" %}
-    <form method="post" action="{% url 'new-reply' pk=thread.pk %}">
-        {% csrf_token %}
-        <input type="hidden" name="parent" value="{{ thread.pk }}" />
-        <div>Character: {{ form.character }}</div>
-        {{ form.content }}
-        <div><input type="submit" value="Submit" /></div>
-    </form>
+    <div class="card">
+        <form method="post" action="{% url 'new-reply' pk=thread.pk %}">
+            {% csrf_token %}
+            <input type="hidden" name="parent" value="{{ thread.pk }}" />
+            <div>Character: {{ form.character }}</div>
+            {{ form.content }}
+            <div><input type="submit" value="Submit" /></div>
+        </form>
+    </div>
 {% endblock %}
