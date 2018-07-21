@@ -128,6 +128,27 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
+SUMMERNOTE_CONFIG = {
+    'summernote': {
+        'width': '100%',
+        'margin': '50px',
+        'toolbar': [
+            ['fontname', ['fontname', 'fontsize', 'color']],
+            ['style', ['bold', 'italic', 'underline']],
+            ['font', ['strikethrough', 'superscript', 'subscript']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['insert', ['picture', 'link', 'hr']]
+        ],
+        'popover': {
+            'image': [
+                ['imagesize', ['imageSize100', 'imageSize50', 'imageSize25']],
+                ['float', ['floatLeft', 'floatRight', 'floatNone']],
+                ['remove', ['removeMedia']]
+            ]
+        }
+    }
+}
 
-django_heroku.settings(locals())
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+#
+# django_heroku.settings(locals())
+# DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)

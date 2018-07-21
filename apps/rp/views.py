@@ -288,8 +288,6 @@ class ThreadDetailView(DetailView):
         context['form'] = ReplyForm()
         return context
 
-
-
 class ThreadCreateView(CreateView):
     model = Thread
     fields = ['title', 'caption', 'verse']
@@ -351,4 +349,8 @@ class ReplyUpdateView(UpdateView):
 
 
 class ReplyDeleteView(DeleteView):
-    pass
+    model = Reply
+
+    def post(self, request, *args, **kwargs):
+        self.success_url = '/threads/%s/' % kwargs['thread_pk']
+        return super().post(self)

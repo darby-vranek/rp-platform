@@ -1,12 +1,5 @@
 {% extends "rp/base.html" %}
-
-{% block jumbotron %}
-<div class="card-body jumbotron">
-	<h1 class="display-4">Threads</h1>
-	<a class="btn btn-primary" href="{% url 'new-thread' %}" role="button">New</a>
-</div>
-{% endblock %}
-
+{% block pagetitle %}Threads {% endblock %}
 {% block content %}
 	{% include "rp/thread_group.html" %}
 {% endblock %}
