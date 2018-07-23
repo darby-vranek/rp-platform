@@ -1,27 +1,31 @@
 {% extends "rp/base.html" %}
 {% block title %}{{ thread.title }}{% endblock %}
-
 {% block jumbotron %}
     <div class="card-body jumbotron">
         <h1 class="display-4">{{ thread.title }} <span class="badge badge-primary" style="font-size: .3em; vertical-align: 80%;">{{ thread.verse }}</span></h1>
         <p class="lead">{{ thread.caption }}</p>
+        <a class="btn btn-primary" href="{% url 'edit-thread' pk=thread.pk %}" role="button">Edit</a>
     </div>
 {% endblock %}
 {% block content %}
 {% include "rp/replies_group.html" %}
 <div class="media" style="max-width: 750px;">
-  <img class="mr-3 mt-3" alt="" style="width: 100px; height: 100px; background-color: lightgray;">
-  <div class="media-body card" style="border: none;">
-      <div class="card-body">
-          <form method="post" action="{% url 'new-reply' pk=thread.pk %}">
-            {% csrf_token %}
-            <input type="hidden" name="parent" value="{{ thread.pk }}" />
-            <div>Character: {{ form.character }}</div>
-              <br>
-            {{ form.content }}
-            <div><input class="btn btn-primary btn-sm" type="submit" value="Submit" /></div>
-        </form>
-      </div>
-  </div>
+    <div class="mr-3 mt-3" style="width: 100px;"></div>
+    <div class="media-body card" style="border: none;">
+        <div class="card-body" id="bottom">
+            <form method="post" action="{% url 'new-reply' pk=thread.pk %}">
+                {% csrf_token %}
+                <input type="hidden" name="parent" value="{{ thread.pk }}" />
+                <div>Character: {{ form.character }}</div>
+                <br>
+                {{ form.content }}
+                <div><input class="btn btn-primary btn-sm" type="submit" value="Submit" /></div>
+            </form>
+        </div>
+    </div>
+</div>
+<div style="position: fixed; right: 10px; top: 10px;">
+    <a href="#" class="btn btn-primary btn-sm">↑</a>
+    <a href="#bottom" class="btn btn-primary btn-sm">↓</a>
 </div>
 {% endblock %}

@@ -186,7 +186,7 @@ class Reply(Model):
 class ReplyForm(ModelForm):
     class Meta:
         model = Reply
-        fields = ['parent', 'character', 'content']
+        fields = ['character', 'content']
         widgets = {
             'content': SummernoteWidget()
         }

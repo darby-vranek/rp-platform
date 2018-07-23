@@ -6,10 +6,10 @@
           <small>
               <strong class="card-link"><a href="{% url 'character-detail' pk=reply.character.pk %}">{{ reply.character.page_name }}</a></strong>
               <em class="card-link">{{ reply.created }}</em>
-              <a href="{% url 'edit-reply' thread.pk reply.pk %}" class="card-link">Edit</a>
-              <form action="{% url 'delete-reply' thread_pk=thread.pk pk=reply.pk %}" method="post">
+              <a href="{% url 'edit-reply' thread_pk=reply.parent.pk pk=reply.pk %}">Edit</a>
+              <form action="{% url 'delete-reply' thread_pk=reply.parent.pk pk=reply.pk %}" method="post">
                   {% csrf_token %}
-                  <input type="submit" value="Delete">
+                  <input class="card-link" type="submit" value="Delete">
               </form>
           </small>
       </div>

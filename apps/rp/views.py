@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
-from django.views.generic.edit import FormView, CreateView, UpdateView, DeleteView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import *
 
 
@@ -311,6 +311,10 @@ class ThreadUpdateView(UpdateView):
         context['title'] = 'Edit Thread'
         return context
 
+    def post(self, request, *args, **kwargs):
+        self.success_url = '/threads/%s/' % kwargs['pk']
+        return super().post(self)
+
 
 class ThreadDeleteView(DeleteView):
     pass
@@ -335,12 +339,12 @@ class ReplyCreateView(CreateView):
 
 class ReplyUpdateView(UpdateView):
     model = Reply
-    fields = ['character', 'content']
-    template_name = 'rp/reply_form.html'
+    form_class = ReplyForm
+    template_name = 'rp/form.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'Edit Thread'
+        context['title'] = 'Edit Reply'
         return context
 
     def get(self, request, *args, **kwargs):
