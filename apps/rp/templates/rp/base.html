@@ -12,38 +12,36 @@
         <title>{% block title %}Title{% endblock %}</title>
         {% block favicon %}{% endblock %}
     </head>
-	{% load static %}
-    <body style="padding-top: 75px;">
+    <body>
         <div class="card" id="page">
-			{% block nav %}
-			<div class="navbar-dark bg-dark fixed-top" style="height: 60x;">
-				<ul class="nav nav-pills" style="padding: 5px">
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-						<div class="dropdown-menu">
-							<a class="dropdown-item" href="#">Action</a>
-							<a class="dropdown-item" href="#">Another action</a>
-							<a class="dropdown-item" href="#">Something else here</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Separated link</a>
+            <div class="card-header">
+                <ul class="nav nav-pills card-header-pills">
+					<li class="nav-item">
+						<div class="btn-group">
+							<button style="border: none;" type="button" class="nav-link active dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+							<div class="dropdown-menu">
+								<h6 class="dropdown-header">Create new</h6>
+								<a class="dropdown-item" href="{% url 'new-thread' %}">Thread</a>
+								<a class="dropdown-item" href="{% url 'new-character' %}">Character</a>
+								<a class="dropdown-item" href="{% url 'new-verse' %}">Verse</a>
+								<a class="dropdown-item" href="{% url 'new-bio' %}">Bio</a>
+							</div>
 						</div>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#"><img src="{% static 'rp/svg/house.svg' %}" style="height:25px; width: 25px;"></a>
+						<a class="nav-link" href="/" style="margin-left: 10px;">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="{% url 'threads' %}"><img src="{% static 'rp/svg/folded-paper.svg' %}" style="height:25px; width: 25px;"></a>
+						<a class="nav-link" href="{% url 'threads' %}" style="margin-left: 10px;">Threads</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="{% url 'characters' %}"><img src="{% static 'rp/svg/id-card.svg' %}" style="height:25px; width: 25px;"></a>
+						<a class="nav-link" href="{% url 'characters' %}">Characters</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Verses</a>
+						<a class="nav-link" href="{% url 'verses' %}">Verses</a>
 					</li>
 				</ul>
-			</div>
-
-			{% endblock %}
+            </div>
 			{% block jumbotron %}
 			<div class="card-body jumbotron">
 				<h1 class="display-4">Title</h1>
