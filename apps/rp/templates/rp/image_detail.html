@@ -1,0 +1,12 @@
+{% extends "rp/base.html" %}
+{% block title %}FC: {{ image.fc }}{% endblock %}
+{% block jumbotron %}{% endblock %}
+{% block content %}
+<div class="card m-2" style="max-width: 20rem; min-width: 20rem; border: none;">
+    <img src="{{ image.img.url}}" class="mr-3" alt=""/>
+    <div class="card-body">
+        <h5 class="mt-0 card-title">{{ image.fc }}</h5>
+        <h6 class="mb-0 card-subtitle text-muted"><a class="btn btn-primary" href="{% url 'edit-image' pk=image.pk %}" role="button">Edit</a></h6>
+    </div>
+</div>
+{% endblock %}

@@ -42,4 +42,8 @@ urlpatterns = [
     path('threads/<int:pk>/replies/new/', ReplyCreateView.as_view(), name='new-reply'),
     path('threads/<int:thread_pk>/replies/<int:pk>/edit/', ReplyUpdateView.as_view(), name='edit-reply'),
     path('threads/<int:thread_pk>/replies/<int:pk>/delete/', ReplyDeleteView.as_view(), name='delete-reply'),
+    # images
+    path('images/', ImageListView.as_view(), name='images'),
+    path('images/new/', ImageCreateView.as_view(), name='new-image'),
+    path('images/<int:pk>/edit/', ImageUpdateView.as_view(), name='edit-image'),
 ]

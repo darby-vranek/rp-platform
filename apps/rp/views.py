@@ -361,3 +361,38 @@ class ReplyDeleteView(DeleteView):
     def post(self, request, *args, **kwargs):
         self.success_url = '/threads/%s/' % kwargs['thread_pk']
         return super().post(self)
+
+
+class ImageListView(ListView):
+    model = Image
+
+    def get_queryset(self):
+        return Image.objects.order_by('fc')
+
+
+class ImageDetailView(DetailView):
+    model = Image
+
+
+class ImageCreateView(CreateView):
+    model = Image
+    form_class = ImageForm
+    template_name = 'rp/form.html'
+    success_url = "/images/"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'New Image'
+        return context
+
+
+class ImageUpdateView(UpdateView):
+    model = Image
+    form_class = ImageForm
+    template_name = 'rp/form.html'
+    success_url = '/images/'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Edit Image'
+        return context
