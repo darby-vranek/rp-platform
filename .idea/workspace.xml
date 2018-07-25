@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8057be3e-aeb9-4e8f-8cf0-d78276b4c29a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/rp/templates/rp/image_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/rp/templates/rp/image_group.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/rp/templates/rp/image_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/rp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/rp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/rp/templates/rp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/rp/templates/rp/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/rp/templates/rp/character_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/rp/templates/rp/character_base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/rp/templates/rp/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/rp/templates/rp/form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/rp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/rp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/rp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/rp/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aurora_rp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/aurora_rp/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aurora_rp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/aurora_rp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,6 +21,15 @@
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/aurora_rp/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="152" column="2" lean-forward="true" selection-start-line="152" selection-start-column="2" selection-end-line="154" />
             </state>
           </provider>
         </entry>
@@ -58,7 +55,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="image_group.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="image_group.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/rp/templates/rp/image_group.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="184">
@@ -156,7 +153,6 @@
         <option value="$PROJECT_DIR$/apps/rp/templates/rp/replies_group.html" />
         <option value="$PROJECT_DIR$/apps/rp/templates/rp/bio_detail.html" />
         <option value="$PROJECT_DIR$/apps/rp/templates/rp/verse_detail.html" />
-        <option value="$PROJECT_DIR$/aurora_rp/settings.py" />
         <option value="$PROJECT_DIR$/apps/rp/templates/rp/character_base.html" />
         <option value="$PROJECT_DIR$/apps/rp/templates/rp/image_list.html" />
         <option value="$PROJECT_DIR$/apps/rp/templates/rp/base.html" />
@@ -169,6 +165,7 @@
         <option value="$PROJECT_DIR$/apps/rp/templates/rp/form.html" />
         <option value="$PROJECT_DIR$/apps/rp/models.py" />
         <option value="$PROJECT_DIR$/apps/rp/templates/rp/image_group.html" />
+        <option value="$PROJECT_DIR$/aurora_rp/settings.py" />
       </list>
     </option>
   </component>
@@ -388,6 +385,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49772727" visible="true" weight="0.20718816" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32948717" />
@@ -686,13 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aurora_rp/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="127" column="5" selection-start-line="127" selection-end-line="127" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aurora_rp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
@@ -741,6 +732,13 @@
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora_rp/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="152" column="2" lean-forward="true" selection-start-line="152" selection-start-column="2" selection-end-line="154" />
         </state>
       </provider>
     </entry>
