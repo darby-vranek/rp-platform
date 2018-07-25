@@ -55,12 +55,6 @@
     <div class="tab-pane fade" id="pills-post" role="tabpanel" aria-labelledby="pills-post-tab">tba</div>
     <div class="tab-pane fade" id="pills-thread" role="tabpanel" aria-labelledby="pills-thread-tab">{% include "rp/thread_group.html" with thread_list=character.get_threads %}</div>
     <div class="tab-pane fade" id="pills-trait" role="tabpanel" aria-labelledby="pills-trait-tab">
-        {% block traits %}
-            <div class="card-body m-1">
-                <form action="{% url 'new-character-trait' pk=character.pk %}"><input type="submit" class="btn btn-outline-primary btn-sm" value="New Trait" /></form>
-            </div>
-            {% include "rp/trait_group.html" with traits=character.traits.all %}
-        {% endblock %}
     </div>
     </div>
 {% endblock %}

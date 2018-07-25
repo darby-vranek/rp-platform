@@ -20,18 +20,6 @@ urlpatterns = [
     path('bios/new/', BioCreateView.as_view(), name='new-bio'),
     path('bios/<int:pk>/', BioDetailView.as_view(), name='bio-detail'),
     path('bios/<int:pk>/edit/', BioUpdateView.as_view(), name='edit-bio'),
-    # traits
-    path('characters/<int:pk>/traits/new/', CharacterTraitCreateView.as_view(), name='new-character-trait'),
-    path('character-traits/<int:pk>/edit', TraitUpdateView.as_view(), name='edit-character-trait'),
-    path('character-traits/<int:pk>/delete', TraitDeleteView.as_view(), name='delete-character-trait'),
-    path('bios/<int:pk>/traits/new/', BioTraitCreateView.as_view(), name='new-bio-trait'),
-    path('bio-traits/<int:pk>/edit', TraitUpdateView.as_view(), name='edit-bio-trait'),
-    path('bio-traits/<int:pk>/delete', TraitDeleteView.as_view(), name='delete-bio-trait'),
-    path('verses/<int:pk>/traits/new/', VerseTraitCreateView.as_view(), name='new-verse-trait'),
-    path('verse-traits/<int:pk>/edit', TraitUpdateView.as_view(), name='edit-verse-trait'),
-    path('verse-traits/<int:pk>/delete', TraitDeleteView.as_view(), name='delete-verse-trait'),
-    path('traits/<int:pk>/edit/', TraitUpdateView.as_view(), name='edit-trait'),
-    path('traits/<int:pk>/delete/', TraitDeleteView.as_view(), name='delete-trait'),
     # threads
     path('threads/', ThreadListView.as_view(), name='threads'),
     path('threads/new/', ThreadCreateView.as_view(), name='new-thread'),

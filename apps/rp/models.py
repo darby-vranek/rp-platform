@@ -41,6 +41,10 @@ class Character(Profile):
                 threads.append(rep.parent)
         return threads
 
+    def last_reply(self):
+        if self.replies:
+            return self.replies.order_by('created').last()
+
 
 
 class CharacterForm(ModelForm):
@@ -117,53 +121,6 @@ class BioForm(ModelForm):
         fields = ['bio_char', 'bio_verse', '_display_name', '_caption', '_desc', '_sm_icon', '_lg_icon']
 
 
-class Trait(Model):
-    title = models.CharField(max_length=255)
-    content = models.CharField(max_length=255)
-
-    def __str__(self):
-        return '%s - %s' % (self.title, self.content)
-
-
-class CharacterTrait(Trait):
-    char = models.ForeignKey(Character, related_name='traits', on_delete=models.DO_NOTHING, null=True)
-
-    def get_absolute_url(self):
-        return reverse('character-detail', kwargs={'pk': self.char.pk})
-
-
-class CharacterTraitForm(ModelForm):
-    class Meta:
-        model = CharacterTrait
-        fields = ['char', 'title', 'content']
-
-
-class VerseTrait(Trait):
-    verse = models.ForeignKey(Verse, related_name='traits', on_delete=models.DO_NOTHING, null=True)
-
-    def get_absolute_url(self):
-        return reverse('verse-detail', kwargs={'pk': self.verse.pk})
-
-
-class VerseTraitForm(ModelForm):
-    class Meta:
-        model = VerseTrait
-        fields = ['verse', 'title', 'content']
-
-
-class BioTrait(Trait):
-    bio = models.ForeignKey(Bio, related_name='traits', on_delete=models.DO_NOTHING, null=True)
-
-    def get_absolute_url(self):
-        return reverse('bio-detail', kwargs={'pk': self.bio.pk})
-
-
-class BioTraitForm(ModelForm):
-    class Meta:
-        model = BioTrait
-        fields = ['bio', 'title', 'content']
-
-
 # threads & replies
 class Thread(Model):
     title = models.CharField(max_length=255, default="Untitled")
@@ -220,3 +177,23 @@ class ImageForm(ModelForm):
     class Meta:
         model = Image
         fields = ['img', 'fc']
+
+
+# about
+
+class About(Model):
+    character = models.ForeignKey(Character, related_name='abouts', null=True, on_delete=models.DO_NOTHING)
+    verse = models.ForeignKey(Verse, related_name='abouts', null=True, on_delete=models.DO_NOTHING)
+    category = models.ForeignKey('AboutCategory', related_name='abouts', null=True, on_delete=models.DO_NOTHING)
+    title = models.CharField(max_length=255)
+    content = models.CharField(max_length=255)
+
+    def __str__(self):
+        return '%s: %s' % (self.title, self.content)
+
+
+class AboutCategory(Model):
+    title = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.title
