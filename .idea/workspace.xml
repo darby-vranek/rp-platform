@@ -29,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/aurora_rp/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="390">
-              <caret line="152" column="2" lean-forward="true" selection-start-line="152" selection-start-column="2" selection-end-line="154" />
+              <caret line="152" column="24" lean-forward="true" selection-start-line="152" selection-start-column="24" selection-end-line="153" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -387,7 +387,7 @@
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49772727" visible="true" weight="0.20718816" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49772727" visible="true" weight="0.20718816" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32948717" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5024665" side_tool="true" weight="0.26794872" />
       <window_info anchor="bottom" id="Find" order="2" />
@@ -395,7 +395,7 @@
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.33846155" />
       <window_info anchor="bottom" id="Run" order="3" />
       <window_info id="Structure" order="1" sideWeight="0.5022727" side_tool="true" weight="0.18393235" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49753347" visible="true" weight="0.20641026" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49753347" visible="true" weight="0.20641026" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -738,7 +738,7 @@
     <entry file="file://$PROJECT_DIR$/aurora_rp/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
-          <caret line="152" column="2" lean-forward="true" selection-start-line="152" selection-start-column="2" selection-end-line="154" />
+          <caret line="152" column="24" lean-forward="true" selection-start-line="152" selection-start-column="24" selection-end-line="153" selection-end-column="26" />
         </state>
       </provider>
     </entry>
