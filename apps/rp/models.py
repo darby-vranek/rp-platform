@@ -181,19 +181,11 @@ class ImageForm(ModelForm):
 
 # about
 
-class About(Model):
-    character = models.ForeignKey(Character, related_name='abouts', null=True, on_delete=models.DO_NOTHING)
-    verse = models.ForeignKey(Verse, related_name='abouts', null=True, on_delete=models.DO_NOTHING)
-    category = models.ForeignKey('AboutCategory', related_name='abouts', null=True, on_delete=models.DO_NOTHING)
+class Trait(Model):
+    character = models.ForeignKey(Character, related_name='traits', null=True, on_delete=models.DO_NOTHING, blank=True)
+    verse = models.ForeignKey(Verse, related_name='traits', null=True, on_delete=models.DO_NOTHING, blank=True)
     title = models.CharField(max_length=255)
     content = models.CharField(max_length=255)
 
     def __str__(self):
         return '%s: %s' % (self.title, self.content)
-
-
-class AboutCategory(Model):
-    title = models.CharField(max_length=255)
-
-    def __str__(self):
-        return self.title

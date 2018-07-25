@@ -163,7 +163,7 @@ class ThreadListView(ListView):
     model = Thread
 
     def get_queryset(self):
-        return Thread.objects.order_by('replies__last__created')
+        return Thread.objects.order_by('title')
 
 
 class ThreadDetailView(DetailView):
