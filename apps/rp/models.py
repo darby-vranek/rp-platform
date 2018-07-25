@@ -68,6 +68,14 @@ class Bio(Model):
     _sm_icon = models.URLField(default='', blank=True)
     _lg_icon = models.URLField(default='', blank=True)
 
+    def get_threads(self):
+        reps = Reply.objects.filter(character=self.bio_char)
+        threads = list()
+        for rep in reps.all():
+            if rep.parent not in threads and rep.parent.verse == self.bio_verse:
+                threads.append(rep.parent)
+        return threads
+
     def display_name(self):
         if self._display_name != '':
             return self._display_name
@@ -118,7 +126,7 @@ class CharacterTrait(Trait):
     char = models.ForeignKey(Character, related_name='traits', on_delete=models.DO_NOTHING, null=True)
 
     def get_absolute_url(self):
-        return reverse('character-detail', kwargs={'pk': self.character.pk})
+        return reverse('character-detail', kwargs={'pk': self.char.pk})
 
 
 class CharacterTraitForm(ModelForm):

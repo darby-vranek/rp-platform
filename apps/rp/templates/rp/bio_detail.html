@@ -1,5 +1,5 @@
 
-{% extends "rp/character_base.html"  %}
+{% extends "rp/character_base.html" %}
 
 {% block editchar %}
 <a class="btn btn-primary btn-sm" href="{% url 'edit-bio' pk=character.pk %}" role="button">Edit Verse</a>
@@ -23,12 +23,3 @@
 	</div>
 </div>
 {% endblock %}
-
-{% block content %}
-                <div class="card-body m-1">
-				    <form action="{% url 'new-character-trait' pk=character.pk %}">
-                        <input type="submit" class="btn btn-outline-primary btn-sm" value="New Trait" />
-                    </form>
-                    {% include "rp/trait_group.html" with traits=character.traits.all %}
-			    </div>
-				{% endblock %}

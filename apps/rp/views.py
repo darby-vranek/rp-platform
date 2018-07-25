@@ -273,11 +273,14 @@ class TraitUpdateView(UpdateView):
 
 class TraitDeleteView(DeleteView):
     model = Trait
-    success_url = '/verses/'
+    success_url = '/'
 
 
 class ThreadListView(ListView):
     model = Thread
+
+    def get_queryset(self):
+        return Thread.objects.order_by('-created')
 
 
 class ThreadDetailView(DetailView):
