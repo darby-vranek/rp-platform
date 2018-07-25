@@ -369,6 +369,9 @@ class ImageListView(ListView):
     def get_queryset(self):
         return Image.objects.order_by('fc')
 
+    def get_queryset(self):
+        return Image.objects.order_by('fc')
+
 
 class ImageDetailView(DetailView):
     model = Image

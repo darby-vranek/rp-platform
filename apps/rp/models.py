@@ -215,6 +215,7 @@ class Image(Model):
         return reverse('image-detail', kwargs={'pk': self.pk})
 
 
+
 class ImageForm(ModelForm):
     class Meta:
         model = Image
