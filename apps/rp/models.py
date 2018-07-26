@@ -189,3 +189,15 @@ class Trait(Model):
 
     def __str__(self):
         return '%s: %s' % (self.title, self.content)
+
+    def get_absolute_url(self):
+        if self.character:
+            return reverse('character-detail', kwargs={'pk': self.character.pk})
+        if self.verse:
+            return reverse('verse-detail', kwargs={'pk': self.verse.pk})
+
+
+class TraitForm(ModelForm):
+    class Meta:
+        model = Trait
+        fields = ['character', 'verse', 'title', 'content']

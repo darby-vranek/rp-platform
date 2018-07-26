@@ -9,7 +9,7 @@
               <a href="{% url 'edit-reply' thread_pk=reply.parent.pk pk=reply.pk %}">Edit</a>
               <form action="{% url 'delete-reply' thread_pk=reply.parent.pk pk=reply.pk %}" method="post">
                   {% csrf_token %}
-                  <input class="card-link" type="submit" value="Delete">
+                  <input class="btn btn-primary btn-sm" type="submit" value="Delete" style="display: inline-block;">
               </form>
           </small>
       </div>

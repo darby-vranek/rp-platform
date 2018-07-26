@@ -282,3 +282,92 @@ class ImageUpdateView(UpdateView):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Edit Image'
         return context
+
+
+def trait_list_view(request, query):
+    trait_list = Trait.objects.filter(title__iexact=query)
+    return render(request, 'rp/trait_list.html', context={'trait_list': trait_list})
+
+
+class CharacterTraitCreateView(CreateView):
+    model = Trait
+    form_class = TraitForm
+    template_name = 'rp/form.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'New Trait'
+        return context
+
+    def get(self, *args, **kwargs):
+        self.success_url = '/characters/%s/' % kwargs['char_pk']
+        self.initial = {'character': Character.objects.get(pk=kwargs['char_pk'])}
+        return super().get(self)
+
+
+class CharacterTraitUpdateView(UpdateView):
+    model = Trait
+    form_class = TraitForm
+    template_name = 'rp/form.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Edit Trait'
+        return context
+
+    def get(self, *args, **kwargs):
+        self.success_url = '/characters/%s/' % kwargs['char_pk']
+        return super().get(self)
+
+
+class CharacterTraitDeleteView(DeleteView):
+    model = Trait
+
+    def post(self, *args, **kwargs):
+        self.success_url = '/characters/%s/' % kwargs['char_pk']
+        return super().post(self)
+
+
+class VerseTraitCreateView(CreateView):
+    model = Trait
+    form_class = TraitForm
+    template_name = 'rp/form.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'New Trait for %s' % Verse.objects.get(pk=kwargs['pk']).display_name
+        return context
+
+    def get(self, *args, **kwargs):
+        self.success_url = '/verses/%s/' % kwargs['pk']
+        self.initial = {'verse': Verse.objects.get(pk=kwargs['pk'])}
+        return super().get(self)
+
+
+class VerseTraitUpdateView(UpdateView):
+    model = Trait
+    form_class = TraitForm
+    template_name = 'rp/form.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        self.success_url = '/verses/%s/' % kwargs['pk']
+        context['title'] = 'Edit Trait'
+        return context
+
+
+class VerseTraitDeleteView(DeleteView):
+    pass
+
+
+class TraitCreateView(CreateView):
+    model = Trait
+    form_class = TraitForm
+    template_name = 'rp/form.html'
+    success_url = '/'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'New Trait'
+        return context
+

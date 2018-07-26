@@ -34,4 +34,13 @@ urlpatterns = [
     path('images/', ImageListView.as_view(), name='images'),
     path('images/new/', ImageCreateView.as_view(), name='new-image'),
     path('images/<int:pk>/edit/', ImageUpdateView.as_view(), name='edit-image'),
+    # traits
+    path('traits/<str:query>/', trait_list_view, name='traits'),
+    path('traits/new/', TraitCreateView.as_view(), name='new-trait'),
+    path('characters/<int:char_pk>/traits/new/', CharacterTraitCreateView.as_view(), name='new-character-trait'),
+    path('characters/<int:char_pk>/traits/<int:pk>/edit/', CharacterTraitUpdateView.as_view(), name='edit-character-trait'),
+    path('characters/<int:char_pk>/traits/<int:pk>/delete/', CharacterTraitDeleteView.as_view(), name='delete-character-trait'),
+    path('verses/<int:pk>/traits/new/', VerseTraitCreateView.as_view(), name='new-verse-trait'),
+    path('verses/<int:verse_pk>/traits/<int:pk>/edit/', VerseTraitUpdateView.as_view(), name='edit-verse-trait'),
+    path('verses/<int:verse_pk>/traits/<int:pk>/delete/', VerseTraitDeleteView.as_view(), name='delete-verse-trait'),
 ]

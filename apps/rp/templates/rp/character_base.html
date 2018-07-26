@@ -55,6 +55,17 @@
     <div class="tab-pane fade" id="pills-post" role="tabpanel" aria-labelledby="pills-post-tab">tba</div>
     <div class="tab-pane fade" id="pills-thread" role="tabpanel" aria-labelledby="pills-thread-tab">{% include "rp/thread_group.html" with thread_list=character.get_threads %}</div>
     <div class="tab-pane fade" id="pills-trait" role="tabpanel" aria-labelledby="pills-trait-tab">
+        <a class="btn btn-primary btn-sm" href="{% url 'new-character-trait' char_pk=character.pk %}">New Trait</a>
+    {% for trait in character.traits.all %}
+        <div class="card-body m-1">
+            <div class="m-2"><a class="btn btn-outline-primary m-2 btn-sm" href="{% url 'edit-character-trait' char_pk=character.pk pk=trait.pk %}">Edit</a><form action="{% url 'delete-character-trait' char_pk=character.pk pk=trait.pk %}" method="post">{% csrf_token %}<input class="btn btn-sm btn-outline-danger" type="submit" value="Delete" /></form>
+            </div>
+            <div class="media-body m-3">
+                <h5 class="mt-0 card-title">{{ trait.title }}</h5>
+                <h6 class="mb-0 card-subtitle text-muted">{{ trait.content }}</h6>
+            </div>
+        </div>
+    {% endfor %}
     </div>
     </div>
 {% endblock %}
