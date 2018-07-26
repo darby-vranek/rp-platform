@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8057be3e-aeb9-4e8f-8cf0-d78276b4c29a" name="Default" comment="did lots of stuff">
-      <change beforePath="$PROJECT_DIR$/aurora_rp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/aurora_rp/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/rp/templates/rp/bio_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/rp/templates/rp/bio_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/rp/templates/rp/character_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/rp/templates/rp/character_base.html" afterDir="false" />
     </list>
     <ignored path="media/" />
     <ignored path="staticfiles/" />
@@ -30,26 +31,26 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1008" />
+          <entry key="HTML" value="1273" />
           <entry key="Python" value="3022" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="24" />
+          <entry key="html" value="25" />
           <entry key="py" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="1008" />
+          <entry key="html" value="1273" />
           <entry key="py" value="3022" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="24" />
+          <entry key="HTML" value="25" />
           <entry key="Python" value="22" />
         </counts>
       </usages-collector>
@@ -89,8 +90,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/aurora_rp/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="154" column="9" selection-start-line="154" selection-start-column="9" selection-end-line="155" selection-end-column="11" />
+            <state relative-caret-position="430">
+              <caret line="155" column="40" selection-start-line="154" selection-start-column="32" selection-end-line="155" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/rp/templates/rp/bio_detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="166">
+              <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -107,8 +117,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/rp/templates/rp/character_base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="82" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="82" />
+            <state relative-caret-position="193">
+              <caret line="58" column="115" lean-forward="true" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="115" />
             </state>
           </provider>
         </entry>
@@ -161,8 +171,8 @@
       <find>Thread</find>
       <find>initial</find>
       <find>pk</find>
-      <find>CharacterTra</find>
       <find>query</find>
+      <find>CharacterTra</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -203,7 +213,6 @@
         <option value="$PROJECT_DIR$/apps/rp/templates/rp/reply_form.html" />
         <option value="$PROJECT_DIR$/apps/rp/templates/rp/thread_list.html" />
         <option value="$PROJECT_DIR$/apps/rp/templates/rp/thread_detail.html" />
-        <option value="$PROJECT_DIR$/apps/rp/templates/rp/bio_detail.html" />
         <option value="$PROJECT_DIR$/apps/rp/templates/rp/base.html" />
         <option value="$PROJECT_DIR$/apps/rp/templates/rp/image_detail.html" />
         <option value="$PROJECT_DIR$/requirements.txt" />
@@ -218,9 +227,10 @@
         <option value="$PROJECT_DIR$/apps/rp/templates/rp/replies_group.html" />
         <option value="$PROJECT_DIR$/apps/rp/urls.py" />
         <option value="$PROJECT_DIR$/apps/rp/models.py" />
-        <option value="$PROJECT_DIR$/apps/rp/templates/rp/character_base.html" />
         <option value="$PROJECT_DIR$/apps/rp/views.py" />
         <option value="$PROJECT_DIR$/apps/rp/templates/rp/trait_list.html" />
+        <option value="$PROJECT_DIR$/apps/rp/templates/rp/character_base.html" />
+        <option value="$PROJECT_DIR$/apps/rp/templates/rp/bio_detail.html" />
         <option value="$PROJECT_DIR$/aurora_rp/settings.py" />
       </list>
     </option>
@@ -457,7 +467,7 @@
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49772727" visible="true" weight="0.17811158" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49772727" visible="true" weight="0.17811158" />
       <window_info id="Structure" order="1" sideWeight="0.5022727" side_tool="true" weight="0.18393235" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
@@ -470,7 +480,7 @@
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="9" weight="0.32866243" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49753347" visible="true" weight="0.18980892" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49753347" visible="true" weight="0.18980892" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.33846155" />
       <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.4983462" weight="0.32866243" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5024665" side_tool="true" weight="0.26794872" />
@@ -667,13 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/rp/templates/rp/bio_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="57" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/rp/templates/rp/character_detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -743,13 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/rp/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="662">
-          <caret line="41" column="81" selection-start-line="41" selection-start-column="81" selection-end-line="41" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/rp/templates/rp/trait_group.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -782,10 +778,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apps/rp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="662">
+          <caret line="41" column="81" selection-start-line="41" selection-start-column="81" selection-end-line="41" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/rp/templates/rp/character_base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="82" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="82" />
+        <state relative-caret-position="193">
+          <caret line="58" column="115" lean-forward="true" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="115" />
         </state>
       </provider>
     </entry>
@@ -796,10 +799,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apps/rp/templates/rp/bio_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/aurora_rp/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="154" column="9" selection-start-line="154" selection-start-column="9" selection-end-line="155" selection-end-column="11" />
+        <state relative-caret-position="430">
+          <caret line="155" column="40" selection-start-line="154" selection-start-column="32" selection-end-line="155" selection-end-column="40" />
         </state>
       </provider>
     </entry>
