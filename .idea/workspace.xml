@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8057be3e-aeb9-4e8f-8cf0-d78276b4c29a" name="Default" comment="fixed up posts page a bit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/rp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/rp/views.py" afterDir="false" />
     </list>
     <ignored path="media/" />
@@ -487,7 +486,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/rp/templates/rp/image_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
+            <state relative-caret-position="411">
               <caret line="32" column="54" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
             </state>
           </provider>
@@ -518,14 +517,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/rp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="302" column="55" selection-start-line="302" selection-start-column="55" selection-end-line="302" selection-end-column="55" />
+            <state relative-caret-position="82">
+              <caret line="287" column="26" selection-start-line="287" selection-start-column="26" selection-end-line="287" selection-end-column="26" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
-                <marker date="1532991182901" expanded="true" signature="8556:8557" ph="..." />
-                <marker date="1532991182901" expanded="true" signature="10816:10817" ph="..." />
-                <marker date="1532991182901" expanded="false" signature="11161:11162" ph="..." />
-                <marker date="1532991182901" expanded="true" signature="11484:11485" ph="..." />
+                <marker date="1532991293210" expanded="true" signature="8517:8518" ph="..." />
+                <marker date="1532991293210" expanded="true" signature="10777:10778" ph="..." />
+                <marker date="1532991293210" expanded="false" signature="11122:11123" ph="..." />
+                <marker date="1532991293210" expanded="true" signature="11445:11446" ph="..." />
               </folding>
             </state>
           </provider>
@@ -882,7 +881,7 @@
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49772727" visible="true" weight="0.18025751" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49772727" weight="0.18025751" />
       <window_info id="Structure" order="1" sideWeight="0.5022727" side_tool="true" weight="0.18393235" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
@@ -919,10 +918,10 @@
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="9" weight="0.32866243" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49570817" visible="true" weight="0.31847134" />
-      <window_info anchor="bottom" id="Python Console" order="11" weight="0.3375796" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49499285" visible="true" weight="0.46624205" />
+      <window_info anchor="bottom" id="Python Console" order="11" sideWeight="0.49713877" weight="0.3375796" />
       <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49713877" weight="0.32866243" />
-      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50429183" side_tool="true" weight="0.31847134" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50500715" side_tool="true" weight="0.31847134" />
       <window_info anchor="right" id="SciView" order="0" />
       <window_info anchor="right" id="Database" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
@@ -1221,13 +1220,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/rp/templates/rp/image_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="32" column="54" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/rp/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1314">
@@ -1253,16 +1245,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apps/rp/templates/rp/image_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="32" column="54" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/rp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="302" column="55" selection-start-line="302" selection-start-column="55" selection-end-line="302" selection-end-column="55" />
+        <state relative-caret-position="82">
+          <caret line="287" column="26" selection-start-line="287" selection-start-column="26" selection-end-line="287" selection-end-column="26" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-            <marker date="1532991182901" expanded="true" signature="8556:8557" ph="..." />
-            <marker date="1532991182901" expanded="true" signature="10816:10817" ph="..." />
-            <marker date="1532991182901" expanded="false" signature="11161:11162" ph="..." />
-            <marker date="1532991182901" expanded="true" signature="11484:11485" ph="..." />
+            <marker date="1532991293210" expanded="true" signature="8517:8518" ph="..." />
+            <marker date="1532991293210" expanded="true" signature="10777:10778" ph="..." />
+            <marker date="1532991293210" expanded="false" signature="11122:11123" ph="..." />
+            <marker date="1532991293210" expanded="true" signature="11445:11446" ph="..." />
           </folding>
         </state>
       </provider>
