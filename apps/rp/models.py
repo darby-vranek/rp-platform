@@ -201,3 +201,25 @@ class TraitForm(ModelForm):
     class Meta:
         model = Trait
         fields = ['character', 'verse', 'title', 'content']
+
+
+#post
+
+class Post(Model):
+    title = models.CharField(max_length=255, default='Untitled', blank=True)
+    verse = models.ForeignKey(Verse, related_name='posts', null=True, on_delete=models.DO_NOTHING, blank=True)
+    character = models.ForeignKey(Character, related_name='posts', null=True, on_delete=models.DO_NOTHING, blank=True)
+    content = models.TextField(default='')
+
+    def get_absolute_url(self):
+        return reverse('post-detail', kwargs={'pk': self.pk})
+
+
+class PostForm(ModelForm):
+    class Meta:
+        model = Post
+        fields = ['title', 'verse', 'character', 'content']
+        widgets = {
+            'content': SummernoteWidget()
+        }
+

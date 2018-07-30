@@ -1,0 +1,13 @@
+{% extends "rp/base.html" %}
+{% block title %}{{ post.title }}{% endblock %}
+{% block jumbotron %}
+    <div class="card-body jumbotron">
+        <h1 class="display-4">{{ post.title }}{% if post.verse %}<span class="badge badge-primary" style="font-size: .3em; vertical-align: 80%;">{{ post.verse.display_name }}</span></h1>{% endif %}
+        <a class="btn btn-primary" href="{% url 'edit-post' pk=post.pk %}" role="button">Edit</a>
+    </div>
+{% endblock %}
+{% block content %}
+<div class="card">
+    {{ post.content | safe }}
+</div>
+{% endblock %}

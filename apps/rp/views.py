@@ -252,9 +252,6 @@ class ImageListView(ListView):
     def get_queryset(self):
         return Image.objects.order_by('fc')
 
-    def get_queryset(self):
-        return Image.objects.order_by('fc')
-
 
 class ImageDetailView(DetailView):
     model = Image
@@ -371,3 +368,26 @@ class TraitCreateView(CreateView):
         context['title'] = 'New Trait'
         return context
 
+
+class PostListView(ListView):
+    model = Post
+
+
+class PostCreateView(CreateView):
+    model = Post
+    form_class = PostForm
+    template_name = 'rp/form.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'New Post'
+        return context
+
+class PostDetailView(DetailView):
+    model = Post
+
+
+class PostUpdateView(UpdateView):
+    model = Post
+    form_class = PostForm
+    template_name = 'rp/form.html'

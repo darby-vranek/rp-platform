@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'aurora_rp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'NAME': 'rp',
+        'NAME': 'rplocal',
         'ENGINE': 'django.db.backends.postgresql',
         'PORT': 5432,
         'USER': 'lyra',

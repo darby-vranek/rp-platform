@@ -1,9 +1,10 @@
 {% extends "rp/base.html" %}
+{%  block title %}Threads{% endblock %}
 {% block pagetitle %}Threads{% endblock %}
 {% block jumbotron %}
 <div class="jumbotron">
     <h1 class="display-4">Threads</h1>
-    <a class="btn btn-primary" href="{% url 'new-thread' %}" role="button">New</a>
+    <a class="btn btn-primary" id="new_thread_link" href="{% url 'new-thread' %}" role="button">New</a>
 </div>
 {% endblock %}
 {% block content %}
