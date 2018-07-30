@@ -299,7 +299,7 @@ def sign_s3(request, file_name, file_type, file_type_1):
 
     return json.dumps({
         'data': presigned_post,
-        'url': f"https://{S3_BUCKET}.s3.amazonaws.com/{file_name}"
+        'url': f"https://{os.environ.get('S3_BUCKET_NAME')}.s3.amazonaws.com/{file_name}"
     })
 
 
