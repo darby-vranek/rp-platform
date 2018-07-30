@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8057be3e-aeb9-4e8f-8cf0-d78276b4c29a" name="Default" comment="fixed up posts page a bit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/rp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/rp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/rp/templates/rp/image_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/rp/templates/rp/image_form.html" afterDir="false" />
     </list>
     <ignored path="media/" />
     <ignored path="staticfiles/" />
@@ -431,7 +430,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="3687" />
+          <entry key="HTML" value="3759" />
           <entry key="PLAIN_TEXT" value="60" />
           <entry key="Python" value="6211" />
         </counts>
@@ -447,7 +446,7 @@
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="3687" />
+          <entry key="html" value="3759" />
           <entry key="py" value="6211" />
           <entry key="txt" value="60" />
         </counts>
@@ -484,11 +483,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/rp/templates/rp/image_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="43" column="39" lean-forward="true" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+            <state relative-caret-position="373">
+              <caret line="32" column="54" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -506,11 +505,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/rp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="301" column="54" selection-start-line="301" selection-start-column="54" selection-end-line="301" selection-end-column="54" />
+            <state relative-caret-position="-6">
+              <caret line="272" lean-forward="true" selection-start-line="272" selection-end-line="272" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
                 <marker date="1532989139653" expanded="true" signature="8431:8432" ph="..." />
@@ -630,8 +629,8 @@
         <option value="$PROJECT_DIR$/aurora_rp/settings.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/apps/rp/urls.py" />
-        <option value="$PROJECT_DIR$/apps/rp/templates/rp/image_form.html" />
         <option value="$PROJECT_DIR$/apps/rp/views.py" />
+        <option value="$PROJECT_DIR$/apps/rp/templates/rp/image_form.html" />
       </list>
     </option>
   </component>
@@ -886,7 +885,7 @@
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="9" weight="0.32866243" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49570817" visible="true" weight="0.31847134" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49570817" weight="0.31847134" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.3375796" />
       <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49713877" weight="0.32866243" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50429183" side_tool="true" weight="0.31847134" />
@@ -1226,13 +1225,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/rp/templates/rp/image_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="43" column="39" lean-forward="true" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/rp/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1314">
@@ -1246,8 +1238,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/rp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="301" column="54" selection-start-line="301" selection-start-column="54" selection-end-line="301" selection-end-column="54" />
+        <state relative-caret-position="-6">
+          <caret line="272" lean-forward="true" selection-start-line="272" selection-end-line="272" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
             <marker date="1532989139653" expanded="true" signature="8431:8432" ph="..." />
@@ -1255,6 +1247,13 @@
             <marker date="1532989139653" expanded="false" signature="11036:11037" ph="..." />
             <marker date="1532989139653" expanded="true" signature="11359:11360" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/rp/templates/rp/image_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="32" column="54" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
         </state>
       </provider>
     </entry>
