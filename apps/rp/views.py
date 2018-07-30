@@ -297,7 +297,7 @@ def sign_s3(request, file_name, file_type, file_type_1):
     #     ExpiresIn=3600
     # )
 
-    s3.upload_file(file_name, 'aurora-rp', file_name)
+    s3.upload_file(f"/{file_name}", 'aurora-rp', file_name)
 
     # Uploads the given file using a managed uploader, which will split up large
     # files automatically and upload parts in parallel.
