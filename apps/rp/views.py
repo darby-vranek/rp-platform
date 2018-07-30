@@ -292,7 +292,7 @@ def sign_s3(request, file_name, file_type, file_type_1):
         Fields={"acl": "public-read", "Content-Type": f"{file_type}/{file_type_1}"},
         Conditions=[
             {"acl": "public-read"},
-            {"Content-Type": file_type}
+            {"Content-Type": f"{file_type}/{file_type_1}"}
         ],
         ExpiresIn=3600
     )
