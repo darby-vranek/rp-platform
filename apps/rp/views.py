@@ -3,6 +3,9 @@ from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import *
+import os
+import boto3
+import json
 
 
 def index(request):
@@ -279,6 +282,27 @@ class ImageUpdateView(UpdateView):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Edit Image'
         return context
+
+
+def sign_s3(request, file_name, file_type):
+    S3_BUCKET = os.environ.get('S3_BUCKET')
+    s3 = boto3.client('s3')
+    presigned_post = s3.generate_presigned_post(
+        Bucket=S3_BUCKET,
+        Key=file_name,
+        Fields={"acl": "public-read", "Content-Type": file_type},
+        Conditions=[
+            {"acl": "public-read"},
+            {"Content-Type": file_type}
+        ],
+        ExpiresIn = 3600
+    )
+
+    return json.dumps({
+        'data': presigned_post,
+        'url': f"https://{S3_BUCKET}.s3.amazonaws.com/{file_name}"
+    })
+
 
 
 def trait_list_view(request, query):

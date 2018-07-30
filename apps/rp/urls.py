@@ -34,6 +34,7 @@ urlpatterns = [
     path('images/', ImageListView.as_view(), name='images'),
     path('images/new/', ImageCreateView.as_view(), name='new-image'),
     path('images/<int:pk>/edit/', ImageUpdateView.as_view(), name='edit-image'),
+    path('sign_s3/<str:file_name>/<str:file_type>', sign_s3, name='sign-s3'),
     # traits
     path('traits/<str:query>/', trait_list_view, name='traits'),
     path('traits/new/', TraitCreateView.as_view(), name='new-trait'),
