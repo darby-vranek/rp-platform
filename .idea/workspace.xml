@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8057be3e-aeb9-4e8f-8cf0-d78276b4c29a" name="Default" comment="fixed up posts page a bit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/rp/templates/rp/image_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/rp/templates/rp/image_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/rp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/rp/views.py" afterDir="false" />
     </list>
     <ignored path="media/" />
     <ignored path="staticfiles/" />
@@ -433,7 +432,7 @@
         <counts>
           <entry key="HTML" value="3687" />
           <entry key="PLAIN_TEXT" value="60" />
-          <entry key="Python" value="6099" />
+          <entry key="Python" value="6166" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -448,7 +447,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="3687" />
-          <entry key="py" value="6099" />
+          <entry key="py" value="6166" />
           <entry key="txt" value="60" />
         </counts>
       </usages-collector>
@@ -509,14 +508,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/rp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="287" column="41" selection-start-line="287" selection-start-column="41" selection-end-line="287" selection-end-column="41" />
+            <state relative-caret-position="205">
+              <caret line="289" column="57" selection-start-line="289" selection-start-column="57" selection-end-line="289" selection-end-column="57" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
-                <marker date="1532987982305" expanded="true" signature="8439:8440" ph="..." />
-                <marker date="1532987982305" expanded="true" signature="10699:10700" ph="..." />
-                <marker date="1532987982305" expanded="false" signature="11044:11045" ph="..." />
-                <marker date="1532987982305" expanded="true" signature="11367:11368" ph="..." />
+                <marker date="1532988490381" expanded="true" signature="8429:8430" ph="..." />
+                <marker date="1532988490381" expanded="true" signature="10689:10690" ph="..." />
+                <marker date="1532988490381" expanded="false" signature="11034:11035" ph="..." />
+                <marker date="1532988490381" expanded="true" signature="11357:11358" ph="..." />
               </folding>
             </state>
           </provider>
@@ -542,7 +541,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>CharacterTr</find>
       <find>absolute</find>
       <find>border-r</find>
       <find>ThreadL</find>
@@ -572,6 +570,7 @@
       <find>json.</find>
       <find>IMage</find>
       <find>s3</find>
+      <find>boto3</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -1246,14 +1245,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/rp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="287" column="41" selection-start-line="287" selection-start-column="41" selection-end-line="287" selection-end-column="41" />
+        <state relative-caret-position="205">
+          <caret line="289" column="57" selection-start-line="289" selection-start-column="57" selection-end-line="289" selection-end-column="57" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-            <marker date="1532987982305" expanded="true" signature="8439:8440" ph="..." />
-            <marker date="1532987982305" expanded="true" signature="10699:10700" ph="..." />
-            <marker date="1532987982305" expanded="false" signature="11044:11045" ph="..." />
-            <marker date="1532987982305" expanded="true" signature="11367:11368" ph="..." />
+            <marker date="1532988490381" expanded="true" signature="8429:8430" ph="..." />
+            <marker date="1532988490381" expanded="true" signature="10689:10690" ph="..." />
+            <marker date="1532988490381" expanded="false" signature="11034:11035" ph="..." />
+            <marker date="1532988490381" expanded="true" signature="11357:11358" ph="..." />
           </folding>
         </state>
       </provider>

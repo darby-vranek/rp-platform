@@ -285,10 +285,9 @@ class ImageUpdateView(UpdateView):
 
 
 def sign_s3(request, file_name, file_type, file_type_1):
-    S3_BUCKET = os.environ.get('S3_BUCKET')
     s3 = boto3.client('s3')
     presigned_post = s3.generate_presigned_post(
-        Bucket=S3_BUCKET,
+        Bucket=s3.Bucket(os.environ.get('S3_BUCKET_NAME')),
         Key=file_name,
         Fields={"acl": "public-read", "Content-Type": f"{file_type}/{file_type_1}"},
         Conditions=[
