@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8057be3e-aeb9-4e8f-8cf0-d78276b4c29a" name="Default" comment="fixed up posts page a bit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/rp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/rp/views.py" afterDir="false" />
     </list>
     <ignored path="media/" />
@@ -432,7 +433,7 @@
         <counts>
           <entry key="HTML" value="3759" />
           <entry key="PLAIN_TEXT" value="60" />
-          <entry key="Python" value="6290" />
+          <entry key="Python" value="6322" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -447,7 +448,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="3759" />
-          <entry key="py" value="6290" />
+          <entry key="py" value="6322" />
           <entry key="txt" value="60" />
         </counts>
       </usages-collector>
@@ -492,11 +493,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aurora_rp/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="154" column="4" lean-forward="true" selection-start-line="154" selection-start-column="4" selection-end-line="156" />
+            <state relative-caret-position="969">
+              <caret line="152" lean-forward="true" selection-start-line="152" selection-end-line="152" />
             </state>
           </provider>
         </entry>
@@ -514,17 +515,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/rp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="297" column="22" lean-forward="true" selection-start-line="297" selection-start-column="22" selection-end-line="297" selection-end-column="22" />
+            <state relative-caret-position="389">
+              <caret line="302" column="55" selection-start-line="302" selection-start-column="55" selection-end-line="302" selection-end-column="55" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
-                <marker date="1532990527601" expanded="true" signature="8498:8499" ph="..." />
-                <marker date="1532990527601" expanded="true" signature="10758:10759" ph="..." />
-                <marker date="1532990527601" expanded="false" signature="11103:11104" ph="..." />
-                <marker date="1532990527601" expanded="true" signature="11426:11427" ph="..." />
+                <marker date="1532991182901" expanded="true" signature="8556:8557" ph="..." />
+                <marker date="1532991182901" expanded="true" signature="10816:10817" ph="..." />
+                <marker date="1532991182901" expanded="false" signature="11161:11162" ph="..." />
+                <marker date="1532991182901" expanded="true" signature="11484:11485" ph="..." />
               </folding>
             </state>
           </provider>
@@ -638,8 +639,8 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/apps/rp/urls.py" />
         <option value="$PROJECT_DIR$/apps/rp/templates/rp/image_form.html" />
-        <option value="$PROJECT_DIR$/apps/rp/views.py" />
         <option value="$PROJECT_DIR$/aurora_rp/settings.py" />
+        <option value="$PROJECT_DIR$/apps/rp/views.py" />
       </list>
     </option>
   </component>
@@ -881,7 +882,7 @@
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49772727" visible="true" weight="0.18025751" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49772727" visible="true" weight="0.18025751" />
       <window_info id="Structure" order="1" sideWeight="0.5022727" side_tool="true" weight="0.18393235" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
@@ -1245,24 +1246,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/rp/views.py">
+    <entry file="file://$PROJECT_DIR$/aurora_rp/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="297" column="22" lean-forward="true" selection-start-line="297" selection-start-column="22" selection-end-line="297" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <marker date="1532990527601" expanded="true" signature="8498:8499" ph="..." />
-            <marker date="1532990527601" expanded="true" signature="10758:10759" ph="..." />
-            <marker date="1532990527601" expanded="false" signature="11103:11104" ph="..." />
-            <marker date="1532990527601" expanded="true" signature="11426:11427" ph="..." />
-          </folding>
+        <state relative-caret-position="969">
+          <caret line="152" lean-forward="true" selection-start-line="152" selection-end-line="152" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aurora_rp/settings.py">
+    <entry file="file://$PROJECT_DIR$/apps/rp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="154" column="4" lean-forward="true" selection-start-line="154" selection-start-column="4" selection-end-line="156" />
+        <state relative-caret-position="389">
+          <caret line="302" column="55" selection-start-line="302" selection-start-column="55" selection-end-line="302" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1532991182901" expanded="true" signature="8556:8557" ph="..." />
+            <marker date="1532991182901" expanded="true" signature="10816:10817" ph="..." />
+            <marker date="1532991182901" expanded="false" signature="11161:11162" ph="..." />
+            <marker date="1532991182901" expanded="true" signature="11484:11485" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

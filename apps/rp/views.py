@@ -285,24 +285,22 @@ class ImageUpdateView(UpdateView):
 
 
 def sign_s3(request, file_name, file_type, file_type_1):
-    s3 = boto3.client('s3')
-    print(s3)
-    presigned_post = s3.generate_presigned_post(
-        Bucket=os.environ.get('S3_BUCKET_NAME'),
-        Key=file_name,
-        Fields={"acl": "public-read", "Content-Type": f"{file_type}/{file_type_1}"},
-        Conditions=[
-            {"acl": "public-read"},
-            {"Content-Type": f"{file_type}/{file_type_1}"}
-        ],
-        ExpiresIn=3600
-    )
-    print(presigned_post)
+    s3 = boto3.client('s3', config = (signature_version = 's3v4'))
+    # presigned_post = s3.generate_presigned_post(
+    #     Bucket=os.environ.get('S3_BUCKET_NAME'),
+    #     Key=file_name,
+    #     Fields={"acl": "public-read", "Content-Type": f"{file_type}/{file_type_1}"},
+    #     Conditions=[
+    #         {"acl": "public-read"},
+    #         {"Content-Type": f"{file_type}/{file_type_1}"}
+    #     ],
+    #     ExpiresIn=3600
+    # )
 
-    return json.dumps({
-        'data': presigned_post,
-        'url': f"https://{os.environ.get('S3_BUCKET_NAME')}.s3.amazonaws.com/{file_name}"
-    })
+    s3.upload_file(file_name, 'aurora-rp', file_name)
+
+    # Uploads the given file using a managed uploader, which will split up large
+    # files automatically and upload parts in parallel.
 
 
 
