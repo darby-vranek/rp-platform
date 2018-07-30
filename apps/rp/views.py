@@ -260,7 +260,7 @@ class ImageDetailView(DetailView):
 class ImageCreateView(CreateView):
     model = Image
     form_class = ImageForm
-    template_name = 'rp/form.html'
+    template_name = 'rp/image_form.html'
     success_url = "/images/"
 
     def get_context_data(self, **kwargs):
