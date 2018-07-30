@@ -286,6 +286,7 @@ class ImageUpdateView(UpdateView):
 
 def sign_s3(request, file_name, file_type, file_type_1):
     s3 = boto3.client('s3')
+    print(s3)
     presigned_post = s3.generate_presigned_post(
         Bucket=os.environ.get('S3_BUCKET_NAME'),
         Key=file_name,
@@ -296,6 +297,7 @@ def sign_s3(request, file_name, file_type, file_type_1):
         ],
         ExpiresIn=3600
     )
+    print(presigned_post)
 
     return json.dumps({
         'data': presigned_post,
