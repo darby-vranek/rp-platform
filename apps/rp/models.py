@@ -3,6 +3,7 @@ from django.forms import ModelForm
 from django.urls import reverse
 from django_summernote.widgets import SummernoteWidget
 from django.core.files.storage import FileSystemStorage
+from django.forms.widgets import HiddenInput
 
 fs = FileSystemStorage(location='media/')
 
@@ -223,3 +224,36 @@ class PostForm(ModelForm):
             'content': SummernoteWidget()
         }
 
+
+class Script(Model):
+    title = models.CharField(max_length=255, default='Untitled', blank=True)
+    verse = models.ForeignKey(Verse, related_name='dialogues', null=True, on_delete=models.DO_NOTHING, blank=True)
+
+    def __str__(self):
+        return self.title
+
+    def get_absolute_url(self):
+        return reverse('script-detail', kwargs={'pk': self.pk})
+
+
+class ScriptForm(ModelForm):
+    class Meta:
+        model = Script
+        fields = ['title', 'verse']
+
+
+class Line(Model):
+    script = models.ForeignKey(Script, related_name='lines', on_delete=models.CASCADE, blank=True)
+    character = models.ForeignKey(Character, related_name='lines', null=True, blank=True, on_delete=models.DO_NOTHING)
+    parenthetical = models.CharField(max_length=255, default='', blank=True)
+    dialogue = models.TextField(default='', blank=True)
+    action = models.CharField(max_length=255, default='', blank=True)
+
+
+class LineForm(ModelForm):
+    class Meta:
+        model = Line
+        fields = ['script', 'character', 'parenthetical', 'dialogue', 'action']
+        widgets = {
+            'script': HiddenInput()
+        }

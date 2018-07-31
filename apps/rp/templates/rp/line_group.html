@@ -1,0 +1,30 @@
+<div class="card" style="border:none;">
+    {% for line in script.lines.all|dictsort:"created" %}
+        <div class="card-body row" style="margin-bottom: -25px; border: none;">
+            <div class="col-4">
+                {% if line.character %}
+                    <p class="text-right mb-0"><a href="{% url "character-detail" pk=line.character.pk %}">{{ line.character.display_name }}</a></p>
+                {% endif %}
+                {% if line.parenthetical %}
+                    <p class="text-right small"><em>{{ line.parenthetical }}</em></p>
+                {% endif %}
+            </div>
+            <div class="col-6" style="margin-left: -10px;">
+                {% if line.dialogue %}
+{#                    <hr style="margin: 10px;" />#}
+                    <p class="quote">{{ line.dialogue }}</p>
+                    <script>
+                        $(document).ready(function() {
+                            $("#id_dialogue").attr('style', 'height: 90px;');
+                        });
+                    </script>
+                    <hr class="m-0" />
+                {% endif %}
+                {% if line.action %}
+                    <p>{{ line.action }}</p>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+</div>
+

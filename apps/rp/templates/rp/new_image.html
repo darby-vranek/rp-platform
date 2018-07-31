@@ -1,0 +1,30 @@
+{% extends "rp/base.html" %}
+{% block title %}New Image{% endblock %}
+{% block jumbotron %}
+<div class="jumbotron">
+    <h1 class="display-4">New Image</h1>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="card">
+    <img class="card-img-top" src="" style="height: 100px; width: 100px; background-color: lightgray;" alt="" />
+    <div class="card-body">
+        <input class="" type="file" name="img" id="file_input" style="margin: auto;" />
+    </div>
+</div>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="fc">Face Claim: <input type="text" name="fc" placeholder="e.g. Mia Wasikowska"></label>
+    <input class="btn btn-primary btn-sm" type="submit" value="Submit" />
+</form>
+<script>
+$(document).ready(function() {
+    console.log('script loaded');
+    $("#file_input:file").change(function() {
+        var file = $(this)[0].files[0];
+        console.log(file);
+    });
+});
+</script>
+{% endblock %}

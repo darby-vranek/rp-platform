@@ -32,7 +32,7 @@ urlpatterns = [
     path('threads/<int:thread_pk>/replies/<int:pk>/delete/', ReplyDeleteView.as_view(), name='delete-reply'),
     # images
     path('images/', ImageListView.as_view(), name='images'),
-    path('images/new/', ImageCreateView.as_view(), name='new-image'),
+    path('images/new/', new_image, name='new-image'),
     path('images/<int:pk>/edit/', ImageUpdateView.as_view(), name='edit-image'),
     path('sign_s3/<str:file_name>/<str:file_type>/<str:file_type_1>/', sign_s3, name='sign-s3'),
     # traits
@@ -47,5 +47,10 @@ urlpatterns = [
     path('posts/', PostListView.as_view(), name='posts'),
     path('posts/new', PostCreateView.as_view(), name='new-post'),
     path('posts/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
-    path('posts/<int:pk>/edit/', PostUpdateView.as_view(), name='edit-post')
+    path('posts/<int:pk>/edit/', PostUpdateView.as_view(), name='edit-post'),
+    # scripts
+    path('scripts/', ScriptListView.as_view(), name='scripts'),
+    path('scripts/new/', ScriptCreateView.as_view(), name='new-script'),
+    path('scripts/<int:pk>/', ScriptDetailView.as_view(), name='script-detail'),
+    path('scripts/<int:pk>/replies/new/', LineCreateView.as_view(), name='new-line')
 ]

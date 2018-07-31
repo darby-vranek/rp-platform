@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -283,20 +283,14 @@ class ImageUpdateView(UpdateView):
         context['title'] = 'Edit Image'
         return context
 
+def new_image(request):
+    if request.POST:
+        return redirect(reverse('images'))
+    return render(request, 'rp/new_image.html')
 
-def sign_s3(request, file_name, file_type, file_type_1):
+
+def sign_s3(request, file_name, file_type, file_format):
     s3 = boto3.client('s3')
-    # presigned_post = s3.generate_presigned_post(
-    #     Bucket=os.environ.get('S3_BUCKET_NAME'),
-    #     Key=file_name,
-    #     Fields={"acl": "public-read", "Content-Type": f"{file_type}/{file_type_1}"},
-    #     Conditions=[
-    #         {"acl": "public-read"},
-    #         {"Content-Type": f"{file_type}/{file_type_1}"}
-    #     ],
-    #     ExpiresIn=3600
-    # )
-
     s3.upload_file(f"/{file_name}", 'aurora-rp', file_name)
 
     # Uploads the given file using a managed uploader, which will split up large
@@ -406,6 +400,7 @@ class PostCreateView(CreateView):
         context['title'] = 'New Post'
         return context
 
+
 class PostDetailView(DetailView):
     model = Post
 
@@ -414,3 +409,53 @@ class PostUpdateView(UpdateView):
     model = Post
     form_class = PostForm
     template_name = 'rp/form.html'
+
+
+class ScriptCreateView(CreateView):
+    model = Script
+    form_class = ScriptForm
+    template_name = 'rp/form.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'New Script'
+        return context
+
+
+class ScriptDetailView(DetailView):
+    model = Script
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['line_form'] = get_lineform_for_script_detail()
+        return context
+
+    def get(self, request, *args, **kwargs):
+        self.initial = {'script': Script.objects.get(pk=kwargs['pk'])}
+        self.success_url = reverse('script-detail', kwargs={'pk':kwargs['pk']})
+        return super().get(self)
+
+
+def get_lineform_for_script_detail():
+    line_form = LineForm()
+    return line_form
+
+
+class ScriptListView(ListView):
+    model = Script
+
+
+class LineCreateView(CreateView):
+    model = Line
+    form_class = LineForm
+    template_name = 'rp/form.html'
+    success_url = "/scripts/"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
+
+    def post(self, request, *args, **kwargs):
+        pk = kwargs['pk']
+        self.success_url = '/scripts/%s/' % pk
+        return super().post(self)
