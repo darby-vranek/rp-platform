@@ -3,7 +3,7 @@ from django.forms import ModelForm
 from django.urls import reverse
 from django_summernote.widgets import SummernoteWidget
 from django.core.files.storage import FileSystemStorage
-from django.forms.widgets import HiddenInput
+from django.forms.widgets import HiddenInput, Textarea, TextInput, Select
 
 fs = FileSystemStorage(location='media/')
 
@@ -255,5 +255,22 @@ class LineForm(ModelForm):
         model = Line
         fields = ['script', 'character', 'parenthetical', 'dialogue', 'action']
         widgets = {
-            'script': HiddenInput()
+            'script': HiddenInput(),
+            'dialogue': Textarea(attrs={
+                'class': 'form-control',
+                'rows': 3,
+                'placeholder': 'e.g. Looking for something, Herms?'
+            }),
+            'action': TextInput(attrs={
+                'class': 'form-control mt-3',
+                'placeholder': 'e.g. She waves the blouse triumphantly at her sister.',
+            }),
+            'parenthetical': TextInput(attrs={
+                'class': 'form-control text-right mt-3',
+                'placeholder': 'e.g. giggling wickedly',
+            }),
+            'character': Select(attrs={
+                'class': 'custom-select form-control',
+            }),
+
         }

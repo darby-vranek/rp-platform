@@ -15,16 +15,21 @@
             <div class="card">
                 <div class="card-body row">
                     <div class="col-4">
-                        <p class="form-control text-right">Character: {{ line_form.character }}</p>
-                        <p class="form-control text-right">Parenthetical: {{ line_form.parenthetical }}</p>
+                        {{ line_form.character }}
+                        {{ line_form.parenthetical }}
                     </div>
                     <div class="col-6">
-                        <p class="form-control">Dialogue: {{ line_form.dialogue }}</p>
-                        <p class="form-control">Action: {{ line_form.action }}</p>
+                        {{ line_form.dialogue }}
+                        {{ line_form.action }}
                     </div>
                     <input type="submit" />
                 </div>
             </div>
         </form>
     </div>
+    <script>
+    $(document).ready(function() {
+        $("#id_character option:first").text('Character (e.g., Phoebe Bones-Prewett):');
+    });
+    </script>
 {% endblock %}
