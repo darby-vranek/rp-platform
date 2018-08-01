@@ -271,6 +271,20 @@ class ImageCreateView(CreateView):
         context['title'] = 'New Image'
         return context
 
+    def post(self, request, *args, **kwargs):
+        form = ImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            s3 = boto3.client('s3')
+            file = request.FILES['img']
+            bucket_name = 'aurora-rp'
+            s3.upload_fileobj(file, bucket_name, file.name)
+            return redirect(reverse('images'))
+
+    def get(self, request, *args, **kwargs):
+        form = ImageForm()
+        return render(request, 'rp/image_form.html', {'form': form})
+
+
 
 class ImageUpdateView(UpdateView):
     model = Image
