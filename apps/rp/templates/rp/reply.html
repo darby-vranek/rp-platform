@@ -5,7 +5,7 @@
     </div>
     <div class="card col-m" style="width: 600px; border: none;">
         <div class="card-body text-center" style="padding: 0px; border: none; margin-bottom: -15px; background-color: none; color: gray;">
-            <small><strong class="card-link">{{ reply.character.display_name }}</strong><em class="card-link">{{ reply.created }}</em> <a href="{% url 'edit-reply' thread.pk reply.pk %}" class="card-link">Edit</a>
+            <small><strong class="card-link">{{ reply.character.display_name }}</strong><em class="card-link">{{ reply.created }}</em> <a href="{% url 'edit-reply' thread.pk reply.pk %}" class="card-link"><img src="https://www.fileformat.info/info/unicode/char/2699/gear.svg" style="height: 10"></a>
             <a href="{% url 'delete-reply' thread_pk=thread.pk reply_pk=reply.pk %}" class="card-link">Delete</a></small>
         </div>
         <div class="card-body" style="width: 576px; margin: 0px auto -25px; vertical-align: top;">{{ reply.content | safe }}</div>

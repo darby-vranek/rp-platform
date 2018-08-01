@@ -6,11 +6,12 @@
           <small>
               <strong class="card-link"><a href="{% url 'character-detail' pk=reply.character.pk %}">{{ reply.character.page_name }}</a></strong>
               <em class="card-link">{{ reply.created }}</em>
-              <a href="{% url 'edit-reply' thread_pk=reply.parent.pk pk=reply.pk %}">Edit</a>
-              <form action="{% url 'delete-reply' thread_pk=reply.parent.pk pk=reply.pk %}" method="post">
-                  {% csrf_token %}
-                  <input class="btn btn-primary btn-sm" type="submit" value="Delete" style="display: inline-block;">
-              </form>
+              <a class="badge badge-sm badge-primary ml-1" href="{% url 'edit-reply' thread_pk=reply.parent.pk pk=reply.pk %}">Edit</a>
+              <a class="badge badge-sm badge-danger" href="{% url 'edit-reply' thread_pk=reply.parent.pk pk=reply.pk %}">Delete</a>
+{#              <form action="{% url 'delete-reply' thread_pk=reply.parent.pk pk=reply.pk %}" method="post">#}
+{#                  {% csrf_token %}#}
+{#                  <input class="btn btn-primary btn-sm" type="submit" value="Delete" style="display: inline-block;">#}
+{#              </form>#}
           </small>
       </div>
       <div class="card-body">

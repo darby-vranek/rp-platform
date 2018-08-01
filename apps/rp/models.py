@@ -131,6 +131,10 @@ class Thread(Model):
     def __str__(self):
         return self.title
 
+    def get_latest_reply_created(self):
+        latest = self.replies.order_by('created').last()
+        return latest.created
+
     def get_absolute_url(self):
         return reverse('thread-detail', kwargs={'pk': self.pk})
 
