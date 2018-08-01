@@ -278,7 +278,7 @@ class ImageCreateView(CreateView):
             file = request.FILES['img']
             bucket_name = 'aurora-rp'
             extension = file.name.split('.')[-1]
-            s3.upload_fileobj(file, bucket_name, file.name, ExtraArgs={'Content-Type': f'image/{extension}'})
+            s3.upload_fileobj(file, bucket_name, file.name, ExtraArgs={'ContentType': f'image/{extension}'})
             return redirect(reverse('images'))
 
     def get(self, request, *args, **kwargs):
