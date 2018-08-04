@@ -286,7 +286,6 @@ class ImageCreateView(CreateView):
         return render(request, 'rp/image_form.html', {'form': form})
 
 
-
 class ImageUpdateView(UpdateView):
     model = Image
     form_class = ImageForm
