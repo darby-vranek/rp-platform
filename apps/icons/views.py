@@ -30,7 +30,7 @@ class IconListView(ListView):
 def IconFcList(request, name):
     name = ' '.join(name.split('-'))
     return render(request, 'icons/icon_list.html', context={
-        'distinct': Icon.objects.order_by('fc').distinct('fc'),
+        'distinct': Icon.objects.order_by('fc').distinct('fc').exclude(fc__iexact=''),
         'icon_list': Icon.objects.filter(fc__icontains=name),
     })
 
