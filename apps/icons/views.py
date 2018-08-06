@@ -23,7 +23,7 @@ class IconListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['distinct'] = Icon.objects.order_by('fc').distinct('fc')
+        context['distinct'] = Icon.objects.order_by('fc').distinct('fc').exclude(fc__iexact='')
         return context
 
 
