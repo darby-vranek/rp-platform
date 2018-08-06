@@ -1,0 +1,14 @@
+{% extends "rp/base.html" %}
+{% block title %}Icons{% endblock %}
+{% block jumbotron %}
+<div class="jumbotron">
+    <h1 class="display-4">Icons</h1>
+    <a href="{% url 'new-icon' %}">New</a>
+</div>
+{% endblock %}
+
+{% block content %}
+    {% for icon in icon_list %}
+        <img src="{{ icon.image.url }}"/>
+    {% endfor %}
+{% endblock %}
