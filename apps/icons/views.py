@@ -14,9 +14,23 @@ class IconCreateView(CreateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        icons = Icon.objects.all()
-        context['icons'] = icons
+        context['icons'] = Icon.objects.all()
         return context
+
 
 class IconListView(ListView):
     model = Icon
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['distinct'] = Icon.objects.order_by('fc').distinct('fc')
+        return context
+
+
+def IconFcList(request, name):
+    name = ' '.join(name.split('-'))
+    return render(request, 'icons/icon_list.html', context={
+        'distinct': Icon.objects.order_by('fc').distinct('fc'),
+        'icon_list': Icon.objects.filter(fc__icontains=name),
+    })
+
