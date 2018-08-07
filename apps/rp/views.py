@@ -12,9 +12,6 @@ def index(request):
     return render(request, 'rp/base.html')
 
 
-
-
-
 class TraitCreateView(CreateView):
     model = Trait
     form_class = TraitForm
@@ -25,31 +22,6 @@ class TraitCreateView(CreateView):
         context = super().get_context_data(**kwargs)
         context['title'] = 'New Trait'
         return context
-
-
-class PostListView(ListView):
-    model = Post
-
-
-class PostCreateView(CreateView):
-    model = Post
-    form_class = PostForm
-    template_name = 'rp/form.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['title'] = 'New Post'
-        return context
-
-
-class PostDetailView(DetailView):
-    model = Post
-
-
-class PostUpdateView(UpdateView):
-    model = Post
-    form_class = PostForm
-    template_name = 'rp/form.html'
 
 
 def trait_list_view(request, query):

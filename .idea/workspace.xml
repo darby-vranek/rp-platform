@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8057be3e-aeb9-4e8f-8cf0-d78276b4c29a" name="Default" comment="changed requirements etc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/rp/templates/rp/verse_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/verses/templates/verses/verse_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/rp/templates/rp/verse_group.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/verses/templates/verses/verse_group.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/rp/templates/rp/verse_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/verses/templates/verses/verse_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/rp/templates/rp/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/posts/templates/posts/post_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/rp/templates/rp/post_group.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/posts/templates/posts/post_group.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/rp/templates/rp/post_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/posts/templates/posts/post_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/rp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/rp/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/rp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/rp/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aurora_rp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/aurora_rp/settings.py" afterDir="false" />
@@ -3139,17 +3139,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="10270" />
+          <entry key="HTML" value="10275" />
           <entry key="PLAIN_TEXT" value="106" />
-          <entry key="Python" value="16335" />
+          <entry key="Python" value="16466" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="4" />
-          <entry key="html" value="104" />
+          <entry key="html" value="107" />
           <entry key="log" value="1" />
-          <entry key="py" value="141" />
+          <entry key="py" value="147" />
           <entry key="txt" value="3" />
         </counts>
       </usages-collector>
@@ -3157,16 +3157,16 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="csv" value="1" />
-          <entry key="html" value="10270" />
-          <entry key="py" value="16335" />
+          <entry key="html" value="10275" />
+          <entry key="py" value="16466" />
           <entry key="txt" value="105" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="104" />
+          <entry key="HTML" value="107" />
           <entry key="PLAIN_TEXT" value="8" />
-          <entry key="Python" value="141" />
+          <entry key="Python" value="147" />
         </counts>
       </usages-collector>
     </session>
@@ -3174,24 +3174,25 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/rp/urls.py">
+        <entry file="file://$PROJECT_DIR$/apps/posts/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="69" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="69" />
+            <state relative-caret-position="185">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#0#45#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/characters/views.py">
+        <entry file="file://$PROJECT_DIR$/apps/rp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="64" column="41" lean-forward="true" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
+            <state relative-caret-position="300">
+              <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
+                <marker date="1533608177306" expanded="true" signature="375:376" ph="..." />
               </folding>
             </state>
           </provider>
@@ -3200,8 +3201,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/aurora_rp/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="181" column="30" lean-forward="true" selection-start-line="180" selection-start-column="30" selection-end-line="181" selection-end-column="30" />
+            <state relative-caret-position="369">
+              <caret line="181" column="16" selection-start-line="181" selection-start-column="16" selection-end-line="182" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -3257,9 +3258,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/apps/rp/templates/rp/thread_list.html" />
-        <option value="$PROJECT_DIR$/apps/rp/templates/rp/post_list.html" />
-        <option value="$PROJECT_DIR$/apps/rp/tests.py" />
         <option value="$PROJECT_DIR$/apps/rp/functional_tests.py" />
         <option value="$PROJECT_DIR$/apps/rp/templates/rp/post_group.html" />
         <option value="$PROJECT_DIR$/apps/rp/templates/rp/post_detail.html" />
@@ -3301,12 +3299,15 @@
         <option value="$PROJECT_DIR$/apps/characters/templates/characters/character_list.html" />
         <option value="$PROJECT_DIR$/apps/characters/templates/characters/character_detail.html" />
         <option value="$PROJECT_DIR$/apps/characters/templates/characters/bio_detail.html" />
-        <option value="$PROJECT_DIR$/aurora_rp/urls.py" />
         <option value="$PROJECT_DIR$/apps/verses/urls.py" />
-        <option value="$PROJECT_DIR$/apps/rp/urls.py" />
-        <option value="$PROJECT_DIR$/apps/rp/views.py" />
         <option value="$PROJECT_DIR$/apps/verses/views.py" />
         <option value="$PROJECT_DIR$/apps/verses/templates/verses/verse_list.html" />
+        <option value="$PROJECT_DIR$/aurora_rp/urls.py" />
+        <option value="$PROJECT_DIR$/apps/posts/urls.py" />
+        <option value="$PROJECT_DIR$/apps/rp/urls.py" />
+        <option value="$PROJECT_DIR$/apps/rp/views.py" />
+        <option value="$PROJECT_DIR$/apps/posts/views.py" />
+        <option value="$PROJECT_DIR$/apps/posts/templates/posts/post_list.html" />
         <option value="$PROJECT_DIR$/aurora_rp/settings.py" />
       </list>
     </option>
@@ -3345,6 +3346,27 @@
               <item name="aurora_rp" type="b2602c69:ProjectViewProjectNode" />
               <item name="aurora_rp" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="posts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aurora_rp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aurora_rp" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="posts" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aurora_rp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aurora_rp" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="posts" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="posts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aurora_rp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aurora_rp" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
               <item name="rp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -3361,27 +3383,6 @@
               <item name="rp" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="rp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aurora_rp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aurora_rp" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="verses" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aurora_rp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aurora_rp" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="verses" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aurora_rp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aurora_rp" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="verses" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="verses" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="aurora_rp" type="b2602c69:ProjectViewProjectNode" />
@@ -3402,11 +3403,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/posts/templates/posts" />
       <recent name="$PROJECT_DIR$/apps/verses/templates/verses" />
       <recent name="$PROJECT_DIR$/apps/characters/templates/characters" />
       <recent name="$PROJECT_DIR$/apps/characters/templates" />
       <recent name="$PROJECT_DIR$/apps/threads/templates/threads" />
-      <recent name="$PROJECT_DIR$/apps/scripts/templates/scripts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -3675,44 +3676,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="changed requirements etc" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apps/rp/templates/rp/image_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/rootkey.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="53" lean-forward="true" selection-start-line="1" selection-start-column="53" selection-end-line="1" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/accessKeys (1).csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/icons/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/icons/functional_tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/rp/templates/rp/form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -3989,45 +3952,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aurora_rp/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="27" column="49" lean-forward="true" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
-          <folding>
-            <element signature="e#633#665#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/rp/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="69" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="69" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/verses/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/rp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="4" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-            <marker date="1533607862274" expanded="true" signature="378:379" ph="..." />
-            <marker date="1533607862274" expanded="false" signature="723:724" ph="..." />
-            <marker date="1533607862274" expanded="true" signature="1047:1048" ph="..." />
           </folding>
         </state>
       </provider>
@@ -4063,10 +3993,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/aurora_rp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="28" column="47" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+          <folding>
+            <element signature="e#633#665#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/characters/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
-          <caret line="64" column="41" lean-forward="true" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
+          <caret line="64" column="41" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/posts/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="20" lean-forward="true" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/rp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="69" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/rp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+            <marker date="1533608177306" expanded="true" signature="375:376" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/posts/templates/posts/post_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding>
+            <element signature="e#499#534#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/posts/templates/posts/post_group.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/posts/templates/posts/post_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/posts/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
@@ -4075,8 +4080,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/aurora_rp/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="181" column="30" lean-forward="true" selection-start-line="180" selection-start-column="30" selection-end-line="181" selection-end-column="30" />
+        <state relative-caret-position="369">
+          <caret line="181" column="16" selection-start-line="181" selection-start-column="16" selection-end-line="182" selection-end-column="17" />
         </state>
       </provider>
     </entry>

@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'apps.threads',
     'apps.characters',
     'apps.verses',
+    'apps.posts',
     'django_summernote',
     'storages',
 ]
