@@ -249,69 +249,6 @@ class ReplyDeleteView(DeleteView):
         return super().post(self)
 
 
-class ImageListView(ListView):
-    model = Image
-
-    def get_queryset(self):
-        return Image.objects.order_by('fc')
-
-
-class ImageDetailView(DetailView):
-    model = Image
-
-
-class ImageCreateView(CreateView):
-    model = Image
-    form_class = ImageForm
-    template_name = 'rp/image_form.html'
-    success_url = "/images/"
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['title'] = 'New Image'
-        return context
-
-    def post(self, request, *args, **kwargs):
-        form = ImageForm(request.POST, request.FILES)
-        if form.is_valid():
-            s3 = boto3.client('s3')
-            file = request.FILES['img']
-            bucket_name = 'aurora-rp'
-            extension = file.name.split('.')[-1]
-            s3.upload_fileobj(file, bucket_name, file.name, ExtraArgs={'ContentType': f'image/{extension}'})
-            return redirect(reverse('images'))
-
-    def get(self, request, *args, **kwargs):
-        form = ImageForm()
-        return render(request, 'rp/image_form.html', {'form': form})
-
-
-class ImageUpdateView(UpdateView):
-    model = Image
-    form_class = ImageForm
-    template_name = 'rp/form.html'
-    success_url = '/images/'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['title'] = 'Edit Image'
-        return context
-
-def new_image(request):
-    if request.POST:
-        return redirect(reverse('images'))
-    return render(request, 'rp/new_image.html')
-
-
-def sign_s3(request, file_name, file_type, file_format):
-    s3 = boto3.client('s3')
-    s3.upload_file(f"/{file_name}", 'aurora-rp', file_name)
-
-    # Uploads the given file using a managed uploader, which will split up large
-    # files automatically and upload parts in parallel.
-
-
-
 def trait_list_view(request, query):
     trait_list = Trait.objects.filter(title__iexact=query)
     return render(request, 'rp/trait_list.html', context={'trait_list': trait_list})

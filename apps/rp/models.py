@@ -47,7 +47,6 @@ class Character(Profile):
             return self.replies.order_by('created').last()
 
 
-
 class CharacterForm(ModelForm):
     class Meta:
         model = Character
@@ -163,25 +162,6 @@ class ReplyForm(ModelForm):
         widgets = {
             'content': SummernoteWidget()
         }
-
-
-# images
-class Image(Model):
-    img = models.ImageField(upload_to='images', storage=fs)
-    fc = models.CharField(max_length=255, default='', blank=True)
-
-    def __str__(self):
-        return self.fc
-
-    def get_absolute_url(self):
-        return reverse('image-detail', kwargs={'pk': self.pk})
-
-
-
-class ImageForm(ModelForm):
-    class Meta:
-        model = Image
-        fields = ['img', 'fc']
 
 
 # about
