@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8057be3e-aeb9-4e8f-8cf0-d78276b4c29a" name="Default" comment="changed requirements etc">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/icons/templates/icons/icon.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/icons/templates/icons/icon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/icons/templates/icons/icon_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/icons/templates/icons/icon_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/icons/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/icons/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/icons/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/icons/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/rp/templates/rp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/rp/templates/rp/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/rp/templates/rp/confirm_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/rp/templates/rp/confirm_delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/threads/templates/threads/thread_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/threads/templates/threads/thread_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aurora_rp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/aurora_rp/settings.py" afterDir="false" />
     </list>
     <ignored path="media/" />
     <ignored path="staticfiles/" />
@@ -3140,7 +3132,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="14547" />
+          <entry key="HTML" value="14566" />
           <entry key="PLAIN_TEXT" value="106" />
           <entry key="Python" value="17359" />
         </counts>
@@ -3148,7 +3140,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="4" />
-          <entry key="html" value="157" />
+          <entry key="html" value="158" />
           <entry key="log" value="1" />
           <entry key="py" value="198" />
           <entry key="txt" value="3" />
@@ -3158,14 +3150,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="csv" value="1" />
-          <entry key="html" value="14547" />
+          <entry key="html" value="14566" />
           <entry key="py" value="17359" />
           <entry key="txt" value="105" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="157" />
+          <entry key="HTML" value="158" />
           <entry key="PLAIN_TEXT" value="8" />
           <entry key="Python" value="198" />
         </counts>
@@ -3204,11 +3196,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aurora_rp/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="305">
               <caret line="180" lean-forward="true" selection-start-line="180" selection-end-line="182" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/rp/templates/rp/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="52" column="63" selection-start-line="52" selection-start-column="63" selection-end-line="52" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -3344,7 +3345,6 @@
         <option value="$PROJECT_DIR$/apps/posts/views.py" />
         <option value="$PROJECT_DIR$/apps/posts/urls.py" />
         <option value="$PROJECT_DIR$/apps/posts/templates/posts/post_detail.html" />
-        <option value="$PROJECT_DIR$/apps/rp/templates/rp/base.html" />
         <option value="$PROJECT_DIR$/apps/icons/templates/icons/icon_list.html" />
         <option value="$PROJECT_DIR$/apps/threads/views.py" />
         <option value="$PROJECT_DIR$/apps/threads/templates/threads/thread_detail.html" />
@@ -3353,6 +3353,7 @@
         <option value="$PROJECT_DIR$/apps/icons/urls.py" />
         <option value="$PROJECT_DIR$/apps/icons/templates/icons/icon.html" />
         <option value="$PROJECT_DIR$/aurora_rp/settings.py" />
+        <option value="$PROJECT_DIR$/apps/rp/templates/rp/base.html" />
       </list>
     </option>
   </component>
@@ -3411,22 +3412,22 @@
               <item name="aurora_rp" type="b2602c69:ProjectViewProjectNode" />
               <item name="aurora_rp" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="posts" type="462c0819:PsiDirectoryNode" />
+              <item name="rp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="aurora_rp" type="b2602c69:ProjectViewProjectNode" />
               <item name="aurora_rp" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="posts" type="462c0819:PsiDirectoryNode" />
+              <item name="rp" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="aurora_rp" type="b2602c69:ProjectViewProjectNode" />
               <item name="aurora_rp" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="posts" type="462c0819:PsiDirectoryNode" />
+              <item name="rp" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="posts" type="462c0819:PsiDirectoryNode" />
+              <item name="rp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="aurora_rp" type="b2602c69:ProjectViewProjectNode" />
@@ -3971,13 +3972,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/rp/templates/rp/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/posts/models.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -4120,6 +4114,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
           <caret line="180" lean-forward="true" selection-start-line="180" selection-end-line="182" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/rp/templates/rp/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="52" column="63" selection-start-line="52" selection-start-column="63" selection-end-line="52" selection-end-column="63" />
         </state>
       </provider>
     </entry>
