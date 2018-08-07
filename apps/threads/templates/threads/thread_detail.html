@@ -1,4 +1,5 @@
 {% extends "rp/base.html" %}
+{% load static %}
 {% block title %}{{ thread.title }}{% endblock %}
 {% block jumbotron %}
     <div class="card-body jumbotron">
@@ -10,7 +11,7 @@
 {% block content %}
 {% include "threads/replies_group.html" %}
 <div class="media" style="max-width: 750px;">
-    <div class="mr-3 mt-3" style="width: 100px;"></div>
+    <img id="reply_icon" src="{% static 'admin/img/icon-unknown.svg' %}" class="mr-3 mt-3" style="width: 100px; height: 100px;" />
     <div class="media-body card" style="border: none;">
         <div class="card-body" id="bottom">
             <form method="post" action="{% url 'new-reply' pk=thread.pk %}">
@@ -28,4 +29,5 @@
     <a href="#" class="btn btn-primary btn-sm">↑</a>
     <a href="#bottom" class="btn btn-primary btn-sm">↓</a>
 </div>
+{% include 'rp/confirm_delete.html' %}
 {% endblock %}

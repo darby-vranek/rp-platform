@@ -21,6 +21,9 @@ class Profile(Model):
     caption = models.CharField(max_length=255, default='', blank=True)
     desc = models.TextField(blank=True)
 
+    class Meta:
+        ordering = ['display_name']
+
     def __str__(self):
         return self.display_name
 
