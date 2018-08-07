@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.rp',
     'apps.icons',
+    'apps.scripts',
     'django_summernote',
     'storages',
 ]

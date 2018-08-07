@@ -43,9 +43,4 @@ urlpatterns = [
     path('posts/new', PostCreateView.as_view(), name='new-post'),
     path('posts/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
     path('posts/<int:pk>/edit/', PostUpdateView.as_view(), name='edit-post'),
-    # scripts
-    path('scripts/', ScriptListView.as_view(), name='scripts'),
-    path('scripts/new/', ScriptCreateView.as_view(), name='new-script'),
-    path('scripts/<int:pk>/', ScriptDetailView.as_view(), name='script-detail'),
-    path('scripts/<int:pk>/replies/new/', LineCreateView.as_view(), name='new-line')
 ]

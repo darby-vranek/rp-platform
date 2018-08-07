@@ -8,7 +8,7 @@
 
 {% block content %}
     <div class="card" style="border:none;">
-        {% include "rp/line_group.html" %}
+        {% include "scripts/line_group.html" %}
         <form action="{% url "new-line" pk=script.pk %}" method="post">
             {% csrf_token %}
             <input type="hidden" name="script" value="{{ script.pk }}"/>
