@@ -17,7 +17,10 @@
 {% endblock %}
 
 {% block content %}
+    <div class="card card-group" style="border:none;">
     {% for icon in icon_list %}
-        <img src="{{ icon.image.url }}"/>
+        {% include 'icons/icon.html' %}
     {% endfor %}
+    </div>
+    {% include 'rp/confirm_delete.html' %}
 {% endblock %}

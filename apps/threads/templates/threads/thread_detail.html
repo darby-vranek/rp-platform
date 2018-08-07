@@ -31,12 +31,4 @@
     <a href="#bottom" class="btn btn-primary btn-sm">↓</a>
 </div>
 {% include 'rp/confirm_delete.html' %}
-<script>
-    $('#confirmDelete').on('show.bs.modal', function(event) {
-        var button = $(event.relatedTarget);
-        var action = button.data('action');
-        var modal = $(this);
-        modal.find('#confirmDeleteForm').attr('action', action);
-    });
-</script>
 {% endblock %}

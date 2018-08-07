@@ -1,0 +1,17 @@
+<div class="card" style="max-width: 100px; height: 100px; border: none;margin: 2px;">
+    <a tabindex="0" role="button" data-placement="bottom" data-toggle="popover" id="{{ icon.pk }}"><img id="icon-{{ icon.pk }}" class="card-img-top" src="{{ icon.image.url }}" style="width: 100px; height: 100px;"/></a>
+</div>
+<script>
+    $('#{{ icon.pk }}').popover({
+        'html': true,
+        'content':
+            '<ul class="nav flex-column">' +
+                '<li class="nav-item">' +
+                    '<a class="nav-link" href="{% url 'edit-icon' pk=icon.pk %}">Edit</a>' +
+                '</li>' +
+                '<li class="nav-item">' +
+                    '<button class="nav-link" data-toggle="modal" data-target="#confirmDelete" data-action="{% url 'delete-icon' pk=icon.pk %}">Delete</button>' +
+                '</li>' +
+            '</ul>'
+    });
+</script>
