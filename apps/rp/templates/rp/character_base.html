@@ -53,7 +53,7 @@
 <div class="tab-content" id="pills-tabContent">
     <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">feed</div>
     <div class="tab-pane fade" id="pills-post" role="tabpanel" aria-labelledby="pills-post-tab">tba</div>
-    <div class="tab-pane fade" id="pills-thread" role="tabpanel" aria-labelledby="pills-thread-tab">{% include "rp/thread_group.html" with thread_list=character.get_threads %}</div>
+    <div class="tab-pane fade" id="pills-thread" role="tabpanel" aria-labelledby="pills-thread-tab">{% include "rp/../../../threads/templates/threads/thread_group.html" with thread_list=character.get_threads %}</div>
     {% block trait-tab %}
         <div class="tab-pane fade" id="pills-trait" role="tabpanel" aria-labelledby="pills-trait-tab">
         <a class="btn btn-primary btn-sm" href="{% url 'new-character-trait' char_pk=character.pk %}">New Trait</a>

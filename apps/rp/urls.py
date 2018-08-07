@@ -20,16 +20,6 @@ urlpatterns = [
     path('bios/new/', BioCreateView.as_view(), name='new-bio'),
     path('bios/<int:pk>/', BioDetailView.as_view(), name='bio-detail'),
     path('bios/<int:pk>/edit/', BioUpdateView.as_view(), name='edit-bio'),
-    # threads
-    path('threads/', ThreadListView.as_view(), name='threads'),
-    path('threads/new/', ThreadCreateView.as_view(), name='new-thread'),
-    path('threads/<int:pk>/', ThreadDetailView.as_view(), name='thread-detail'),
-    path('threads/<int:pk>/edit/', ThreadUpdateView.as_view(), name='edit-thread'),
-    path('threads/<int:pk>/delete/', ThreadDetailView.as_view(), name='delete-thread'),
-    # replies
-    path('threads/<int:pk>/replies/new/', ReplyCreateView.as_view(), name='new-reply'),
-    path('threads/<int:thread_pk>/replies/<int:pk>/edit/', ReplyUpdateView.as_view(), name='edit-reply'),
-    path('threads/<int:thread_pk>/replies/<int:pk>/delete/', ReplyDeleteView.as_view(), name='delete-reply'),
     # traits
     path('traits/<str:query>/', trait_list_view, name='traits'),
     path('traits/new/', TraitCreateView.as_view(), name='new-trait'),
