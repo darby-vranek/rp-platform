@@ -30,3 +30,8 @@ class PostUpdateView(UpdateView):
     model = Post
     form_class = PostForm
     template_name = 'rp/form.html'
+
+
+class PostDeleteView(DeleteView):
+    model = Post
+    success_url = '/posts/'

@@ -2,8 +2,9 @@
 {% block title %}{{ post.title }}{% endblock %}
 {% block jumbotron %}
     <div class="card-body jumbotron">
-        <h1 class="display-4">{{ post.title }}{% if post.verse %} <span class="badge badge-primary" style="font-size: .3em; vertical-align: 80%;">{{ post.verse.display_name }}</span></h1>{% endif %}
-        <a class="btn btn-primary" href="{% url 'edit-post' pk=post.pk %}" role="button">Edit</a>
+        <h1 class="display-4">{{ post.title }}{% if post.verse %} <span class="badge badge-primary" style="font-size: .3em; vertical-align: 80%;">{{ post.verse.display_name }}</span>{% endif %}</h1>
+        <a class="btn btn-sm btn-outline-primary" href="{% url 'edit-post' pk=post.pk %}" role="button">Edit</a>
+    <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#confirmDelete" data-action="{% url 'delete-post' pk=post.pk %}">Delete</button>
     </div>
 {% endblock %}
 {% block content %}
@@ -12,4 +13,13 @@
     <div class="card-body">{{ post.content | safe }}</div>
     <div class="card-footer"><small>{{ post.created }}</small></div>
 </div>
+{% include 'rp/confirm_delete.html' %}
+<script>
+    $('#confirmDelete').on('show.bs.modal', function(event) {
+        var button = $(event.relatedTarget);
+        var action = button.data('action');
+        var modal = $(this);
+        modal.find('#confirmDeleteForm').attr('action', action);
+    });
+</script>
 {% endblock %}
