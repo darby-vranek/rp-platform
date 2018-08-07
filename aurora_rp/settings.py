@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'apps.icons',
     'apps.scripts',
     'apps.threads',
+    'apps.characters',
     'django_summernote',
     'storages',
 ]

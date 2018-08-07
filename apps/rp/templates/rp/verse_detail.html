@@ -31,7 +31,7 @@
 {% endblock %}
 {% block content %}
 <div class="tab-content" id="pills-tabContent">
-  <div class="tab-pane fade show active" id="pills-character" role="tabpanel" aria-labelledby="pills-character-tab">{% include "rp/bio_group.html" %}</div>
+  <div class="tab-pane fade show active" id="pills-character" role="tabpanel" aria-labelledby="pills-character-tab">{% include "rp/../../../characters/templates/characters/bio_group.html" %}</div>
   <div class="tab-pane fade" id="pills-post" role="tabpanel" aria-labelledby="pills-post-tab">tba</div>
   <div class="tab-pane fade" id="pills-thread" role="tabpanel" aria-labelledby="pills-thread-tab">{% include "rp/../../../threads/templates/threads/thread_group.html" with thread_list=verse.threads.all %}</div>
 	<div class="tab-pane fade" id="pills-trait" role="tabpanel" aria-labelledby="pills-trait-tab">
