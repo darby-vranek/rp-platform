@@ -1,13 +1,16 @@
-<div class="row" style="width: 775px;">
-    <div class="col- mr-1 mt-1 " style="width: 100px;">
-        <img src="{{reply.character.sm_icon}}" alt="" class="text-center" style="height:100px; width:100px; min-width:100px; min-height:100px; background-color: gray;" />
-        <p class="text-right"><small><a href="{% url 'character-detail' pk=reply.character.pk %}">{{ reply.character.page_name }}</a></small></p>
-    </div>
-    <div class="card col-m" style="width: 600px; border: none;">
-        <div class="card-body text-center" style="padding: 0px; border: none; margin-bottom: -15px; background-color: none; color: gray;">
-            <small><strong class="card-link">{{ reply.character.display_name }}</strong><a href="{% url 'delete-reply' thread_pk=thread.pk pk=reply.pk %}" class="card-link">Delete</a></small>
-        </div>
-        <div class="card-body" style="width: 576px; margin: 0 auto -25px; vertical-align: top;">{{ reply.content | safe }}</div>
-    </div>
+<div class="media" style="max-width: 750px;">
+  <img class="mr-3 mt-3" src="{{ reply.character.sm_icon }}" alt="" style="width: 100px; height: 100px; background-color: lightgray;">
+  <div class="media-body card" style="border: none;">
+      <div class="card-header" style="margin-bottom: -15px; background-color: white;">
+          <small>
+              <strong class="card-link"><a href="{% url 'character-detail' pk=reply.character.pk %}">{{ reply.character.page_name }}</a></strong>
+              <em class="card-link">{{ reply.created }}</em>
+              <a class="badge badge-sm badge-primary ml-1" href="{% url 'edit-reply' thread_pk=reply.parent.pk pk=reply.pk %}">Edit</a>
+              <button type="button" class="badge badge-sm badge-danger" data-toggle="modal" data-target="#confirmDelete" data-action="{% url 'delete-reply' thread_pk=reply.parent.pk pk=reply.pk %}">Delete</button>
+          </small>
+      </div>
+      <div class="card-body">
+          {{ reply.content | safe }}
+      </div>
+  </div>
 </div>
-<hr>

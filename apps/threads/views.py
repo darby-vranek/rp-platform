@@ -54,7 +54,8 @@ class ThreadUpdateView(UpdateView):
 
 
 class ThreadDeleteView(DeleteView):
-    pass
+    model = Thread
+    success_url = '/threads/'
 
 
 class ReplyCreateView(CreateView):
