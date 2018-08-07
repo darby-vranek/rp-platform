@@ -11,7 +11,7 @@
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.10/summernote.css" rel="stylesheet">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.10/summernote.js"></script>
         <title>{% block title %}Title{% endblock %}</title>
-        {% block favicon %}{% static 'rp/svg/quill-ink.svg' %}{% endblock %}
+        {% block favicon %}<link rel="icon" href="{% static 'rp/svg/quill-ink.svg' %}" type="image/x-icon" />{% endblock %}
     </head>
     <body>
         <div class="card" id="page">
