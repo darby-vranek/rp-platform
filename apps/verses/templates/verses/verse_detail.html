@@ -7,35 +7,37 @@
 	<h1 class="display-4"> {{ verse.display_name }}</h1>
 	<p class="lead">{{ verse.caption }}</p>
 	<p>{{ verse.desc }}</p>
-	<a class="btn btn-outline-primary" href="{% url 'edit-verse' pk=verse.pk %}">Edit</a>
-	<a class="btn btn-outline-primary" href="{% url 'new-verse-bio' pk=verse.pk %}">Add Character</a>
+	<a class="btn btn-sm btn-outline-primary" href="{% url 'edit-verse' pk=verse.pk %}">Edit</a>
 </div>
 {% endblock %}
 {% block navbar %}
 <div class="card-header" style="margin-top: -32px;">
-<ul class="nav nav-pills" id="pills-tab" role="tablist">
-	<li class="nav-item">
-    <a class="nav-link active" id="pills-character-tab" data-toggle="pill" href="#pills-character" role="tab" aria-controls="pills-character" aria-selected="false">Characters</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="pills-post-tab" data-toggle="pill" href="#pills-post" role="tab" aria-controls="pills-post" aria-selected="false">Posts</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="pills-thread-tab" data-toggle="pill" href="#pills-thread" role="tab" aria-controls="pills-thread" aria-selected="false">Threads</a>
-  </li>
-	<li class="nav-item">
-    <a class="nav-link" id="pills-trait-tab" data-toggle="pill" href="#pills-trait" role="tab" aria-controls="pills-trait" aria-selected="false">Traits</a>
-  </li>
-</ul>
+    <ul class="nav nav-pills" id="pills-tab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="pills-character-tab" data-toggle="pill" href="#pills-character" role="tab" aria-controls="pills-character" aria-selected="false">Characters</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="pills-post-tab" data-toggle="pill" href="#pills-post" role="tab" aria-controls="pills-post" aria-selected="false">Posts</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="pills-thread-tab" data-toggle="pill" href="#pills-thread" role="tab" aria-controls="pills-thread" aria-selected="false">Threads</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="pills-script-tab" data-toggle="pill" href="#pills-script" role="tab" aria-controls="pills-script" aria-selected="false">Scripts</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="pills-trait-tab" data-toggle="pill" href="#pills-trait" role="tab" aria-controls="pills-trait" aria-selected="false">Traits</a>
+        </li>
+    </ul>
 </div>
 {% endblock %}
 {% block content %}
 <div class="tab-content" id="pills-tabContent">
-  <div class="tab-pane fade show active" id="pills-character" role="tabpanel" aria-labelledby="pills-character-tab">{% include "rp/../../../characters/templates/characters/bio_group.html" %}</div>
-  <div class="tab-pane fade" id="pills-post" role="tabpanel" aria-labelledby="pills-post-tab">tba</div>
-  <div class="tab-pane fade" id="pills-thread" role="tabpanel" aria-labelledby="pills-thread-tab">{% include "rp/../../../threads/templates/threads/thread_group.html" with thread_list=verse.threads.all %}</div>
-	<div class="tab-pane fade" id="pills-trait" role="tabpanel" aria-labelledby="pills-trait-tab">
-
-	</div>
+    <div class="tab-pane fade show active" id="pills-character" role="tabpanel" aria-labelledby="pills-character-tab">{% include "characters/bio_group.html" %}</div>
+    <div class="tab-pane fade" id="pills-post" role="tabpanel" aria-labelledby="pills-post-tab">{% include "posts/post_group.html" with post_list=verse.posts.all %}</div>
+    <div class="tab-pane fade" id="pills-thread" role="tabpanel" aria-labelledby="pills-thread-tab">{% include "threads/thread_group.html" with thread_list=verse.threads.all %}</div>
+    <div class="tab-pane fade" id="pills-script" role="tabpanel" aria-labelledby="pills-script-tab">{% include "scripts/script_group.html" with script_list=verse.dialogues.all %}</div>
+    <div class="tab-pane fade" id="pills-trait" role="tabpanel" aria-labelledby="pills-trait-tab">tba</div>
 </div>
+{% include 'rp/confirm_delete.html' %}
 {% endblock %}
