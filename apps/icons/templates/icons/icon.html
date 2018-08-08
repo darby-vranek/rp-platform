@@ -1,9 +1,12 @@
-    <a tabindex="0" data-trigger="focus" role="button" data-placement="bottom" data-toggle="popover" id="{{ icon.pk }}"><img id="icon-{{ icon.pk }}" class="card-img mb-1" src="{{ icon.image.url }}" style="width: 100px; height: 100px;"/></a>
+<a tabindex="0" data-trigger="focus" role="button" data-placement="bottom" data-toggle="popover" id="{{ icon.pk }}"><img id="icon-{{ icon.pk }}" class="card-img mb-1" src="{{ icon.image.url }}" style="width: 100px; height: 100px;"/></a>
 <script>
     $('#{{ icon.pk }}').popover({
         'html': true,
         'content':
             '<ul class="nav flex-column text-center">' +
+            {% for tag in icon.get_tags %}
+                <li>tag</li>
+            {% endfor %}
                 '<li class="nav-item">' +
                     '<h6><a class="nav-link badge badge-primary mt-2" href="{% url 'edit-icon' pk=icon.pk %}">Edit</a></h6>' +
                 '</li>' +

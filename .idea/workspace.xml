@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8057be3e-aeb9-4e8f-8cf0-d78276b4c29a" name="Default" comment="changed requirements etc">
-      <change beforePath="$PROJECT_DIR$/apps/icons/templates/icons/fc_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/icons/templates/icons/fc_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/icons/templates/icons/icon_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/icons/templates/icons/icon_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/icons/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/icons/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/icons/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/icons/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/icons/templates/icons/icon.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/icons/templates/icons/icon.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aurora_rp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/aurora_rp/settings.py" afterDir="false" />
     </list>
     <ignored path="media/" />
@@ -3136,7 +3133,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="16893" />
+          <entry key="HTML" value="16946" />
           <entry key="PLAIN_TEXT" value="106" />
           <entry key="Python" value="18485" />
         </counts>
@@ -3144,9 +3141,9 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="4" />
-          <entry key="html" value="175" />
+          <entry key="html" value="176" />
           <entry key="log" value="1" />
-          <entry key="py" value="224" />
+          <entry key="py" value="226" />
           <entry key="txt" value="3" />
         </counts>
       </usages-collector>
@@ -3154,65 +3151,22 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="csv" value="1" />
-          <entry key="html" value="16893" />
+          <entry key="html" value="16946" />
           <entry key="py" value="18485" />
           <entry key="txt" value="105" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="175" />
+          <entry key="HTML" value="176" />
           <entry key="PLAIN_TEXT" value="8" />
-          <entry key="Python" value="224" />
+          <entry key="Python" value="226" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/icons/templates/icons/fc_detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" column="57" lean-forward="true" selection-start-line="1" selection-start-column="57" selection-end-line="1" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/icons/templates/icons/icon_form.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/icons/templates/icons/icon_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/apps/icons/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-                <marker date="1533712547784" expanded="true" signature="626:631" ph="..." />
-                <marker date="1533712547784" expanded="true" signature="1350:1502" ph="..." />
-                <marker date="1533712547784" expanded="true" signature="1436:1441" ph="..." />
-                <marker date="1533712547784" expanded="true" signature="1501:1502" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/icons/urls.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -3221,6 +3175,38 @@
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/icons/templates/icons/icon.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/icons/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+                <marker date="1533709254431" expanded="true" signature="648:651" ph="..." />
+                <marker date="1533709254431" expanded="true" signature="741:744" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/aurora_rp/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="429">
+              <caret line="182" column="27" lean-forward="true" selection-start-line="181" selection-start-column="16" selection-end-line="182" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -3320,13 +3306,13 @@
         <option value="$PROJECT_DIR$/apps/verses/templates/verses/verse_detail.html" />
         <option value="$PROJECT_DIR$/apps/verses/views.py" />
         <option value="$PROJECT_DIR$/apps/verses/urls.py" />
-        <option value="$PROJECT_DIR$/apps/icons/templates/icons/icon.html" />
         <option value="$PROJECT_DIR$/apps/icons/models.py" />
-        <option value="$PROJECT_DIR$/aurora_rp/settings.py" />
         <option value="$PROJECT_DIR$/apps/icons/templates/icons/icon_list.html" />
         <option value="$PROJECT_DIR$/apps/icons/templates/icons/fc_detail.html" />
         <option value="$PROJECT_DIR$/apps/icons/urls.py" />
         <option value="$PROJECT_DIR$/apps/icons/views.py" />
+        <option value="$PROJECT_DIR$/apps/icons/templates/icons/icon.html" />
+        <option value="$PROJECT_DIR$/aurora_rp/settings.py" />
       </list>
     </option>
   </component>
@@ -4015,18 +4001,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/icons/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <marker date="1533709254431" expanded="true" signature="648:651" ph="..." />
-            <marker date="1533709254431" expanded="true" signature="741:744" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/threads/templates/threads/thread_detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
@@ -4041,26 +4015,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aurora_rp/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="181" column="18" selection-start-line="181" selection-start-column="18" selection-end-line="181" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/icons/templates/icons/icon.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/threads/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/posts/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="36" column="16" lean-forward="true" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -4079,12 +4049,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/posts/views.py">
+    <entry file="file://$PROJECT_DIR$/apps/icons/templates/icons/icon_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="36" column="16" lean-forward="true" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+        <state relative-caret-position="460">
+          <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/icons/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="602">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
           <folding>
-            <element signature="e#0#45#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1533712547784" expanded="true" signature="626:631" ph="..." />
+            <marker date="1533712547784" expanded="true" signature="1350:1502" ph="..." />
+            <marker date="1533712547784" expanded="true" signature="1436:1441" ph="..." />
+            <marker date="1533712547784" expanded="true" signature="1501:1502" ph="..." />
           </folding>
         </state>
       </provider>
@@ -4099,24 +4080,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/icons/templates/icons/icon_list.html">
+    <entry file="file://$PROJECT_DIR$/apps/icons/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+        <state relative-caret-position="23">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1533709254431" expanded="true" signature="648:651" ph="..." />
+            <marker date="1533709254431" expanded="true" signature="741:744" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/icons/views.py">
+    <entry file="file://$PROJECT_DIR$/apps/icons/templates/icons/icon.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <marker date="1533712547784" expanded="true" signature="626:631" ph="..." />
-            <marker date="1533712547784" expanded="true" signature="1350:1502" ph="..." />
-            <marker date="1533712547784" expanded="true" signature="1436:1441" ph="..." />
-            <marker date="1533712547784" expanded="true" signature="1501:1502" ph="..." />
-          </folding>
+        <state relative-caret-position="184">
+          <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora_rp/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="182" column="27" lean-forward="true" selection-start-line="181" selection-start-column="16" selection-end-line="182" selection-end-column="27" />
         </state>
       </provider>
     </entry>
