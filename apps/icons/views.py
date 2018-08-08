@@ -32,7 +32,6 @@ class IconUpdateView(UpdateView):
     model = Icon
     form_class = IconForm
     template_name = 'icons/icon_form.html'
-    success_url = '/icons/'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -41,7 +40,6 @@ class IconUpdateView(UpdateView):
 
     def get(self, request, *args, **kwargs):
         icon = Icon.objects.get(pk=kwargs['pk'])
-        self.success_url = '/icons/fc/%s/' % icon.fc_model.pk
         return super().get(self)
 
 

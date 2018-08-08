@@ -1,6 +1,7 @@
 from django.db import models
 from apps.rp.models import Model
 from django.forms import ModelForm
+from django.urls import reverse
 
 
 # face claim
@@ -16,6 +17,7 @@ class FaceClaim(Model):
             for tag in icon.get_tags():
                 if not tag in tags:
                     tags.append(tag);
+        tags.sort()
         return tags
 
 
@@ -30,6 +32,9 @@ class Icon(Model):
 
     def get_tags(self):
         return [tag.strip() for tag in self.tags.split(',') if len(tag) > 0]
+
+    def get_absolute_url(self):
+        return reverse('faceclaim-detail', kwargs={'pk': self.fc_model.pk})
 
 
 class IconForm(ModelForm):
