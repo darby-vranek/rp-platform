@@ -23,7 +23,7 @@ class IconListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['distinct'] = Icon.objects.order_by('fc').distinct('fc').exclude(fc__iexact='')
+        context['fcs'] = FaceClaim.objects.distinct()
         return context
 
 
@@ -47,7 +47,6 @@ class IconDeleteView(DeleteView):
 def IconFcList(request, name):
     name = ' '.join(name.split('-'))
     return render(request, 'icons/fc_detail.html', context={
-        'distinct': Icon.objects.order_by('fc').distinct('fc').exclude(fc__iexact=''),
-        'icon_list': Icon.objects.filter(fc__icontains=name),
+        'icon_list': Icon.objects.filter(fc_model__name__icontains=name),
         'fc_name': name
     })

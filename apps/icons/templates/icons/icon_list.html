@@ -9,12 +9,9 @@
             <a class="btn btn-primary" href="{% url 'new-icon' %}">New Icon</a>
         </div>
         <ul class="nav flex-sm-column">
+            {% for fc in fcs %}
             <li class="nav-item">
-
-            </li>
-            {% for icon in distinct %}
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'fc-icons' name=icon.fc|slugify %}">{{ icon.fc }}</a>
+                <a class="nav-link" href="{% url 'fc-icons' name=fc.name|slugify %}">{{ fc.name }}</a>
             </li>
             {% endfor %}
             <li class="nav-item">
