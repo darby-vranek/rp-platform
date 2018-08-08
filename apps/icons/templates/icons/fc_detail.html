@@ -1,14 +1,14 @@
 {% extends "rp/base.html" %}
-{% block title %}{{ fc_name }} icons{% endblock %}
+{% block title %}{{ faceclaim.name }} icons{% endblock %}
 {% block jumbotron %}
 <div class="jumbotron">
-    <h1 class="display-4">{{ fc_name }}</h1>
+    <h1 class="display-4">{{ faceclaim.name }}</h1>
     <a class="btn btn-primary" href="{% url 'new-icon' %}">New</a>
 </div>
 {% endblock %}
 
 {% block content %}
-    {% for icon in icon_list %}
+    {% for icon in faceclaim.icons.all %}
         {% include "icons/icon.html" %}
     {% endfor %}
 {% include 'rp/confirm_delete.html' %}
