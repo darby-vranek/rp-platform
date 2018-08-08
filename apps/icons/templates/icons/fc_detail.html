@@ -1,9 +1,13 @@
 {% extends "rp/base.html" %}
 {% block title %}{{ faceclaim.name }} icons{% endblock %}
-{% block jumbotron %}
+{% block jumbotron %}f
 <div class="jumbotron">
     <h1 class="display-4">{{ faceclaim.name }}</h1>
-    <a class="btn btn-primary" href="{% url 'new-icon' %}">New</a>
+    <p class="lead">
+        {% for tag in faceclaim.get_all_tags %}
+            #{{ tag }}
+        {% endfor %}
+    </p>
 </div>
 {% endblock %}
 

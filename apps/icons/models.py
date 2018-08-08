@@ -10,6 +10,14 @@ class FaceClaim(Model):
     def __str__(self):
         return self.name
 
+    def get_all_tags(self):
+        tags = list()
+        for icon in self.icons.all():
+            for tag in icon.get_tags():
+                if not tag in tags:
+                    tags.append(tag);
+        return tags
+
 
 # icon
 class Icon(Model):
@@ -21,7 +29,7 @@ class Icon(Model):
         return self.image.url
 
     def get_tags(self):
-        return [f'#{tag}' for tag in self.tags.split(',')]
+        return [tag.strip() for tag in self.tags.split(',') if len(tag) > 0]
 
 
 class IconForm(ModelForm):

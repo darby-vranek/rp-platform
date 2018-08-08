@@ -3,10 +3,12 @@
     $('#{{ icon.pk }}').popover({
         'html': true,
         'content':
-            '<ul class="nav flex-column text-center">' +
-            {% for tag in icon.get_tags %}
-                <li>tag</li>
-            {% endfor %}
+            '<ul class="nav flex-column text-center" style="max-width: 125px;">' +
+                '<li><small>' +
+                {% for tag in icon.get_tags %}
+                    '#{{ tag }} ' +
+                {% endfor %}
+                '</small></li>' +
                 '<li class="nav-item">' +
                     '<h6><a class="nav-link badge badge-primary mt-2" href="{% url 'edit-icon' pk=icon.pk %}">Edit</a></h6>' +
                 '</li>' +
