@@ -46,7 +46,8 @@ class IconDeleteView(DeleteView):
 
 def IconFcList(request, name):
     name = ' '.join(name.split('-'))
-    return render(request, 'icons/icon_list.html', context={
+    return render(request, 'icons/fc_detail.html', context={
         'distinct': Icon.objects.order_by('fc').distinct('fc').exclude(fc__iexact=''),
         'icon_list': Icon.objects.filter(fc__icontains=name),
+        'fc_name': name
     })

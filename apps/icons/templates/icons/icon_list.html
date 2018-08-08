@@ -1,26 +1,26 @@
 {% extends "rp/base.html" %}
 {% block title %}Icons{% endblock %}
 {% block jumbotron %}
-<div class="jumbotron">
-    <h1 class="display-4">Icons</h1>
-    <div class="dropdown">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Face Claim</a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="{% url 'icons' %}">All Icons</a>
-            {% for icon in distinct %}
-                <a class="dropdown-item" href="{% url 'fc-icons' name=icon.fc|slugify %}">{{ icon.fc }}</a>
-            {% endfor %}
-        </div>
-    </div>
-    <a class="btn btn-primary" href="{% url 'new-icon' %}">New</a>
-</div>
 {% endblock %}
 
 {% block content %}
-    <div class="card card-group" style="border:none;">
-    {% for icon in icon_list %}
-        {% include 'icons/icon.html' %}
-    {% endfor %}
+    <div class="card" style="width: 20rem; margin: auto;">
+        <div class="nav card-body">
+            <a class="btn btn-primary" href="{% url 'new-icon' %}">New Icon</a>
+        </div>
+        <ul class="nav flex-sm-column">
+            <li class="nav-item">
+
+            </li>
+            {% for icon in distinct %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'fc-icons' name=icon.fc|slugify %}">{{ icon.fc }}</a>
+            </li>
+            {% endfor %}
+            <li class="nav-item">
+                <a class="nav-link" href="#">Unidentified</a>
+            </li>
+        </ul>
     </div>
     {% include 'rp/confirm_delete.html' %}
 {% endblock %}
