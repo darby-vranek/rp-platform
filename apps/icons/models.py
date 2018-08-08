@@ -13,7 +13,6 @@ class FaceClaim(Model):
 
 # icon
 class Icon(Model):
-    fc = models.CharField(max_length=255, default='', blank=True)
     fc_model = models.ForeignKey(FaceClaim, related_name='icons', on_delete=models.DO_NOTHING, null=True, blank=True)
     image = models.ImageField(default='admin/img/icon-unknown.svg')
     tags = models.CharField(max_length=255, default='', blank=True)

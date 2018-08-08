@@ -4,20 +4,19 @@
 {% endblock %}
 
 {% block content %}
-    <div class="card" style="width: 20rem; margin: auto;">
-        <div class="nav card-body">
-            <a class="btn btn-primary" href="{% url 'new-icon' %}">New Icon</a>
-        </div>
-        <ul class="nav flex-sm-column">
-            {% for fc in fcs %}
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'fc-icons' name=fc.name|slugify %}">{{ fc.name }}</a>
-            </li>
-            {% endfor %}
-            <li class="nav-item">
-                <a class="nav-link disabled">Unidentified</a>
-            </li>
-        </ul>
+    <div class="card text-center border-white" style="width: 20rem; margin: auto;">
+        <p><a class="btn btn-primary m-1" href="{% url 'new-icon' %}">New Icon</a><a class="btn btn-secondary disabled m-1">New Collection</a></p>
+    </div>
+    <div class="card text-center border-white" style="width: 20rem; margin: auto;">
+        {% for fc in fcs|dictsort:"name" %}
+            <div class="media card-body">
+                <img class="mr-3" src="{{ fc.icons.last.image.url }}" />
+                <div class="media-body card border-white" style="height: 100px;">
+                    <a class="btn-sm btn-primary" href="{% url 'fc-icons' name=fc.name|slugify %}"><strong>{{ fc.name }}</strong></a>
+                    <div class="card-body"><span class="badge badge-primary">{{ fc.icons.count }}</span> icons</div>
+                </div>
+            </div>
+        {% endfor %}
     </div>
     {% include 'rp/confirm_delete.html' %}
 {% endblock %}
