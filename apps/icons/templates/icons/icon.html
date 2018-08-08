@@ -1,14 +1,14 @@
-    <a tabindex="0" data-trigger="focus" role="button" data-placement="bottom" data-toggle="popover" id="{{ icon.pk }}"><img id="icon-{{ icon.pk }}" class="card-img m-1" src="{{ icon.image.url }}" style="width: 100px; height: 100px;"/></a>
+    <a tabindex="0" data-trigger="focus" role="button" data-placement="bottom" data-toggle="popover" id="{{ icon.pk }}"><img id="icon-{{ icon.pk }}" class="card-img mb-1" src="{{ icon.image.url }}" style="width: 100px; height: 100px;"/></a>
 <script>
     $('#{{ icon.pk }}').popover({
         'html': true,
         'content':
-            '<ul class="nav flex-column">' +
+            '<ul class="nav flex-column text-center">' +
                 '<li class="nav-item">' +
-                    '<a class="nav-link" href="{% url 'edit-icon' pk=icon.pk %}">Edit</a>' +
+                    '<h6><a class="nav-link badge badge-primary mt-2" href="{% url 'edit-icon' pk=icon.pk %}">Edit</a></h6>' +
                 '</li>' +
                 '<li class="nav-item">' +
-                    '<button class="nav-link" data-toggle="modal" data-target="#confirmDelete" data-action="{% url 'delete-icon' pk=icon.pk %}">Delete</button>' +
+                    '<h6><button class="nav-link badge badge-danger" data-toggle="modal" data-target="#confirmDelete" data-action="{% url 'delete-icon' pk=icon.pk %}">Delete</button></h6>' +
                 '</li>' +
             '</ul>'
     });
