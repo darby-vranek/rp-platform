@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'apps.posts',
     'django_summernote',
     'storages',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 MIDDLEWARE = [

@@ -3,7 +3,7 @@ from .views import *
 
 urlpatterns = [
     # threads
-    path('', ThreadListView.as_view(), name='threads'),
+    path('', ThreadListView.asstati_view(), name='threads'),
     path('new/', ThreadCreateView.as_view(), name='new-thread'),
     path('<int:pk>/', ThreadDetailView.as_view(), name='thread-detail'),
     path('<int:pk>/edit/', ThreadUpdateView.as_view(), name='edit-thread'),
