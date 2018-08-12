@@ -1,16 +1,14 @@
-<div class="media" style="max-width: 750px;">
-  <img class="mr-3 mt-3" src="{{ reply.character.sm_icon }}" alt="" style="width: 100px; height: 100px; background-color: lightgray;">
-  <div class="media-body card" style="border: none;">
-      <div class="card-header" style="margin-bottom: -15px; background-color: white;">
-          <small>
-              <strong class="card-link"><a href="{% url 'character-detail' pk=reply.character.pk %}">{{ reply.character.page_name }}</a></strong>
-              <em class="card-link">{{ reply.created }}</em>
-              <a class="badge badge-sm badge-primary ml-1" href="{% url 'edit-reply' thread_pk=reply.parent.pk pk=reply.pk %}">Edit</a>
-              <button type="button" class="badge badge-sm badge-danger" data-toggle="modal" data-target="#confirmDelete" data-action="{% url 'delete-reply' thread_pk=reply.parent.pk pk=reply.pk %}">Delete</button>
-          </small>
-      </div>
-      <div class="card-body">
-          {{ reply.content | safe }}
-      </div>
-  </div>
+<div class="card col-md-6 ml-auto mr-auto" style="margin-bottom: 50px; margin-top: 50px;">
+    <div class="card-header card-header-image">
+        <img src="{{ reply.character.sm_icon }}" style="width: 100px; height: 100px;"/>
+        <h4 class="card-title" style="margin-left: 100px;"><a class="text-muted" href="{% url 'character-detail' pk=reply.character.pk %}">{{ reply.character.display_name }}</a></h4>
+    </div>
+
+    <div class="card-body pl-4 pr-4">
+        {{ reply.content|safe }}
+    </div>
+    <hr class="m-0" />
+    <div class="card-footer">
+        <div class="stats">{{ reply.created }} <a href="{% url 'edit-reply' thread_pk=thread.pk pk=reply.pk %}"><i class="material-icons align-top">edit</i></a></div>
+    </div>
 </div>
