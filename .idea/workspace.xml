@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8057be3e-aeb9-4e8f-8cf0-d78276b4c29a" name="Default" comment="changed requirements etc">
-      <change beforePath="$PROJECT_DIR$/aurora_rp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/aurora_rp/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/threads/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/threads/urls.py" afterDir="false" />
     </list>
     <ignored path="media/" />
     <ignored path="staticfiles/" />
@@ -3145,7 +3145,7 @@
           <entry key="html" value="199" />
           <entry key="js" value="1" />
           <entry key="log" value="1" />
-          <entry key="py" value="240" />
+          <entry key="py" value="241" />
           <entry key="txt" value="3" />
         </counts>
       </usages-collector>
@@ -3163,7 +3163,7 @@
           <entry key="HTML" value="199" />
           <entry key="JavaScript" value="1" />
           <entry key="PLAIN_TEXT" value="8" />
-          <entry key="Python" value="240" />
+          <entry key="Python" value="241" />
         </counts>
       </usages-collector>
     </session>
@@ -3185,14 +3185,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aurora_rp/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
+            <state relative-caret-position="-552">
               <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
               <folding>
                 <element signature="e#309#329#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/rp/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -3206,11 +3215,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/threads/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="92">
-              <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+              <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -3369,9 +3378,9 @@
         <option value="$PROJECT_DIR$/apps/threads/templates/threads/thread_detail.html" />
         <option value="$PROJECT_DIR$/apps/threads/templates/threads/thread_list.html" />
         <option value="$PROJECT_DIR$/apps/threads/templates/threads/reply.html" />
-        <option value="$PROJECT_DIR$/apps/threads/urls.py" />
         <option value="$PROJECT_DIR$/aurora_rp/storage_backends.py" />
         <option value="$PROJECT_DIR$/aurora_rp/settings.py" />
+        <option value="$PROJECT_DIR$/apps/threads/urls.py" />
       </list>
     </option>
   </component>
@@ -3640,7 +3649,7 @@
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49594814" weight="0.28898427" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49594814" visible="true" weight="0.28898427" />
       <window_info id="Structure" order="1" sideWeight="0.50318474" side_tool="true" weight="0.15522175" />
       <window_info id="Favorites" order="2" sideWeight="0.50405186" side_tool="true" weight="0.28923988" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
@@ -3653,7 +3662,7 @@
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="9" weight="0.32866243" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.48855507" weight="1.0" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.48855507" weight="0.6687898" />
       <window_info anchor="bottom" id="Python Console" order="11" sideWeight="0.49427754" weight="0.3375796" />
       <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.4914163" weight="0.32866243" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5114449" side_tool="true" weight="0.21401274" />
@@ -3810,13 +3819,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/icons/templates/icons/icon_group.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/rp/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/icons/storage.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -4048,13 +4050,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/threads/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aurora_rp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
@@ -4071,11 +4066,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/aurora_rp/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
+        <state relative-caret-position="-552">
           <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
           <folding>
             <element signature="e#309#329#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/rp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/threads/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
         </state>
       </provider>
     </entry>
