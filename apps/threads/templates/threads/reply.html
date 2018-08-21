@@ -1,14 +1,14 @@
-<div class="card col-md-6 ml-auto mr-auto" style="margin-bottom: 50px; margin-top: 50px;">
+<div class="card col-md-6 ml-auto mr-auto pl-lg-4 pr-lg-4 pr-md-3 pl-md-3" style="margin-bottom: 50px;">
     <div class="card-header card-header-image">
-        <img src="{{ reply.character.sm_icon }}" style="width: 100px; height: 100px;"/>
-        <h4 class="card-title" style="margin-left: 100px;"><a class="text-muted" href="{% url 'character-detail' pk=reply.character.pk %}">{{ reply.character.display_name }}</a></h4>
+        <img class="img" src="{{ reply.character.sm_icon }}" style="width: 100px; height: 100px; margin-top: -25px;"/>
+        <h4 class="card-title" style="margin-left: 100px; margin-bottom: 10px;"><a class="badge badge-default pt-2 pb-2 pl-3 pr-3" href="{% url 'character-detail' pk=reply.character.pk %}">{{ reply.character.display_name }}</a></h4>
     </div>
 
-    <div class="card-body pl-4 pr-4">
+    <div class="card-body" style="margin-bottom: -10px;">
         {{ reply.content|safe }}
     </div>
     <hr class="m-0" />
     <div class="card-footer">
-        <div class="stats">{{ reply.created }} <a href="{% url 'edit-reply' thread_pk=thread.pk pk=reply.pk %}"><i class="material-icons align-top">edit</i></a></div>
+        <div class="stats">{{ reply.created }} <a href="{% url 'edit-reply' thread_pk=thread.pk pk=reply.pk %}"><i class="material-icons align-top ml-2 mr-2">edit</i></a></div>
     </div>
 </div>

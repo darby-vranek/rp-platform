@@ -1,22 +1,16 @@
 {% extends "rp/base.html" %}
 {% load static %}
 {% block title %}{{ thread.title }}{% endblock %}
-{#{% block jumbotron %}#}
-{#    <div class="card-body jumbotron">#}
-{#        <h1 class="display-4">{{ thread.title }} <span class="badge badge-primary" style="font-size: .3em; vertical-align: 80%;">{{ thread.verse }}</span></h1>#}
-{#        <p class="lead">{{ thread.caption }}</p>#}
-{#        <a class="btn btn-sm btn-outline-primary" href="{% url 'edit-thread' pk=thread.pk %}" role="button">Edit</a>#}
-{#        <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#confirmDelete" data-action="{% url 'delete-thread' pk=thread.pk %}">Delete</button>#}
-{#    </div>#}
-{#{% endblock %}#}
+{% block navbar %}{% include 'threads/thread_navbar.html' %}{% endblock %}
 {% block content %}
-    <div class="header text-center">
+    <div id="top" class="header text-center mt-4 mb-5 p-2">
         <h1 class="title">{{ thread.title }}</h1>
+        <p class="subtitle">{{ thread.caption }} <a href="{% url 'edit-thread' pk=thread.pk %}"><i class="material-icons align-top">edit</i></a></p>
     </div>
     {% for reply in thread.replies.all|dictsort:"created" %}
         {% include "threads/reply.html" %}
     {% endfor %}
-    <div class="card col-md-6 ml-auto mr-auto" style="border: none;">
+    <div class="card col-md-6 ml-auto mr-auto pl-lg-4 pr-lg-4 pr-md-3 pl-md-3" style="border: none;">
         <div class="card-body" id="bottom">
             <form method="post" action="{% url 'new-reply' pk=thread.pk %}">
                 {% csrf_token %}
@@ -28,9 +22,5 @@
             </form>
         </div>
     </div>
-{#<div style="position: fixed; right: 10px; top: 10px;">#}
-{#    <a href="#" class="btn btn-primary btn-sm">↑</a>#}
-{#    <a href="#bottom" class="btn btn-primary btn-sm">↓</a>#}
-{#</div>#}
 {% include 'rp/confirm_delete.html' %}
 {% endblock %}

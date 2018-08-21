@@ -5,7 +5,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-7 mr-auto ml-auto">
-                <div class="card">
+                <div class="card pl-3 pr-3">
 				    <div class="card-header card-header-text card-header-primary">
                         <div class="card-text">
                             <h4 class="card-title">Threads</h4>
@@ -23,6 +23,7 @@
                                         <th>Verse</th>
                                         <th >Last Reply</th>
                                         <th>Created</th>
+                                        <th><span class="mr-4">Replies</span></th>
                                     </tr>
                                 </thead>
                                 <tfoot>
@@ -31,6 +32,7 @@
                                         <th>Verse</th>
                                         <th>Last Reply</th>
                                         <th>Created</th>
+                                        <th>Replies</th>
                                     </tr>
                                 </tfoot>
                                 <tbody>
@@ -40,6 +42,7 @@
                                         <td>{% if thread.verse %}<a href="{% url 'verse-detail' pk=thread.verse.pk %}">{{ thread.verse.display_name }}</a>{% endif %}</td>
                                         <td data-order="{{ thread.get_latest_reply_created|date:'ymdhi' }}"><small>{{ thread.get_latest_reply_created }}</small></td>
                                         <td data-order="{{ thread.created|date:'ymdhi' }}"><small>{{ thread.created }}</small></td>
+                                        <td>{{ thread.replies.count }}</td>
                                     </tr>
                                     {% endfor %}
                                 </tbody>
