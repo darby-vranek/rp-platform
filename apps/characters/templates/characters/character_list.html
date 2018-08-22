@@ -1,9 +1,8 @@
 {% extends "rp/base.html" %}
 {% block title %}Characters{% endblock %}
-{% block jumbotron %}
-{#<div class="jumbotron">#}
-{#    <h1 class="display-4">Characters</h1>#}
-{#    <a class="btn btn-primary" href="{% url 'new-character' %}" role="button">New</a>#}
-{#</div>#}
+{% block content %}
+    <div id="top" class="header text-center mt-4 mb-0 p-2">
+        <h1 class="title">Characters <a class href="{% url 'new-character' %}"><i class="material-icons" style="margin-bottom: 0px;">add_circle_outline</i></a></h1>
+    </div>
+    {% include "characters/character_group.html" %}
 {% endblock %}
-{% block content %}{% include "characters/character_group.html" %}{% endblock %}

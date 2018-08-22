@@ -1,0 +1,33 @@
+{% load static %}
+<div class="navbar bg-primary" style="position: fixed; top: 0; right: 0; left: 0; height: 40px; z-index: 1000; border-radius: 0px;">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" href="/"><img src="{% static 'rp/img/burning-book.png' %}" height="30px" width="30px" /></a>
+        </li>
+        <li class="nav-item dropdown pt-1">
+            <a class="nav-link dropdown-toggle btn btn-primary" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Writing</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="{% url 'threads' %}">Threads</a>
+                <a class="dropdown-item" href="{% url 'posts' %}">Posts</a>
+                <a class="dropdown-item" href="{% url 'scripts' %}">Conversations</a>
+            </div>
+        </li>
+        <li class="nav-item pt-1">
+            <a class="nav-link" href="{% url 'characters' %}">Characters</a>
+        </li>
+        <li class="nav-item pt-1">
+            <a class="nav-link" href="{% url 'verses' %}">Verses</a>
+        </li>
+        <li class="nav-item pt-1">
+            <a class="nav-link" href="{% url 'icons' %}">Icons</a>
+        </li>
+    </ul>
+    <ul class="nav nav-pills-icons mr-3">
+        <li class="nav-item">
+            <a href="{% url 'edit-character' pk=character.pk %}" class="text-white"><i class="nav-item material-icons">edit</i></a>
+        </li>
+        <li class="nav-item mr-2 ml-2">
+            <a href="#" class="text-white"><i class="nav-item material-icons">delete</i></a>
+        </li>
+    </ul>
+</div>

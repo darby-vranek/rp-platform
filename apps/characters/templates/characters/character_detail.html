@@ -1,1 +1,18 @@
-{% extends "characters/character_base.html" %}
+{% extends "rp/base.html" %}
+
+{% block navbar %}
+    {% include "characters/character_detail_navbar.html" %}
+{% endblock %}
+
+{% block content %}
+    <div class="card card-profile col-5" style="margin: 100px auto 0px;">
+        <div class="card-header card-header-image">
+            <img src="{{ character.lg_icon }}" style="width: 200px; height: 200px; background-color: lightgray;" alt=""/>
+        </div>
+        <div class="card-body">
+            <h4 class="mb-0 card-title text-muted">{{ character.display_name }}</h4>
+            <p class="card-category text-gray mb-0">{{ character.caption|lower }}</p>
+
+        </div>
+    </div>
+{% endblock %}

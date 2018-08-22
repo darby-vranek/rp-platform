@@ -18,7 +18,7 @@ class Model(models.Model):
 
 class Profile(Model):
     display_name = models.CharField(max_length=255)
-    caption = models.CharField(max_length=255, default='', blank=True)
+    caption = models.CharField(max_length=30, default='', blank=True)
     desc = models.TextField(blank=True)
 
     class Meta:
@@ -30,6 +30,7 @@ class Profile(Model):
 
 class Character(Profile):
     page_name = models.CharField(max_length=30)
+    short_name = models.CharField(max_length=15, default='')
     sm_icon = models.URLField(default='', blank=True)
     lg_icon = models.URLField(default='', blank=True)
     verses = models.ManyToManyField('Verse', through='Bio', symmetrical=True, related_name='characters')
@@ -53,7 +54,7 @@ class Character(Profile):
 class CharacterForm(ModelForm):
     class Meta:
         model = Character
-        fields = ['page_name', 'display_name', 'caption', 'desc', 'sm_icon', 'lg_icon']
+        fields = ['display_name', 'caption', 'desc', 'page_name', 'short_name', 'sm_icon', 'lg_icon']
 
 
 class Verse(Profile):

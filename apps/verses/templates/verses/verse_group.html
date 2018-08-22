@@ -1,5 +1,5 @@
 {% for verse in verse_list %}
-<div class="card" style="border: none;">
+<div class="card col-3 ml-auto mr-auto mb-2 mt-2" style="border: none;">
 	<div class="card-body">
 		<h5 class="card-title"><a href="{% url 'verse-detail' pk=verse.pk %}">{{ verse.display_name }}</a></h5>
 		<h6 class="card-subtitle text-muted">{{ verse.franchise }}</h6>

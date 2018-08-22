@@ -20,7 +20,7 @@ class CharacterListView(ListView):
 
 class CharacterCreateView(CreateView):
     model = Character
-    fields = ['page_name', 'display_name', 'caption', 'desc', 'sm_icon', 'lg_icon']
+    form_class = CharacterForm
     template_name = 'rp/form.html'
     success_url = "/characters/"
 
@@ -32,7 +32,7 @@ class CharacterCreateView(CreateView):
 
 class CharacterUpdateView(UpdateView):
     model = Character
-    fields = ['page_name', 'display_name', 'caption', 'desc', 'sm_icon', 'lg_icon']
+    form_class = CharacterForm
     template_name = 'rp/form.html'
 
     def get_context_data(self, **kwargs):

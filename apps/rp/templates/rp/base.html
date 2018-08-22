@@ -26,12 +26,10 @@
         {% block navbar %}
             {% include "rp/navbar.html" %}
         {% endblock %}
-        <div class="wrapper card card-plain" id="page" style="padding-top: 40px;">
-			<div class="card-body">
-				{% block content %}
-				feed
-				{% endblock %}
-			</div>
+        <div class="wrapper" id="page" style="padding-top: 40px;">
+            {% block content %}
+            feed
+            {% endblock %}
         </div>
     <script src='{% static "assets/js/plugins/jquery.dataTables.min.js" %}'></script>
     <script>
