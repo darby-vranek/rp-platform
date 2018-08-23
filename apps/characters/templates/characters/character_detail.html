@@ -1,18 +1,91 @@
 {% extends "rp/base.html" %}
 
+{% block title %}{{ character.display_name }}{% endblock %}
+
 {% block navbar %}
     {% include "characters/character_detail_navbar.html" %}
 {% endblock %}
 
 {% block content %}
-    <div class="card card-profile col-5" style="margin: 100px auto 0px;">
-        <div class="card-header card-header-image">
-            <img src="{{ character.lg_icon }}" style="width: 200px; height: 200px; background-color: lightgray;" alt=""/>
+<div class="container">
+    <div class="row mt-5">
+        <div class="card card-profile col-2 mt-5 align-self-start ml-auto mr-auto" style="min-width: 250px;">
+            <div class="card-header card-header-image">
+                <img src="{{ character.lg_icon }}" style="max-width: 200px; background-color: lightgray;" alt=""/>
+            </div>
+            <div class="card-body">
+                <h4 class="mb-0 card-title text-muted">{{ character.display_name }}</h4>
+                <p class="card-category text-gray mb-0">{{ character.caption|lower }}</p>
+            </div>
         </div>
-        <div class="card-body">
-            <h4 class="mb-0 card-title text-muted">{{ character.display_name }}</h4>
-            <p class="card-category text-gray mb-0">{{ character.caption|lower }}</p>
-
+        <div class="card col-auto col-lg-8 col-xl-9 card-nav-tabs mt-5 ml-auto mr-auto">
+            <div class="card-header card-header-info">
+                <div class="nav-tabs-navigation">
+                    <ul class="nav nav-tabs" data-tabs="tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#all" data-toggle="tab">All</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#description" data-toggle="tab">Description</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#threads" data-toggle="tab">Threads</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#posts" data-toggle="tab">Posts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#scripts" data-toggle="tab">Scripts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#headcanons" data-toggle="tab">Headcanons</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="all">
+                        Feed
+                    </div>
+                    <div class="tab-pane" id="description">
+                        {{ character.desc }}
+                    </div>
+                    <div class="tab-pane" id="threads">
+                        {% for thread in character.get_threads %}
+                            <div class="card-body">
+                                <h4 class="card-title"><a href="{% url 'thread-detail' pk=thread.pk %}">{{ thread.title }}</a></h4>
+                                {% if thread.verse %}<h6 class="card-subtitle mb-2 text-muted">{{ thread.verse.display_name }}</h6>{% endif %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="tab-pane" id="posts">
+                        {% for post in character.posts.all %}
+                            <div class="card-body">
+                                <h4 class="card-title"><a href="{% url 'post-detail' pk=post.pk %}">{{ post.title }}</a></h4>
+                                {% if post.verse %}<h6 class="card-subtitle mb-2 text-muted">{{ post.verse.display_name }}</h6>{% endif %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="tab-pane" id="scripts">
+                        {% for script in character.get_scripts %}
+                            <div class="card-body">
+                                <h4 class="card-title"><a href="{% url 'script-detail' pk=script.pk %}">{{ script.title }}</a></h4>
+                                {% if script.verse %}<h6 class="card-subtitle mb-2 text-muted">{{ script.verse.display_name }}</h6>{% endif %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="tab-pane" id="headcanons">
+                        {% for trait in character.traits.all %}
+                            <div class="card-body">
+                                <h4 class="card-title">{{ trait.title }}: <span class="card-subtitle">{{ trait.content }}</span></h4>
+                                {% if trait.verse %}<h6 class="card-subtitle mb-2 text-muted">{{ trait.verse.display_name }}</h6>{% endif %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+</div>
 {% endblock %}

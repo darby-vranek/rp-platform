@@ -1,14 +1,18 @@
 {% extends "rp/base.html" %}
 {% block title %}{{ title }}{% endblock %}
 {% block content %}
-    <div class="header text-center mb-2 pt-4">
-        <h1 class="title">{{ title|safe }}</h1>
-    </div>
-    <div class="card col-md-6 ml-auto mr-auto p-4">
-        <form method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input class="btn btn-primary btn-sm" type="submit" value="Submit" />
-        </form>
+    <div class="card col-md-6 ml-auto mr-auto" style="margin-top: 75px;">
+        <div class="card-header card-header-text card-header-info">
+            <div class="card-text">
+                <h4 class="card-title">{{ title|safe }}</h4>
+            </div>
+        </div>
+        <div class="card-body">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input class="btn btn-primary btn-sm btn-info" type="submit" value="Submit" />
+            </form>
+        </div>
     </div>
 {% endblock %}

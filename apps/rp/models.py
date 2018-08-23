@@ -46,6 +46,14 @@ class Character(Profile):
                 threads.append(rep.parent)
         return threads
 
+    def get_scripts(self):
+        lines = Line.objects.filter(character=self)
+        scripts = list()
+        for line in lines.all():
+            if not line.script in scripts:
+                scripts.append(line.script)
+        return scripts
+
     def last_reply(self):
         if self.replies:
             return self.replies.order_by('created').last()
@@ -137,6 +145,16 @@ class Thread(Model):
     def get_latest_reply_created(self):
         latest = self.replies.order_by('created').last()
         return latest.created
+
+    def get_characters_str(self):
+        chars = list()
+        for reply in self.replies.distinct('character'):
+            chars.append(reply.character.short_name)
+        chars.sort()
+        output = chars[0]
+        for i in range(1, len(chars)):
+            output += f" & {chars[i]}"
+        return output
 
     def get_absolute_url(self):
         return reverse('thread-detail', kwargs={'pk': self.pk})

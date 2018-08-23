@@ -1,18 +1,24 @@
 {% extends "rp/base.html" %}
 {% block title %}{{ post.title }}{% endblock %}
-{% block jumbotron %}
-    <div class="card-body jumbotron">
-        <h1 class="display-4">{{ post.title }}{% if post.verse %} <span class="badge badge-primary" style="font-size: .3em; vertical-align: 80%;">{{ post.verse.display_name }}</span>{% endif %}</h1>
-        <a class="btn btn-sm btn-outline-primary" href="{% url 'edit-post' pk=post.pk %}" role="button">Edit</a>
-    <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#confirmDelete" data-action="{% url 'delete-post' pk=post.pk %}">Delete</button>
-    </div>
-{% endblock %}
+
 {% block content %}
-<div class="card"  style="width: 600px; margin: auto;">
-    {% if post.character %}<div class="card-header"><a href="{% url "character-detail" pk=post.character.pk %}">{{ post.character.page_name }}</a></div>{% endif %}
-    <div class="card-body">{{ post.content | safe }}</div>
-    <div class="card-footer"><small>{{ post.created }}</small></div>
-</div>
+    <div id="top" class="header text-center mt-4 mb-2 p-2">
+        <h1 class="title mb-2">{{ post.title }}</h1>
+        {% if post.verse %}<p class="subtitle">{{ post.verse|lower }}</p>{% endif %}
+    </div>
+    <div class="card col-md-6 ml-auto mr-auto pl-lg-4 pr-lg-4 pr-md-3 pl-md-3" style="margin-bottom: 50px;">
+        {% if post.character %}
+            <div class="card-header card-header-image">
+                <img class="img" src="{{ post.character.sm_icon }}" style="width: 100px; height: 100px;"/>
+                <h4 class="card-title" style="margin-left: 100px;"><a class="btn btn-sm btn-default" href="{% url 'character-detail' pk=post.character.pk %}">{{ post.character.display_name }}</a></h4>
+            </div>
+        {% endif %}
+        <div class="card-body">{{ post.content | safe }}</div>
+        <hr class="m-0" />
+        <div class="card-footer">
+            <div class="stats">{{ post.created }} <a href="{% url 'edit-post' pk=post.pk %}"><i class="material-icons align-top ml-2 mr-2">edit</i></a></div>
+        </div>
+    </div>
 {% include 'rp/confirm_delete.html' %}
 <script>
     $('#confirmDelete').on('show.bs.modal', function(event) {

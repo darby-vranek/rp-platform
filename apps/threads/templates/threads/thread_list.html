@@ -5,7 +5,7 @@
     <div class="container-fluid mt-5">
         <div class="row">
             <div class="col-md-7 mr-auto ml-auto">
-                <div class="card pl-3 pr-3">
+                <div class="card">
 				    <div class="card-header card-header-text card-header-primary">
                         <div class="card-text">
                             <h4 class="card-title">Threads</h4>
@@ -23,7 +23,7 @@
                                         <th>Verse</th>
                                         <th >Last Reply</th>
                                         <th>Created</th>
-                                        <th><span class="mr-4">Replies</span></th>
+                                        <th><i class="material-icons" style="margin-bottom: -0px;">reply</i></th>
                                     </tr>
                                 </thead>
                                 <tfoot>
@@ -38,11 +38,12 @@
                                 <tbody>
                                     {% for thread in thread_list|dictsort:"title" %}
 						            <tr>
-                                        <td><strong><a href="{% url 'thread-detail' pk=thread.pk %}">{{ thread.title }}</a></strong><h6 class="mb-0 card-subtitle text-muted">{{ thread.caption|lower }}</h6></td>
+                                        <td><strong><a href="{% url 'thread-detail' pk=thread.pk %}">{{ thread.title }}</a></strong><h6 class="mt-1 mb-0 card-subtitle text-muted">{{ thread.get_characters_str|lower }}</h6></td>
                                         <td>{% if thread.verse %}<a href="{% url 'verse-detail' pk=thread.verse.pk %}">{{ thread.verse.display_name }}</a>{% endif %}</td>
                                         <td data-order="{{ thread.get_latest_reply_created|date:'ymdhi' }}"><small>{{ thread.get_latest_reply_created }}</small></td>
                                         <td data-order="{{ thread.created|date:'ymdhi' }}"><small>{{ thread.created }}</small></td>
                                         <td>{{ thread.replies.count }}</td>
+
                                     </tr>
                                     {% endfor %}
                                 </tbody>
