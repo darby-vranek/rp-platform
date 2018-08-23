@@ -80,8 +80,8 @@
                         <hr>
                         {% for hc in character.headcanons.all %}
                                 <div class="row">
-                                    <h4 class="card-title col-auto mt-2" style="margin-bottom:-15px;">{{ hc.hc.title|safe }}</h4>
-                                    {% if hc.verse %}<h6 class="col-auto card-subtitle mt-1">{{ hc.verse.display_name }}</h6>{% endif %}
+                                    <h4 class="card-title col-auto mt-1">{{ hc.hc.title }}</h4>
+                                    {% if hc.verse %}<h6 class="badge badge-rose align-self-start col-auto card-subtitle mt-2">{{ hc.verse.display_name }}</h6>{% endif %}
                                 </div>
                                 <p class="card-text">{{ hc.content|safe }}</p>
                         {% endfor %}
@@ -117,11 +117,11 @@
                         </div>
                         <div class="form-group">
                             <label for="hc">Title</label>
-                            <textarea class="form-control" name="hc" id="hc_input" placeholder="e.g. Birthday"></textarea>
+                            <input type="text" class="form-control" name="hc" id="hc_input" placeholder="e.g. Birthday" />
                         </div>
                         <div class="form-group">
                             <label for="content">Content</label>
-                            <textarea class="form-control" name="content" rows="2" placeholder="e.g. September 13th"></textarea>
+                            <input type="text" class="form-control" name="content" placeholder="e.g. September 13th" />
                         </div>
                         <input type="submit" class="btn btn-rose" />
                     </form>
@@ -130,11 +130,4 @@
         </div>
     </div>
 </div>
-<script>
-$("#hc_input").summernote({
-    popover: false,
-    toolbar: false,
-    placeholder: 'e.g. 24 September 1986',
-});
-</script>
 {% endblock %}

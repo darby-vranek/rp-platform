@@ -169,11 +169,15 @@ def new_headcanon(request, pk):
         verse = Verse.objects.get(pk=post['verse'])
     else:
         verse = None
-    if len(Hc.objects.filter(title=post['hc'])) == 0:
-        hc = Hc(title=post['hc'])
+    if post['hc'][-4:] == '<br>':
+        title = post['hc'][0:-4]
+    else:
+        title = post['hc']
+    if len(Hc.objects.filter(title=title)) == 0:
+        hc = Hc(title=title)
         hc.save()
     else:
-        hc = Hc.objects.get(title=post['hc'])
+        hc = Hc.objects.get(title=title)
     Headcanon.objects.create(
         character=Character.objects.get(pk=pk),
         verse=verse,
