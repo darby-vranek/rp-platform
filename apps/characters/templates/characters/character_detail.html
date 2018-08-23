@@ -78,10 +78,10 @@
                     <div class="tab-pane" id="headcanons">
                         <h4 class="card-title"><a class href="#" data-toggle="modal" data-target="#hcModal"><i class="material-icons" style="margin-bottom: 0px;">add_circle_outline</i> New Headcanon </a></h4>
                         <hr>
-                        {% for hc in character.headcanons.all|dictsort:"title" %}
+                        {% for hc in character.headcanons.all %}
                                 <div class="row">
                                     <h4 class="card-title col-auto" style="margin-bottom:-15px;">{{ hc.hc.title|safe }}</h4>
-                                    {% if hc.verse %}<h6 class="col-auto card-subtitle mt-1f">{{ hc.verse.display_name }}</h6>{% endif %}
+                                    {% if hc.verse %}<h6 class="col-auto card-subtitle mt-1">{{ hc.verse.display_name }}</h6>{% endif %}
                                 </div>
                                 <p class="card-text">{{ hc.content|safe }}</p>
                         {% endfor %}

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8057be3e-aeb9-4e8f-8cf0-d78276b4c29a" name="Default" comment="changed requirements etc">
       <change beforePath="$PROJECT_DIR$/apps/characters/templates/characters/character_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/characters/templates/characters/character_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aurora_rp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/aurora_rp/settings.py" afterDir="false" />
     </list>
     <ignored path="media/" />
     <ignored path="staticfiles/" />
@@ -3150,9 +3151,9 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="36710" />
+          <entry key="HTML" value="36714" />
           <entry key="PLAIN_TEXT" value="106" />
-          <entry key="Python" value="21273" />
+          <entry key="Python" value="21276" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -3169,8 +3170,8 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="csv" value="1" />
-          <entry key="html" value="36710" />
-          <entry key="py" value="21273" />
+          <entry key="html" value="36714" />
+          <entry key="py" value="21276" />
           <entry key="txt" value="105" />
         </counts>
       </usages-collector>
@@ -3227,11 +3228,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/characters/templates/characters/character_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="80" column="77" selection-start-line="80" selection-start-column="77" selection-end-line="80" selection-end-column="77" />
+            <state relative-caret-position="324">
+              <caret line="83" column="91" selection-start-line="83" selection-start-column="91" selection-end-line="83" selection-end-column="91" />
               <folding>
                 <element signature="e#4640#4665#0#HTML" expanded="true" />
               </folding>
@@ -3239,10 +3240,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/aurora_rp/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
+            <state relative-caret-position="322">
               <caret line="181" column="23" selection-start-line="180" selection-start-column="22" selection-end-line="181" selection-end-column="23" />
               <folding>
                 <element signature="e#309#329#0" expanded="true" />
@@ -3351,8 +3352,8 @@
         <option value="$PROJECT_DIR$/apps/rp/templates/rp/base.html" />
         <option value="$PROJECT_DIR$/apps/characters/urls.py" />
         <option value="$PROJECT_DIR$/apps/characters/views.py" />
-        <option value="$PROJECT_DIR$/aurora_rp/settings.py" />
         <option value="$PROJECT_DIR$/apps/characters/templates/characters/character_detail.html" />
+        <option value="$PROJECT_DIR$/aurora_rp/settings.py" />
       </list>
     </option>
   </component>
@@ -4111,22 +4112,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aurora_rp/settings.py">
+    <entry file="file://$PROJECT_DIR$/apps/characters/templates/characters/character_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="181" column="23" selection-start-line="180" selection-start-column="22" selection-end-line="181" selection-end-column="23" />
+        <state relative-caret-position="324">
+          <caret line="83" column="91" selection-start-line="83" selection-start-column="91" selection-end-line="83" selection-end-column="91" />
           <folding>
-            <element signature="e#309#329#0" expanded="true" />
+            <element signature="e#4640#4665#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/characters/templates/characters/character_detail.html">
+    <entry file="file://$PROJECT_DIR$/aurora_rp/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="80" column="77" selection-start-line="80" selection-start-column="77" selection-end-line="80" selection-end-column="77" />
+        <state relative-caret-position="322">
+          <caret line="181" column="23" selection-start-line="180" selection-start-column="22" selection-end-line="181" selection-end-column="23" />
           <folding>
-            <element signature="e#4640#4665#0#HTML" expanded="true" />
+            <element signature="e#309#329#0" expanded="true" />
           </folding>
         </state>
       </provider>
