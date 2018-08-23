@@ -49,7 +49,7 @@
                         Feed
                     </div>
                     <div class="tab-pane" id="description">
-                        {{ character.desc }}
+                        {{ character.desc|safe }}
                     </div>
                     <div class="tab-pane" id="threads">
                         {% for thread in character.get_threads %}

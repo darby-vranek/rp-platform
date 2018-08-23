@@ -63,6 +63,9 @@ class CharacterForm(ModelForm):
     class Meta:
         model = Character
         fields = ['display_name', 'caption', 'desc', 'page_name', 'short_name', 'sm_icon', 'lg_icon']
+        widgets = {
+            'desc': SummernoteWidget()
+        }
 
 
 class Verse(Profile):
