@@ -160,11 +160,11 @@ SUMMERNOTE_CONFIG = {
     'summernote': {
         'width': '100%',
         'margin': '50px',
+        'fontSize': 12,
         'toolbar': [
-            ['fontname', ['fontname', 'fontsize', 'color']],
+            ['font', ['clear', 'fontsize', 'strikethrough', 'superscript', 'subscript']],
             ['style', ['bold', 'italic', 'underline']],
-            ['font', ['strikethrough', 'superscript', 'subscript']],
-            ['para', ['ul', 'ol', 'paragraph']],
+            ['para', ['style', 'ul', 'ol', 'paragraph']],
             ['insert', ['picture', 'link', 'hr']]
         ],
         'popover': {

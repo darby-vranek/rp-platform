@@ -9,6 +9,11 @@ class CharacterDetailView(DetailView):
     model = Character
     template_name = 'characters/character_detail.html'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['verses'] = Verse.objects.all()
+        return context
+
 
 class CharacterListView(ListView):
     model = Character
@@ -156,3 +161,23 @@ class CharacterTraitDeleteView(DeleteView):
     def post(self, *args, **kwargs):
         self.success_url = '/characters/%s/' % kwargs['char_pk']
         return super().post(self)
+
+
+def new_headcanon(request, pk):
+    post = request.POST
+    if post['verse']:
+        verse = Verse.objects.get(pk=post['verse'])
+    else:
+        verse = None
+    if len(Hc.objects.filter(title=post['hc'])) == 0:
+        hc = Hc(title=post['hc'])
+        hc.save()
+    else:
+        hc = Hc.objects.get(title=post['hc'])
+    Headcanon.objects.create(
+        character=Character.objects.get(pk=pk),
+        verse=verse,
+        hc=hc,
+        content=post['content']
+    )
+    return redirect(f"/characters/{pk}")

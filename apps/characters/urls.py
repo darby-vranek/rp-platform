@@ -7,6 +7,10 @@ urlpatterns = [
     path('<int:pk>/', CharacterDetailView.as_view(), name='character-detail'),
     path('<int:pk>/edit/', CharacterUpdateView.as_view(), name='edit-character'),
     path('<int:pk>/delete/', CharacterDetailView.as_view(), name='delete-character'),
+    path('<int:pk>/headcanons/new/', new_headcanon, name='new-headcanon'),
+
+
+
     path('<int:pk>/verses/new/', CharacterBioCreateView.as_view(), name='new-character-bio'),
     path('characters/<int:char_pk>/traits/new/', CharacterTraitCreateView.as_view(), name='new-character-trait'),
     path('characters/<int:char_pk>/traits/<int:pk>/edit/', CharacterTraitUpdateView.as_view(), name='edit-character-trait'),

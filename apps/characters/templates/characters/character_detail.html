@@ -76,11 +76,14 @@
                         {% endfor %}
                     </div>
                     <div class="tab-pane" id="headcanons">
-                        {% for trait in character.traits.all %}
-                            <div class="card-body">
-                                <h4 class="card-title">{{ trait.title }}: <span class="card-subtitle">{{ trait.content }}</span></h4>
-                                {% if trait.verse %}<h6 class="card-subtitle mb-2 text-muted">{{ trait.verse.display_name }}</h6>{% endif %}
-                            </div>
+                        <h4 class="card-title"><a class href="#" data-toggle="modal" data-target="#hcModal"><i class="material-icons" style="margin-bottom: 0px;">add_circle_outline</i> New Headcanon </a></h4>
+                        <hr>
+                        {% for hc in character.headcanons.all %}
+                                <div class="row">
+                                    <h4 class="card-title col-auto" style="margin-bottom:-15px;">{{ hc.hc.title|safe }}</h4>
+                                    {% if hc.verse %}<h6 class="col-auto card-subtitle mt-1f">{{ hc.verse.display_name }}</h6>{% endif %}
+                                </div>
+                                <p class="card-text">{{ hc.content|safe }}</p>
                         {% endfor %}
                     </div>
                 </div>
@@ -88,4 +91,50 @@
         </div>
     </div>
 </div>
+<div class="modal fade" id="hcModal" tabindex="-1" role="">
+    <div class="modal-dialog modal-hc" role="document">
+        <div class="modal-content">
+            <div class="card card-signup card-plain">
+                <div class="modal-header">
+                    <div class="card-header card-header-rose text-center">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            <i class="material-icons">clear</i>
+                        </button>
+                        <h4 class="card-title">New Headcanon</h4>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <form class="form" method="post" action="{% url 'new-headcanon' pk=character.pk %}">
+                    {% csrf_token %}
+                        <div class="form-group">
+                            <label for="verse">Verse</label>
+                            <select class="form-control selectpicker" data-style="btn btn-link" id="verseSelect" name="verse">
+                                <option></option>
+                                {% for verse in verses %}
+                                    <option value="{{ verse.pk }}">{{ verse.display_name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="hc">Title</label>
+                            <textarea class="form-control" name="hc" id="hc_input" placeholder="e.g. Birthday"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="content">Content</label>
+                            <textarea class="form-control" name="content" rows="2" placeholder="e.g. September 13th"></textarea>
+                        </div>
+                        <input type="submit" class="btn btn-rose" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+$("#hc_input").summernote({
+    popover: false,
+    toolbar: false,
+    placeholder: 'e.g. 24 September 1986',
+});
+</script>
 {% endblock %}

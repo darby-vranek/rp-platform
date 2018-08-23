@@ -283,3 +283,26 @@ class LineForm(ModelForm):
             }),
 
         }
+
+
+class Hc(Model):
+    title = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.title
+
+
+class Headcanon(Model):
+    character = models.ForeignKey('Character', on_delete=models.CASCADE, related_name='headcanons')
+    verse = models.ForeignKey('Verse', on_delete=models.DO_NOTHING, related_name='headcanons', null=True, blank=True)
+    hc = models.ForeignKey('Hc', on_delete=models.DO_NOTHING, related_name='headcanons', null=True, blank=True)
+    content = models.TextField()
+
+
+class HeadcanonForm(ModelForm):
+    class Meta:
+        model = Headcanon
+        fields = ['character', 'verse', 'hc', 'content']
+        widgets = {
+            'content': SummernoteWidget()
+        }
