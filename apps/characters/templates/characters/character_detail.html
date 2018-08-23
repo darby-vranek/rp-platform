@@ -80,7 +80,7 @@
                         <hr>
                         {% for hc in character.headcanons.all %}
                                 <div class="row">
-                                    <h4 class="card-title col-auto" style="margin-bottom:-15px;">{{ hc.hc.title|safe }}</h4>
+                                    <h4 class="card-title col-auto mt-2" style="margin-bottom:-15px;">{{ hc.hc.title|safe }}</h4>
                                     {% if hc.verse %}<h6 class="col-auto card-subtitle mt-1">{{ hc.verse.display_name }}</h6>{% endif %}
                                 </div>
                                 <p class="card-text">{{ hc.content|safe }}</p>

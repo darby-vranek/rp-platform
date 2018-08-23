@@ -162,7 +162,7 @@ SUMMERNOTE_CONFIG = {
         'margin': '50px',
         'fontSize': 12,
         'toolbar': [
-            ['font', ['clear', 'fontsize', 'strikethrough', 'superscript', 'subscript']],
+            ['font', ['clear', 'fontsize', 'strikethrough', 'superscript', 'subscript', 'color']],
             ['style', ['bold', 'italic', 'underline']],
             ['para', ['style', 'ul', 'ol', 'paragraph']],
             ['insert', ['picture', 'link', 'hr']]
