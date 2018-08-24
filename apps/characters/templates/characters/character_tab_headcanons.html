@@ -1,0 +1,36 @@
+<div class="card-body">
+    <div class="toolbar">
+        <h4 class="card-title"><a class href="#" data-toggle="modal" data-target="#hcModal"><i class="material-icons" style="margin-bottom: 0px;">add_circle_outline</i> New Headcanon </a></h4>
+        <hr>
+    </div>
+    <div class="material-datatables">
+        <table id="datatables" data-page-length='25' data-order='[[ 0, "asc" ]]' class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th class="sorting_asc_disabled sorting_desc_disabled disabled"></th>
+                    <th>Verse</th>
+                    <th class="sorting_asc_disabled sorting_desc_disabled disabled"></th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th>Verse</th>
+                    <th></th>
+                </tr>
+            </tfoot>
+            <tbody>
+                {% for hc in character.headcanons.all %}
+                <tr>
+                    <td class="text-right"><h6 class="card-subtitle mt-1 text-muted">{{ hc.hc.title|upper }}:</h6></td>
+                    <td>{{ hc.content }}</td>
+                    <td>{% if hc.verse %}<span class="badge badge-rose">{{ hc.verse.display_name }}</span>{% endif %}</td>
+                    <td><i class="material-icons" style="margin-bottom: -0px;">edit</i> <i class="material-icons" style="margin-bottom: -0px;">delete</i></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>

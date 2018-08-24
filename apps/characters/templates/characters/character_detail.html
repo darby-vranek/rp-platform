@@ -14,7 +14,7 @@
                 <p class="card-category text-gray mb-0">{{ character.caption|lower }}</p>
             </div>
         </div>
-        <div class="card col-auto col-lg-8 col-xl-9 card-nav-tabs mt-5 ml-auto mr-auto">
+        <div class="card col-auto col-lg-7 col-xl-8 card-nav-tabs mt-5 ml-auto mr-auto">
             <div class="card-header card-header-info">
                 <div class="nav-tabs-navigation">
                     <ul class="nav nav-tabs" data-tabs="tabs">
@@ -39,50 +39,19 @@
             <div class="card-body">
                 <div class="tab-content">
                     <div class="tab-pane active" id="description">
-                        <h4 class="card-title"><a class href="#"><i class="material-icons" style="margin-bottom: 0px;">edit</i> Edit Description </a></h4>
-                        <hr>
-                        {{ character.desc|safe }}
+                        {% include "characters/character_tab_description.html" %}
                     </div>
                     <div class="tab-pane" id="threads">
-                        <h4 class="card-title"><a class href="#"><i class="material-icons" style="margin-bottom: 0px;">add_circle_outline</i> New Thread</a></h4>
-                        <hr>
-                        {% for thread in character.get_threads %}
-                            <div class="card-body">
-                                <h4 class="card-title"><a href="{% url 'thread-detail' pk=thread.pk %}">{{ thread.title }}</a></h4>
-                                {% if thread.verse %}<h6 class="card-subtitle mb-2 text-muted">{{ thread.verse.display_name }}</h6>{% endif %}
-                            </div>
-                        {% endfor %}
+                        {% include "characters/character_tab_threads.html" %}
                     </div>
                     <div class="tab-pane" id="posts">
-                        <h4 class="card-title"><a class href="#"><i class="material-icons" style="margin-bottom: 0px;">add_circle_outline</i> New Post</a></h4>
-                        <hr>
-                        {% for post in character.posts.all %}
-                            <div class="card-body">
-                                <h4 class="card-title"><a href="{% url 'post-detail' pk=post.pk %}">{{ post.title }}</a></h4>
-                                {% if post.verse %}<h6 class="card-subtitle mb-2 text-muted">{{ post.verse.display_name }}</h6>{% endif %}
-                            </div>
-                        {% endfor %}
+                        {% include "characters/character_tab_posts.html" %}
                     </div>
                     <div class="tab-pane" id="scripts">
-                        <h4 class="card-title"><a class href="#"><i class="material-icons" style="margin-bottom: 0px;">add_circle_outline</i> New Script</a></h4>
-                        <hr>
-                        {% for script in character.get_scripts %}
-                            <div class="card-body">
-                                <h4 class="card-title"><a href="{% url 'script-detail' pk=script.pk %}">{{ script.title }}</a></h4>
-                                {% if script.verse %}<h6 class="card-subtitle mb-2 text-muted">{{ script.verse.display_name }}</h6>{% endif %}
-                            </div>
-                        {% endfor %}
+                        {% include "characters/character_tab_scripts.html" %}
                     </div>
                     <div class="tab-pane" id="headcanons">
-                        <h4 class="card-title"><a class href="#" data-toggle="modal" data-target="#hcModal"><i class="material-icons" style="margin-bottom: 0px;">add_circle_outline</i> New Headcanon </a></h4>
-                        <hr>
-                        {% for hc in character.headcanons.all %}
-                                <div class="row">
-                                    <h4 class="card-title col-auto mt-1">{{ hc.hc.title }}</h4>
-                                    {% if hc.verse %}<h6 class="badge badge-rose align-self-start col-auto card-subtitle mt-2">{{ hc.verse.display_name }}</h6>{% endif %}
-                                </div>
-                                <p class="card-text">{{ hc.content|safe }}</p>
-                        {% endfor %}
+                        {% include "characters/character_tab_headcanons.html" %}
                     </div>
                 </div>
             </div>

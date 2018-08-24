@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8057be3e-aeb9-4e8f-8cf0-d78276b4c29a" name="Default" comment="changed requirements etc">
+      <change afterPath="$PROJECT_DIR$/apps/characters/templates/characters/character_tab_description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/characters/templates/characters/character_tab_headcanons.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/characters/templates/characters/character_tab_posts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/characters/templates/characters/character_tab_scripts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/characters/templates/characters/character_tab_threads.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/characters/templates/characters/form_character_create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/characters/templates/characters/modal_character_description_edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/characters/templates/characters/modal_character_edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/characters/templates/characters/modal_character_headcanon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/characters/templates/characters/character_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/characters/templates/characters/character_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/characters/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/characters/views.py" afterDir="false" />
     </list>
     <ignored path="media/" />
     <ignored path="staticfiles/" />
@@ -3151,7 +3160,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="36922" />
+          <entry key="HTML" value="38339" />
           <entry key="PLAIN_TEXT" value="106" />
           <entry key="Python" value="21517" />
         </counts>
@@ -3159,10 +3168,10 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="4" />
-          <entry key="html" value="272" />
+          <entry key="html" value="300" />
           <entry key="js" value="1" />
           <entry key="log" value="1" />
-          <entry key="py" value="291" />
+          <entry key="py" value="292" />
           <entry key="txt" value="3" />
         </counts>
       </usages-collector>
@@ -3170,17 +3179,17 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="csv" value="1" />
-          <entry key="html" value="36922" />
+          <entry key="html" value="38339" />
           <entry key="py" value="21517" />
           <entry key="txt" value="105" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="272" />
+          <entry key="HTML" value="300" />
           <entry key="JavaScript" value="1" />
           <entry key="PLAIN_TEXT" value="8" />
-          <entry key="Python" value="291" />
+          <entry key="Python" value="292" />
         </counts>
       </usages-collector>
     </session>
@@ -3190,32 +3199,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/characters/templates/characters/character_detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="59" selection-start-line="2" selection-start-column="59" selection-end-line="2" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/characters/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="171" column="30" selection-start-line="171" selection-start-column="30" selection-end-line="171" selection-end-column="30" />
-              <folding>
-                <marker date="1535072544631" expanded="true" signature="5039:5044" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/aurora_rp/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="577">
-              <caret line="181" column="21" selection-start-line="180" selection-start-column="19" selection-end-line="181" selection-end-column="21" />
+            <state relative-caret-position="533">
+              <caret line="180" column="28" selection-start-line="180" selection-start-column="28" selection-end-line="181" selection-end-column="35" />
               <folding>
                 <element signature="e#309#329#0" expanded="true" />
               </folding>
@@ -3235,7 +3223,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>list</find>
       <find>absolu</find>
       <find>cd</find>
       <find>Thread</find>
@@ -3265,6 +3252,7 @@
       <find>form</find>
       <find>option</find>
       <find>tab</find>
+      <find>edit</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -3274,15 +3262,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/apps/icons/templates/icons/icon_form.html" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/apps/convos/models.py" />
-        <option value="$PROJECT_DIR$/apps/scripts/urls.py" />
-        <option value="$PROJECT_DIR$/apps/scripts/templates/scripts/script_detail.html" />
-        <option value="$PROJECT_DIR$/apps/scripts/views.py" />
-        <option value="$PROJECT_DIR$/apps/characters/templates/characters/bio_detail.html" />
-        <option value="$PROJECT_DIR$/apps/rp/urls.py" />
-        <option value="$PROJECT_DIR$/apps/rp/views.py" />
         <option value="$PROJECT_DIR$/apps/characters/templates/characters/character_base.html" />
         <option value="$PROJECT_DIR$/apps/threads/templates/threads/replies_group.html" />
         <option value="$PROJECT_DIR$/apps/posts/views.py" />
@@ -3322,8 +3301,17 @@
         <option value="$PROJECT_DIR$/apps/characters/templates/characters/headcanon_modal.html" />
         <option value="$PROJECT_DIR$/apps/rp/templates/rp/base.html" />
         <option value="$PROJECT_DIR$/apps/characters/urls.py" />
-        <option value="$PROJECT_DIR$/apps/characters/templates/characters/character_detail.html" />
         <option value="$PROJECT_DIR$/apps/characters/views.py" />
+        <option value="$PROJECT_DIR$/apps/characters/templates/characters/form_character_create.html" />
+        <option value="$PROJECT_DIR$/apps/characters/templates/characters/modal_character_edit.html" />
+        <option value="$PROJECT_DIR$/apps/characters/templates/characters/modal_character_description_edit.html" />
+        <option value="$PROJECT_DIR$/apps/characters/templates/characters/modal_character_headcanon.html" />
+        <option value="$PROJECT_DIR$/apps/characters/templates/characters/character_tab_description.html" />
+        <option value="$PROJECT_DIR$/apps/characters/templates/characters/character_tab_posts.html" />
+        <option value="$PROJECT_DIR$/apps/characters/templates/characters/character_tab_threads.html" />
+        <option value="$PROJECT_DIR$/apps/characters/templates/characters/character_tab_scripts.html" />
+        <option value="$PROJECT_DIR$/apps/characters/templates/characters/character_detail.html" />
+        <option value="$PROJECT_DIR$/apps/characters/templates/characters/character_tab_headcanons.html" />
         <option value="$PROJECT_DIR$/aurora_rp/settings.py" />
       </list>
     </option>
@@ -3378,27 +3366,6 @@
               <item name="characters" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="characters" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aurora_rp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aurora_rp" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="rp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aurora_rp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aurora_rp" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="rp" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aurora_rp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aurora_rp" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="rp" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="rp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="aurora_rp" type="b2602c69:ProjectViewProjectNode" />
@@ -3626,7 +3593,7 @@
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49594814" visible="true" weight="0.14735337" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49594814" visible="true" weight="0.29399142" />
       <window_info id="Structure" order="1" sideWeight="0.50318474" side_tool="true" weight="0.15522175" />
       <window_info id="Favorites" order="2" sideWeight="0.50405186" side_tool="true" weight="0.28923988" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
@@ -3727,69 +3694,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="changed requirements etc" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apps/scripts/templates/scripts/script_group.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/verses/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="55" lean-forward="true" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/verses/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="45" column="32" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/verses/templates/verses/verse_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/posts/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="36" column="16" lean-forward="true" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/icons/templates/icons/icon_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/icons/templates/icons/icon_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/threads/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/icons/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/staticfiles/assets/js/core/jquery.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -3804,13 +3708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/threads/templates/threads/replies_group.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -3972,13 +3869,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/threads/templates/threads/reply.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="10" selection-start-line="9" selection-start-column="4" selection-end-line="12" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/posts/templates/posts/post_detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -4010,13 +3900,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/characters/templates/characters/character_detail_navbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/rp/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -4044,16 +3927,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/characters/templates/characters/headcanon_modal.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/threads/templates/threads/thread_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="37" column="39" lean-forward="true" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/rp/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
@@ -4076,13 +3949,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/characters/templates/characters/character_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="59" selection-start-line="2" selection-start-column="59" selection-end-line="2" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/characters/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -4093,10 +3959,91 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apps/characters/templates/characters/headcanon_modal.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/characters/templates/characters/modal_character_description_edit.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/characters/templates/characters/modal_character_edit.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/characters/templates/characters/form_character_create.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/characters/templates/characters/character_tab_description.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/characters/templates/characters/character_tab_posts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/characters/templates/characters/modal_character_headcanon.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/characters/templates/characters/character_detail_navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="21" column="66" lean-forward="true" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/characters/templates/characters/character_tab_scripts.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/threads/templates/threads/replies_group.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/characters/templates/characters/character_tab_headcanons.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="5" column="37" lean-forward="true" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/threads/templates/threads/reply.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="64" lean-forward="true" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/characters/templates/characters/character_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="30" column="79" lean-forward="true" selection-start-line="30" selection-start-column="79" selection-end-line="30" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/threads/templates/threads/thread_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="39" column="40" lean-forward="true" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/characters/templates/characters/character_tab_threads.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/aurora_rp/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="181" column="21" selection-start-line="180" selection-start-column="19" selection-end-line="181" selection-end-column="21" />
+        <state relative-caret-position="533">
+          <caret line="180" column="28" selection-start-line="180" selection-start-column="28" selection-end-line="181" selection-end-column="35" />
           <folding>
             <element signature="e#309#329#0" expanded="true" />
           </folding>

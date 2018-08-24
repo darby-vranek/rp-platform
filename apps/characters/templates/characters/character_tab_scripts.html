@@ -1,0 +1,6 @@
+{% for script in character.get_scripts %}
+    <div class="card-body">
+        <h4 class="card-title"><a href="{% url 'script-detail' pk=script.pk %}">{{ script.title }}</a></h4>
+        {% if script.verse %}<h6 class="card-subtitle mb-2 text-muted">{{ script.verse.display_name }}</h6>{% endif %}
+    </div>
+{% endfor %}
