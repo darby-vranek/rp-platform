@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8057be3e-aeb9-4e8f-8cf0-d78276b4c29a" name="Default" comment="changed requirements etc">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/characters/templates/characters/character_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/characters/templates/characters/character_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/characters/templates/characters/character_tab_description.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/characters/templates/characters/character_tab_description.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/characters/templates/characters/character_tab_headcanons.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/characters/templates/characters/character_tab_headcanons.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aurora_rp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/aurora_rp/settings.py" afterDir="false" />
     </list>
     <ignored path="media/" />
@@ -3165,7 +3161,7 @@
           <entry key="html" value="316" />
           <entry key="js" value="1" />
           <entry key="log" value="1" />
-          <entry key="py" value="305" />
+          <entry key="py" value="306" />
           <entry key="txt" value="3" />
         </counts>
       </usages-collector>
@@ -3184,7 +3180,7 @@
           <entry key="HTML" value="316" />
           <entry key="JavaScript" value="1" />
           <entry key="PLAIN_TEXT" value="8" />
-          <entry key="Python" value="305" />
+          <entry key="Python" value="306" />
         </counts>
       </usages-collector>
     </session>
@@ -3203,9 +3199,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/characters/templates/characters/character_tab_description.html">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/aurora_rp/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="180" column="16" selection-start-line="180" selection-start-column="16" selection-end-line="181" selection-end-column="11" />
+              <folding>
+                <element signature="e#309#329#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -3306,10 +3318,10 @@
         <option value="$PROJECT_DIR$/apps/icons/templates/icons/icon_list.html" />
         <option value="$PROJECT_DIR$/apps/icons/templates/icons/icon_form.html" />
         <option value="$PROJECT_DIR$/apps/icons/views.py" />
-        <option value="$PROJECT_DIR$/aurora_rp/settings.py" />
         <option value="$PROJECT_DIR$/apps/characters/templates/characters/character_tab_headcanons.html" />
         <option value="$PROJECT_DIR$/apps/characters/templates/characters/character_detail.html" />
         <option value="$PROJECT_DIR$/apps/characters/templates/characters/character_tab_description.html" />
+        <option value="$PROJECT_DIR$/aurora_rp/settings.py" />
       </list>
     </option>
   </component>
@@ -4003,16 +4015,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aurora_rp/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="172" column="26" lean-forward="true" selection-start-line="172" selection-start-column="26" selection-end-line="172" selection-end-column="26" />
-          <folding>
-            <element signature="e#309#329#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/characters/templates/characters/character_tab_headcanons.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -4028,7 +4030,21 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/characters/templates/characters/character_tab_description.html">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aurora_rp/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="180" column="16" selection-start-line="180" selection-start-column="16" selection-end-line="181" selection-end-column="11" />
+          <folding>
+            <element signature="e#309#329#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
