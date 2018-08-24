@@ -11,10 +11,11 @@
             </div>
             <div class="card-body">
                 <h4 class="mb-0 card-title text-muted">{{ character.display_name }}</h4>
-                <p class="card-category text-gray mb-0">{{ character.caption|lower }}</p>
+                <p class="card-category text-gray mb-1">{{ character.caption|lower }}</p>
+                <p class="mb-0"><a href="{% url 'edit-character' pk=character.pk %}"><i class="material-icons mr-1" style="margin-bottom: -0px;">edit</i></a> <a href=""><i class="material-icons ml-1" style="margin-bottom: -0px;">delete</i></a></p>
             </div>
         </div>
-        <div class="card col-auto col-lg-7 col-xl-8 card-nav-tabs mt-5 ml-auto mr-auto">
+        <div class="card col- col-lg-8 card-nav-tabs mt-5 ml-auto mr-auto p-0">
             <div class="card-header card-header-info">
                 <div class="nav-tabs-navigation">
                     <ul class="nav nav-tabs" data-tabs="tabs">
@@ -36,7 +37,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="card-body">
+            <div class="card-body p-0">
                 <div class="tab-content">
                     <div class="tab-pane active" id="headcanons">
                         {% include "characters/character_tab_headcanons.html" %}
