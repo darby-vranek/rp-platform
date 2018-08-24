@@ -12,6 +12,14 @@
 {% endblock %}
 
 {% block content %}
+    <div class="header text-center mt-4 mb-0 p-2">
+        <h1 class="title">{{ faceclaim.name }}</h1>
+        <p class="lead">
+            {% for tag in faceclaim.get_all_tags %}
+                #{{ tag }}
+            {% endfor %}
+        </p>
+    </div>
     {% for icon in faceclaim.icons.all %}
         {% include "icons/icon.html" %}
     {% endfor %}

@@ -1,22 +1,28 @@
 {% extends "rp/base.html" %}
 {% block title %}Icons{% endblock %}
-{% block jumbotron %}
-{% endblock %}
 
 {% block content %}
-    <div class="card text-center border-white" style="width: 20rem; margin: auto;">
-        <p><a class="btn btn-primary m-1" href="{% url 'new-icon' %}">New Icon</a><a class="btn btn-secondary disabled m-1">New Collection</a></p>
+    <div class="card card-plain text-center border-white mt-5">
+        <p class="mt-3">
+            <a class="btn btn-primary mr-1" href="{% url 'new-icon' %}">New Icon</a>
+            <a class="ml-1 btn btn-primary disabled">New Face Claim</a>
+            <a class="ml-1 btn btn-primary disabled">New Collection</a>
+        </p>
     </div>
-    <div class="card text-center border-white" style="width: 20rem; margin: auto;">
+    <div class="container card">
+        <div class="row">
         {% for fc in fcs|dictsort:"name" %}
-            <div class="media card-body">
-                <img class="mr-3" src="{{ fc.icons.last.image.url }}" />
-                <div class="media-body card border-white" style="height: 100px;">
-                    <a class="btn-sm btn-primary" href="{% url 'faceclaim-detail' pk=fc.pk %}"><strong>{{ fc.name }}</strong></a>
-                    <div class="card-body"><span class="badge badge-primary">{{ fc.icons.count }}</span> icons</div>
+            <div class="card card-plain card-profile mt-3 mb-0 col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="card-header card-header-image">
+                    <img src="{{ fc.icons.last.image.url }}" style="width: 100px; height: 100px;" alt=""/>
+                </div>
+                <div class="card-body">
+                    <h6 class="mb-0 card-subtitle text-muted"><a href="{% url 'faceclaim-detail' pk=fc.pk %}">{{ fc.name }}</a></h6>
+                    <p class="card-category mb-0 mt-1"><span class="badge badge-primary">{{ fc.icons.count }}</span> icons</p>
                 </div>
             </div>
         {% endfor %}
+        </div>
     </div>
     {% include 'rp/confirm_delete.html' %}
 {% endblock %}
