@@ -2,10 +2,6 @@
 
 {% block title %}{{ character.display_name }}{% endblock %}
 
-{% block navbar %}
-    {% include "characters/character_detail_navbar.html" %}
-{% endblock %}
-
 {% block content %}
 <div class="container">
     <div class="row mt-5">
@@ -23,10 +19,7 @@
                 <div class="nav-tabs-navigation">
                     <ul class="nav nav-tabs" data-tabs="tabs">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#all" data-toggle="tab">All</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#description" data-toggle="tab">Description</a>
+                            <a class="nav-link active" href="#description" data-toggle="tab">Description</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#threads" data-toggle="tab">Threads</a>
@@ -45,13 +38,14 @@
             </div>
             <div class="card-body">
                 <div class="tab-content">
-                    <div class="tab-pane active" id="all">
-                        Feed
-                    </div>
-                    <div class="tab-pane" id="description">
+                    <div class="tab-pane active" id="description">
+                        <h4 class="card-title"><a class href="#"><i class="material-icons" style="margin-bottom: 0px;">edit</i> Edit Description </a></h4>
+                        <hr>
                         {{ character.desc|safe }}
                     </div>
                     <div class="tab-pane" id="threads">
+                        <h4 class="card-title"><a class href="#"><i class="material-icons" style="margin-bottom: 0px;">add_circle_outline</i> New Thread</a></h4>
+                        <hr>
                         {% for thread in character.get_threads %}
                             <div class="card-body">
                                 <h4 class="card-title"><a href="{% url 'thread-detail' pk=thread.pk %}">{{ thread.title }}</a></h4>
@@ -60,6 +54,8 @@
                         {% endfor %}
                     </div>
                     <div class="tab-pane" id="posts">
+                        <h4 class="card-title"><a class href="#"><i class="material-icons" style="margin-bottom: 0px;">add_circle_outline</i> New Post</a></h4>
+                        <hr>
                         {% for post in character.posts.all %}
                             <div class="card-body">
                                 <h4 class="card-title"><a href="{% url 'post-detail' pk=post.pk %}">{{ post.title }}</a></h4>
@@ -68,6 +64,8 @@
                         {% endfor %}
                     </div>
                     <div class="tab-pane" id="scripts">
+                        <h4 class="card-title"><a class href="#"><i class="material-icons" style="margin-bottom: 0px;">add_circle_outline</i> New Script</a></h4>
+                        <hr>
                         {% for script in character.get_scripts %}
                             <div class="card-body">
                                 <h4 class="card-title"><a href="{% url 'script-detail' pk=script.pk %}">{{ script.title }}</a></h4>
