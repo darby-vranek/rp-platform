@@ -1,16 +1,5 @@
 {% extends "rp/base.html" %}
 {% block title %}{{ faceclaim.name }} icons{% endblock %}
-{% block jumbotron %}
-<div class="jumbotron">
-    <h1 class="display-4">{{ faceclaim.name }}</h1>
-    <p class="lead">
-        {% for tag in faceclaim.get_all_tags %}
-            #{{ tag }}
-        {% endfor %}
-    </p>
-</div>
-{% endblock %}
-
 {% block content %}
     <div class="header text-center mt-4 mb-0 p-2">
         <h1 class="title">{{ faceclaim.name }}</h1>
@@ -19,9 +8,14 @@
                 #{{ tag }}
             {% endfor %}
         </p>
+        <h4 class="card-title"><a class href="#" data-toggle="modal" data-target="#hcModal"><i class="material-icons mr-2">cloud_upload</i> New Icon</a></h4>
     </div>
-    {% for icon in faceclaim.icons.all %}
-        {% include "icons/icon.html" %}
-    {% endfor %}
+    <div class="content card pt-4 pb-4 mt-0">
+        <div class="row justify-content-center">
+            {% for icon in faceclaim.icons.all %}
+                {% include "icons/icon.html" %}
+            {% endfor %}
+        </div>
+    </div>
 {% include 'rp/confirm_delete.html' %}
 {% endblock %}

@@ -62,7 +62,7 @@ class Character(Profile):
 class CharacterForm(ModelForm):
     class Meta:
         model = Character
-        fields = ['display_name', 'caption', 'desc', 'page_name', 'short_name', 'sm_icon', 'lg_icon']
+        fields = ['display_name', 'caption', 'page_name', 'short_name', 'sm_icon', 'lg_icon', 'desc']
         widgets = {
             'desc': SummernoteWidget()
         }
@@ -140,7 +140,7 @@ class BioForm(ModelForm):
 class Thread(Model):
     title = models.CharField(max_length=255, default="Untitled")
     caption = models.CharField(max_length=255, default='', blank=True)
-    verse = models.ForeignKey(Verse, related_name='threads', null=True, on_delete=models.DO_NOTHING)
+    verse = models.ForeignKey(Verse, related_name='threads', null=True, on_delete=models.DO_NOTHING, blank=True)
 
     def __str__(self):
         return self.title
@@ -165,7 +165,7 @@ class Thread(Model):
 
 class ThreadForm(ModelForm):
     model = Thread
-    fields = ['title', 'caption', 'verse']
+    fields = ['title', 'verse']
 
 
 class Reply(Model):

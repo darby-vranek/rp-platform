@@ -10,7 +10,16 @@
         <div class="card-body">
             <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
-                {{ form.as_p }}
+                {% for field in form %}
+                    <div class="form-group">
+                        {{ field.errors }}
+                        {{ field.label_tag }}
+                        {{ field }}
+                        <script>
+                            $("#{{ field.id_for_label }}").addClass('form-control');
+                        </script>
+                    </div>
+                {% endfor %}
                 <input class="btn btn-primary btn-sm btn-info" type="submit" value="Submit" />
             </form>
         </div>
