@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
@@ -26,6 +26,7 @@ class IconListView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['fcs'] = FaceClaim.objects.distinct()
+        context['fc_form'] = FaceClaimForm()
         return context
 
 
@@ -52,3 +53,15 @@ class IconDeleteView(DeleteView):
 class FaceClaimDetailView(DetailView):
     model = FaceClaim
     template_name = 'icons/fc_detail.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['form'] = IconForm()
+        return context
+
+
+def create_faceclaim(request):
+    post = request.POST
+    fc = FaceClaim(name=post['name'])
+    fc.save()
+    return redirect(f"/icons/fc/{fc.pk}/")

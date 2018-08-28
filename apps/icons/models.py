@@ -1,5 +1,6 @@
 from django.db import models
 from apps.rp.models import Model
+from django import forms
 from django.forms import ModelForm
 from django.urls import reverse
 
@@ -19,6 +20,15 @@ class FaceClaim(Model):
                     tags.append(tag);
         tags.sort()
         return tags
+
+
+class FaceClaimForm(ModelForm):
+    class Meta:
+        model = FaceClaim
+        fields = ['name']
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control'})
+        }
 
 
 # icon
