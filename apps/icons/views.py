@@ -1,23 +1,27 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
-from django.urls import reverse_lazy
 
 from .models import *
 
 
 class IconCreateView(CreateView):
     model = Icon
-    form_class = IconForm
-    template_name = 'rp/form.html'
-    success_url = reverse_lazy('icons')
+    form_class = CreateIconForm
+    template_name = 'icons/icon_create_form.html'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['icons'] = Icon.objects.all()
-        context['title'] = 'New Icon'
-        return context
+    def post(self, request, *args, **kwargs):
+        files = request.FILES.getlist('image')
+        print(type(files))
+        print(files)
+        for f in files:
+            Icon.objects.create(
+                fc_model=FaceClaim.objects.get(pk=kwargs['pk']),
+                tags=request.POST['tags'],
+                image=f
+            )
+        return redirect(reverse('faceclaim-detail', kwargs={'pk': kwargs['pk']}))
 
 
 class IconListView(ListView):
@@ -57,6 +61,7 @@ class FaceClaimDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['form'] = IconForm()
+        context['create_icon_form'] = CreateIconForm()
         return context
 
 
@@ -65,3 +70,17 @@ def create_faceclaim(request):
     fc = FaceClaim(name=post['name'])
     fc.save()
     return redirect(f"/icons/fc/{fc.pk}/")
+
+
+def upload_icons(request, pk):
+    fc = FaceClaim.objects.get(pk=pk)
+    tags = request.POST['tags']
+    for img in request.FILES:
+        print(type(img))
+    # for file in files:
+    #     Icon.objects.create(
+    #         fc_model=fc,
+    #         image=file,
+    #         tags=tags
+    #     )
+    return redirect(f'/icons/fc/{pk}/')

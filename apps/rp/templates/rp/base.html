@@ -19,11 +19,15 @@
         <script src="{% static 'assets/js/plugins/bootstrap-selectpicker.js' %}" ></script>
 
         <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
-        <script src="assets/js/plugins/jasny-bootstrap.min.js"></script>
+        <script src="{% static 'assets/js/plugins/jasny-bootstrap.min.js' %}"></script><!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+
+        <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+        <script src="{% static 'assets/js/plugins/bootstrap-tagsinput.js' %}"></script>
+
 
         <!-- include summernote css/js -->
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
 
         <link rel="icon" type="image/png" href="{% static 'rp/img/burning-book.png' %}" />
 

@@ -27,7 +27,7 @@ class FaceClaimForm(ModelForm):
         model = FaceClaim
         fields = ['name']
         widgets = {
-            'name': forms.TextInput(attrs={'class': 'form-control'})
+            'name': forms.TextInput(attrs={'class': 'form-control', 'height': '80px'})
         }
 
 
@@ -53,3 +53,22 @@ class IconForm(ModelForm):
         fields = '__all__'
 
 
+class CreateIconForm(ModelForm):
+    class Meta:
+        model = Icon
+        fields = ['image', 'tags']
+        widgets = {
+            'tags': forms.TextInput(attrs={
+                'class': 'tagsinput form-control',
+                'data-role': 'tagsinput',
+                'data-color': 'primary',
+                'placeholder': 'add tag'
+            }),
+            'image': forms.ClearableFileInput(attrs={
+                'multiple': True
+            })
+
+        }
+
+class UploadIconForm(forms.Form):
+    file = forms.FileField()

@@ -1,0 +1,30 @@
+<style>
+    .tag {
+        background-color: slategray;
+
+    }
+</style>
+<form action="{% url 'new-icon' pk=faceclaim.pk %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-4 col-sm-3 col-lg-3">
+            <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                <div class="fileinput-new thumbnail">
+                    <img src="https://www.kiabrisa.com.br/wp-content/uploads/revslider/home5/placeholder-1200x500-100x100.png" alt="...">
+                </div>
+                <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
+                <span class="btn btn-raised btn-sm btn-outline-secondary btn-file">
+                    <span class="fileinput-new">Upload</span>
+                <span class="fileinput-exists">Change</span>
+                {{ create_icon_form.image }}
+            </div>
+        </div>
+        <div class="col text-right">
+            <div class="text-left">
+                {{ create_icon_form.tags }}
+            </div>
+            <hr>
+            <input type="submit" class="btn btn-rose btn-sm" />
+        </div>
+    </div>
+</form>

@@ -8,7 +8,7 @@
                 #{{ tag }}
             {% endfor %}
         </p>
-        <h4 class="card-title"><a class href="#" data-toggle="modal" data-target="#hcModal"><i class="material-icons mr-2">cloud_upload</i> New Icon</a></h4>
+        <h4 class="card-title"><a class href="#" data-toggle="modal" data-target="#newIconModal"><i class="material-icons mr-2">cloud_upload</i> New Icon</a></h4>
     </div>
     <div class="content card pt-4 pb-4 mt-0">
         <div class="row justify-content-center">
@@ -18,8 +18,8 @@
         </div>
     </div>
 {% include 'rp/confirm_delete.html' %}
-<div class="modal fade" id="hcModal" tabindex="-1" role="">
-    <div class="modal-dialog modal-hc" role="document">
+<div class="modal fade" id="newIconModal" tabindex="-1" role="">
+    <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="card card-signup card-plain">
                 <div class="modal-header">
@@ -27,15 +27,14 @@
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
                             <i class="material-icons">clear</i>
                         </button>
-                        <h4 class="card-title">New Headcanon</h4>
+                        <h4 class="card-title">New Icon</h4>
                     </div>
                 </div>
                 <div class="modal-body">
-                    {% include "icons/modal_icon_create.html" %}
+                    {% include "icons/icon_create_form.html" %}
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 {% endblock %}
