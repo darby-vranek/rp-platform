@@ -151,12 +151,14 @@ class Thread(Model):
 
     def get_characters_str(self):
         chars = list()
-        for reply in self.replies.distinct('character'):
-            chars.append(reply.character.short_name)
-        chars.sort()
-        output = chars[0]
-        for i in range(1, len(chars)):
-            output += f" & {chars[i]}"
+        output = ''
+        if self.replies:
+            for reply in self.replies.distinct('character'):
+                chars.append(reply.character.short_name)
+            chars.sort()
+            output = chars[0]
+            for i in range(1, len(chars)):
+                output += f" & {chars[i]}"
         return output
 
     def get_absolute_url(self):

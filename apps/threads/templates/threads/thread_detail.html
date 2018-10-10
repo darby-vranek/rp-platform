@@ -5,7 +5,7 @@
 {% block content %}
     <div id="top" class="header text-center mt-4 mb-5 p-2">
         <h1 class="title">{{ thread.title }}</h1>
-        <p class="subtitle">{{ thread.get_characters_str|lower }} <a href="{% url 'edit-thread' pk=thread.pk %}"><i class="material-icons align-top">edit</i></a></p>
+        <p class="subtitle"><a href="{% url 'edit-thread' pk=thread.pk %}"><i class="material-icons align-top">edit</i></a></p>
     </div>
     {% for reply in thread.replies.all|dictsort:"created" %}
         {% include "threads/reply.html" %}

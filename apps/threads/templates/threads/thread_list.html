@@ -38,7 +38,7 @@
                                 <tbody>
                                     {% for thread in thread_list|dictsort:"title" %}
 						            <tr>
-                                        <td><strong><a href="{% url 'thread-detail' pk=thread.pk %}">{{ thread.title }}</a></strong><h6 class="mt-1 mb-0 card-subtitle text-muted">{{ thread.get_characters_str|lower }}</h6></td>
+                                        <td><strong><a href="{% url 'thread-detail' pk=thread.pk %}">{{ thread.title }}</a></strong></td>
                                         <td>{% if thread.verse %}<a href="{% url 'verse-detail' pk=thread.verse.pk %}">{{ thread.verse.display_name }}</a>{% endif %}</td>
                                         <td data-order="{{ thread.get_latest_reply_created|date:'ymdhi' }}"><small>{{ thread.get_latest_reply_created }}</small></td>
                                         <td data-order="{{ thread.created|date:'ymdhi' }}"><small>{{ thread.created }}</small></td>
