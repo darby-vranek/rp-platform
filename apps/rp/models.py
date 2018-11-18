@@ -146,8 +146,10 @@ class Thread(Model):
         return self.title
 
     def get_latest_reply_created(self):
-        latest = self.replies.order_by('created').last()
-        return latest.created
+        if self.replies.count() > 0:
+            latest = self.replies.order_by('created').last()
+            return latest.created
+        return self.created
 
     def get_characters_str(self):
         chars = list()
